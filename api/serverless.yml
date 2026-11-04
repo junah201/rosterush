@@ -4,17 +4,25 @@ service: rosterush
 frameworkVersion: "4"
 
 # stage별 기본값
-# - dev/prod는 환경변수 IP_HASH_SECRET 필수 (api/.env.{stage} 또는 셸 환경변수). 없으면 배포 실패
+# - dev/prod는 환경변수 IP_HASH_SECRET, ORIGIN_VERIFY_SECRET 필수 (api/.env.{stage} 또는 셸 환경변수). 없으면 배포 실패
 params:
   local:
+    domain: localhost
     dynamodbEndpoint: http://localhost:8000
     ipHashSecret: local-only-secret
     originVerifySecret: ""
     minSample: 100
+  dev:
+    domain: rosterush-dev.junah.dev
+  prod:
+    domain: rosterush.junah.dev
   default:
+    # CloudFront용 us-east-1 인증서 (rosterush.junah.dev + rosterush-dev.junah.dev)
+    certificateArn: arn:aws:acm:us-east-1:805892673937:certificate/3e36e5c0-4386-439a-8f46-5d0967f9aaa9
     dynamodbEndpoint: ""
     ipHashSecret: ${env:IP_HASH_SECRET}
-    originVerifySecret: ""
+    # CloudFront가 API 오리진에 붙이는 비밀 헤더 값 (API Gateway 직접 호출 차단)
+    originVerifySecret: ${env:ORIGIN_VERIFY_SECRET}
     minSample: 100
 
 plugins:
@@ -33,7 +41,7 @@ provider:
   environment:
     STAGE: ${self:provider.stage}
     IP_HASH_SECRET: ${param:ipHashSecret}
-    ORIGIN_VERIFY_SECRET: ${env:ORIGIN_VERIFY_SECRET, param:originVerifySecret}
+    ORIGIN_VERIFY_SECRET: ${param:originVerifySecret}
     DYNAMODB_ENDPOINT: ${env:DYNAMODB_ENDPOINT, param:dynamodbEndpoint}
     STATS_BUCKET: !Ref StatsBucket
     MIN_SAMPLE: ${param:minSample}
@@ -166,3 +174,217 @@ resources:
         TimeToLiveSpecification:
           AttributeName: expiresAt
           Enabled: true
+
+    # ─── 웹 (CloudFront) ───────────────────────────────────────────────────
+    # https://{domain}/
+    #   /api/*   → API Gateway (비밀 헤더 X-Origin-Verify 추가, 캐시 안 함)
+    #   /stats/* → StatsBucket (stats/ 경로만 공개, internal/은 비공개)
+    #   그 외    → SiteBucket (Next.js 정적 export) + CloudFront Function
+
+    # Next.js 정적 export 결과물
+    SiteBucket:
+      Type: AWS::S3::Bucket
+      Properties:
+        BucketName: rosterush-${self:provider.stage}-site-${aws:accountId}
+        PublicAccessBlockConfiguration:
+          BlockPublicAcls: true
+          BlockPublicPolicy: true
+          IgnorePublicAcls: true
+          RestrictPublicBuckets: true
+
+    # CloudFront → S3 접근 제어 (버킷은 비공개 유지)
+    S3OriginAccessControl:
+      Type: AWS::CloudFront::OriginAccessControl
+      Properties:
+        OriginAccessControlConfig:
+          Name: rosterush-${self:provider.stage}-s3
+          OriginAccessControlOriginType: s3
+          SigningBehavior: always
+          SigningProtocol: sigv4
+
+    SiteBucketPolicy:
+      Type: AWS::S3::BucketPolicy
+      Properties:
+        Bucket: !Ref SiteBucket
+        PolicyDocument:
+          Statement:
+            - Effect: Allow
+              Principal: { Service: cloudfront.amazonaws.com }
+              Action: s3:GetObject
+              Resource: !Sub "${SiteBucket.Arn}/*"
+              Condition:
+                StringEquals:
+                  AWS:SourceArn: !Sub "arn:aws:cloudfront::${AWS::AccountId}:distribution/${Distribution}"
+
+    StatsBucketPolicy:
+      Type: AWS::S3::BucketPolicy
+      Properties:
+        Bucket: !Ref StatsBucket
+        PolicyDocument:
+          Statement:
+            - Effect: Allow
+              Principal: { Service: cloudfront.amazonaws.com }
+              Action: s3:GetObject
+              Resource: !Sub "${StatsBucket.Arn}/stats/*"
+              Condition:
+                StringEquals:
+                  AWS:SourceArn: !Sub "arn:aws:cloudfront::${AWS::AccountId}:distribution/${Distribution}"
+
+    # 뷰어 요청 처리 (웹 기본 경로에만 연결)
+    # - "/" → lang 쿠키 > Accept-Language로 /ko/ /ja/ /en/ 302 (미지원 언어는 en)
+    # - "/ko/s/{id}" → 공유 페이지 껍데기 /ko/s/index.html
+    # - "/ko/genshin/" → /ko/genshin/index.html
+    # - "/ko/genshin" (확장자 없음) → "/ko/genshin/" 301
+    ViewerRequestFunction:
+      Type: AWS::CloudFront::Function
+      Properties:
+        Name: rosterush-${self:provider.stage}-viewer-request
+        AutoPublish: true
+        FunctionConfig:
+          Comment: language redirect and static export path rewrite
+          Runtime: cloudfront-js-2.0
+        FunctionCode: |
+          var LANGS = ["ko", "ja", "en"];
+
+          function pickLang(req) {
+            var cookie = req.cookies.lang && req.cookies.lang.value;
+            if (cookie && LANGS.indexOf(cookie) >= 0) return cookie;
+            var header = req.headers["accept-language"];
+            var parts = header ? header.value.toLowerCase().split(",") : [];
+            for (var i = 0; i < parts.length; i++) {
+              var code = parts[i].trim().slice(0, 2);
+              if (LANGS.indexOf(code) >= 0) return code;
+            }
+            return "en";
+          }
+
+          function query(req) {
+            var keys = Object.keys(req.querystring);
+            if (!keys.length) return "";
+            return "?" + keys.map(function (k) {
+              var v = req.querystring[k];
+              return v.value === "" ? k : k + "=" + v.value;
+            }).join("&");
+          }
+
+          function redirect(code, location) {
+            return {
+              statusCode: code,
+              statusDescription: code === 301 ? "Moved Permanently" : "Found",
+              headers: {
+                location: { value: location },
+                "cache-control": { value: code === 301 ? "max-age=3600" : "no-store" },
+              },
+            };
+          }
+
+          function handler(event) {
+            var req = event.request;
+            var uri = req.uri;
+
+            if (uri === "/") return redirect(302, "/" + pickLang(req) + "/" + query(req));
+
+            var share = uri.match(/^\/(ko|ja|en)\/s\/[^/]+\/?$/);
+            if (share) {
+              req.uri = "/" + share[1] + "/s/index.html";
+              return req;
+            }
+
+            if (uri.endsWith("/")) {
+              req.uri = uri + "index.html";
+              return req;
+            }
+
+            var last = uri.slice(uri.lastIndexOf("/") + 1);
+            if (last.indexOf(".") === -1) return redirect(301, uri + "/" + query(req));
+
+            return req;
+          }
+
+    # API 오리진으로 넘길 헤더: 실제 사용자 IP(CloudFront-Viewer-Address) + 본문 처리용 헤더.
+    # Host는 넘기지 않음 (API Gateway가 자기 도메인을 기대함)
+    ApiOriginRequestPolicy:
+      Type: AWS::CloudFront::OriginRequestPolicy
+      Properties:
+        OriginRequestPolicyConfig:
+          Name: rosterush-${self:provider.stage}-api
+          HeadersConfig:
+            HeaderBehavior: whitelist
+            Headers:
+              - CloudFront-Viewer-Address
+              - Content-Type
+              - Accept
+              - Accept-Language
+          QueryStringsConfig:
+            QueryStringBehavior: all
+          CookiesConfig:
+            CookieBehavior: none
+
+    Distribution:
+      Type: AWS::CloudFront::Distribution
+      Properties:
+        DistributionConfig:
+          Enabled: true
+          Comment: rosterush ${self:provider.stage}
+          Aliases:
+            - ${param:domain}
+          ViewerCertificate:
+            AcmCertificateArn: ${param:certificateArn}
+            SslSupportMethod: sni-only
+            MinimumProtocolVersion: TLSv1.2_2021
+          HttpVersion: http2and3
+          IPV6Enabled: true
+          # PriceClass_100은 한국·일본 엣지를 포함하지 않음
+          PriceClass: PriceClass_200
+          Origins:
+            - Id: site
+              DomainName: !GetAtt SiteBucket.RegionalDomainName
+              OriginAccessControlId: !GetAtt S3OriginAccessControl.Id
+              S3OriginConfig:
+                OriginAccessIdentity: ""
+            - Id: stats
+              DomainName: !GetAtt StatsBucket.RegionalDomainName
+              OriginAccessControlId: !GetAtt S3OriginAccessControl.Id
+              S3OriginConfig:
+                OriginAccessIdentity: ""
+            - Id: api
+              DomainName: !Sub "${HttpApi}.execute-api.${AWS::Region}.amazonaws.com"
+              CustomOriginConfig:
+                OriginProtocolPolicy: https-only
+                OriginSSLProtocols: [TLSv1.2]
+              OriginCustomHeaders:
+                - HeaderName: X-Origin-Verify
+                  HeaderValue: ${param:originVerifySecret}
+          DefaultCacheBehavior:
+            TargetOriginId: site
+            ViewerProtocolPolicy: redirect-to-https
+            Compress: true
+            # Managed-CachingOptimized (오리진 Cache-Control을 따름)
+            CachePolicyId: 658327ea-f89d-4fab-a63d-7e88639e58f6
+            FunctionAssociations:
+              - EventType: viewer-request
+                FunctionARN: !GetAtt ViewerRequestFunction.FunctionMetadata.FunctionARN
+          CacheBehaviors:
+            - PathPattern: /api/*
+              TargetOriginId: api
+              ViewerProtocolPolicy: https-only
+              AllowedMethods: [GET, HEAD, OPTIONS, PUT, PATCH, POST, DELETE]
+              CachedMethods: [GET, HEAD]
+              Compress: true
+              # Managed-CachingDisabled
+              CachePolicyId: 4135ea2d-6df8-44a3-9df3-4b5a84be39ad
+              OriginRequestPolicyId: !Ref ApiOriginRequestPolicy
+            - PathPattern: /stats/*
+              TargetOriginId: stats
+              ViewerProtocolPolicy: redirect-to-https
+              Compress: true
+              # Managed-CachingOptimized (latest.json 1시간, 스냅샷 1년 — 오리진 Cache-Control 기준)
+              CachePolicyId: 658327ea-f89d-4fab-a63d-7e88639e58f6
+
+  Outputs:
+    SiteBucketName:
+      Value: !Ref SiteBucket
+    DistributionId:
+      Value: !Ref Distribution
+    DistributionDomainName:
+      Value: !GetAtt Distribution.DomainName
