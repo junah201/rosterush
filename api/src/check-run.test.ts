@@ -13,7 +13,7 @@ const req = (over: Partial<ResultRequest> = {}): ResultRequest => ({
   difficulty: "normal",
   rosterVer: game.rosterVer,
   endReason: "clear",
-  totalMs: 60_000,
+  totalMs: ids.length * 5_000,
   solves: Object.fromEntries(ids.map((id, i) => [id, (i + 1) * 5_000])),
   ...over,
 });
