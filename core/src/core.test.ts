@@ -66,6 +66,17 @@ describe("normalize", () => {
   it("전각 문자를 반각으로 바꾼다", () => {
     expect(normalize("ＴＲＡＣＥＲ")).toBe("tracer");
   });
+  it("라틴 악센트는 지우되 일본어 탁점은 유지한다", () => {
+    expect(normalize("Lúcio")).toBe("lucio");
+    expect(normalize("Torbjörn")).toBe("torbjorn");
+    expect(normalize("ガ")).not.toBe(normalize("カ"));
+    expect(normalize("파멸")).toBe("파멸");
+  });
+  it("•, &, ★ 기호를 무시한다", () => {
+    expect(normalize("Dan Heng • Imbibitor Lunae")).toBe("danhengimbibitorlunae");
+    expect(normalize("Topaz & Numby")).toBe(normalize("Topaz Numby"));
+    expect(normalize("에이언즈★아하")).toBe("에이언즈아하");
+  });
 });
 
 describe("roster / judge", () => {
