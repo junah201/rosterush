@@ -25,3 +25,7 @@ coverage/
 PLAN.md
 mockups/
 GAMES_REVIEW.md
+
+# 로컬 집계 결과
+api/.local/
+web/public/stats/
