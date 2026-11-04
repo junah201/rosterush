@@ -37,6 +37,8 @@ pnpm --filter @rosterush/api db:up     # DynamoDB Local 실행 (Docker)
 pnpm --filter @rosterush/api db:init   # 테이블 생성
 pnpm --filter @rosterush/api dev       # serverless offline → http://localhost:4000
 pnpm --filter @rosterush/api db:scan   # 로컬 테이블 내용 확인 (기본 results)
+pnpm --filter @rosterush/api db:seed overwatch ko normal 300   # 가짜 기록 생성
+pnpm --filter @rosterush/api aggregate:local --reset           # 로컬 집계 → web/public/stats
 ```
 
 `serverless` 명령은 Serverless Framework v4 로그인이 필요합니다 (`npx serverless login`).
