@@ -1,0 +1,15 @@
+{
+  "name": "@rosterush/games",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "typecheck": "tsc -p tsconfig.json",
+    "validate": "tsx scripts/validate.ts"
+  },
+  "dependencies": {
+    "@rosterush/core": "workspace:*"
+  }
+}
