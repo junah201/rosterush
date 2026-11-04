@@ -21,7 +21,7 @@
 
 ```bash
 pnpm install          # 의존성 설치
-pnpm dev              # web 개발 서버 → http://localhost:3000/ko/
+pnpm dev              # web 개발 서버 → http://localhost:3000 (/api/* 는 localhost:4000으로 프록시)
 pnpm build            # web 정적 빌드 → web/out
 pnpm test             # Vitest (core, games, api)
 pnpm typecheck        # 전체 타입 체크
