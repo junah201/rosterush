@@ -12,6 +12,9 @@ params:
     ipHashSecret: local-only-secret
     originVerifySecret: ""
     minSample: 100
+    publicOrigin: http://localhost:3000
+    # 공유 시 백분위 계산용 latest.json을 로컬 집계 결과(web/public/stats)에서 읽음
+    statsDir: ../web/public
   # 비밀값은 dev/prod 블록에만 둔다 (default에 두면 local stage에서도 값을 요구해 실패함)
   dev:
     domain: rosterush-dev.junah.dev
@@ -26,6 +29,8 @@ params:
     certificateArn: arn:aws:acm:us-east-1:805892673937:certificate/3e36e5c0-4386-439a-8f46-5d0967f9aaa9
     dynamodbEndpoint: ""
     minSample: 100
+    publicOrigin: https://${param:domain}
+    statsDir: ""
 
 plugins:
   - serverless-offline
@@ -47,6 +52,8 @@ provider:
     DYNAMODB_ENDPOINT: ${env:DYNAMODB_ENDPOINT, param:dynamodbEndpoint}
     STATS_BUCKET: !Ref StatsBucket
     MIN_SAMPLE: ${param:minSample}
+    PUBLIC_ORIGIN: ${param:publicOrigin}
+    STATS_DIR: ${param:statsDir}
   httpApi:
     payload: "2.0"
   iam:
@@ -91,6 +98,20 @@ functions:
       - httpApi:
           method: POST
           path: /api/results
+
+  sharesCreate:
+    handler: src/shares.create
+    events:
+      - httpApi:
+          method: POST
+          path: /api/shares
+
+  sharesGet:
+    handler: src/shares.get
+    events:
+      - httpApi:
+          method: GET
+          path: /api/shares/{shareId}
 
   # 증분 집계 (UTC 기준 cron)
   # 일·수 19:00 UTC = 한국 시간 월·목 04:00 → 주 2회
@@ -403,6 +424,17 @@ resources:
               - EventType: viewer-request
                 FunctionARN: !GetAtt ViewerRequestFunction.FunctionMetadata.FunctionARN
           CacheBehaviors:
+            # 공유 상세는 내용이 바뀌지 않으므로 CloudFront에 캐시 (오리진 Cache-Control 1년 기준)
+            # /api/* 보다 먼저 와야 함 (위에서부터 첫 번째로 맞는 경로 적용)
+            - PathPattern: /api/shares/*
+              TargetOriginId: api
+              ViewerProtocolPolicy: https-only
+              AllowedMethods: [GET, HEAD]
+              CachedMethods: [GET, HEAD]
+              Compress: true
+              # Managed-CachingOptimized
+              CachePolicyId: 658327ea-f89d-4fab-a63d-7e88639e58f6
+              OriginRequestPolicyId: !Ref ApiOriginRequestPolicy
             - PathPattern: /api/*
               TargetOriginId: api
               ViewerProtocolPolicy: https-only
