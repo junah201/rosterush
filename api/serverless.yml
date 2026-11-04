@@ -12,17 +12,19 @@ params:
     ipHashSecret: local-only-secret
     originVerifySecret: ""
     minSample: 100
+  # 비밀값은 dev/prod 블록에만 둔다 (default에 두면 local stage에서도 값을 요구해 실패함)
   dev:
     domain: rosterush-dev.junah.dev
+    ipHashSecret: ${env:IP_HASH_SECRET}
+    originVerifySecret: ${env:ORIGIN_VERIFY_SECRET}
   prod:
     domain: rosterush.junah.dev
+    ipHashSecret: ${env:IP_HASH_SECRET}
+    originVerifySecret: ${env:ORIGIN_VERIFY_SECRET}
   default:
     # CloudFront용 us-east-1 인증서 (rosterush.junah.dev + rosterush-dev.junah.dev)
     certificateArn: arn:aws:acm:us-east-1:805892673937:certificate/3e36e5c0-4386-439a-8f46-5d0967f9aaa9
     dynamodbEndpoint: ""
-    ipHashSecret: ${env:IP_HASH_SECRET}
-    # CloudFront가 API 오리진에 붙이는 비밀 헤더 값 (API Gateway 직접 호출 차단)
-    originVerifySecret: ${env:ORIGIN_VERIFY_SECRET}
     minSample: 100
 
 plugins:
