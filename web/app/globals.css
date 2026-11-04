@@ -145,3 +145,21 @@
     background-size: 18px 18px;
   }
 }
+
+@keyframes rr-pop {
+  0% {
+    transform: scale(0.4);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.15);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@utility rr-pop {
+  animation: rr-pop 0.45s cubic-bezier(0.2, 0.9, 0.3, 1.4) both;
+}
