@@ -21,6 +21,7 @@ plugins:
 
 provider:
   name: aws
+  profile: rosterush
   runtime: nodejs24.x
   region: ap-northeast-2
   stage: ${opt:stage, 'dev'}
@@ -80,13 +81,15 @@ functions:
           method: POST
           path: /api/results
 
-  # 증분 집계: 초기 3일마다 → 이후 rate(7 days)로 변경
+  # 증분 집계 (UTC 기준 cron)
+  # 일·수 19:00 UTC = 한국 시간 월·목 04:00 → 주 2회
+  # 나중에 주 1회로 줄일 때: cron(0 19 ? * SUN *) (한국 시간 월 04:00)
   aggregate:
     handler: src/aggregate.main
     timeout: 300
     memorySize: 1024
     events:
-      - schedule: rate(3 days)
+      - schedule: cron(0 19 ? * SUN,WED *)
 
 custom:
   serverless-offline:
