@@ -1,1 +1,5 @@
-[{ "id": "overwatch", "category": "fps", "enabled": true }]
+[
+  { "id": "overwatch", "category": "fps", "enabled": true },
+  { "id": "genshin", "category": "hoyoverse", "enabled": true },
+  { "id": "starrail", "category": "hoyoverse", "enabled": true }
+]

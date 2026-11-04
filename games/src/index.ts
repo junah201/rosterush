@@ -1,10 +1,14 @@
 import type { GameDef, GameIndexEntry } from "@rosterush/core";
+import genshin from "../genshin.json";
 import index from "../index.json";
 import overwatch from "../overwatch.json";
+import starrail from "../starrail.json";
 
 /** 게임 추가 = JSON 파일 1개 + 등록부(index.json) 1줄 + 아래 맵 1줄 */
 const DEFS: Record<string, GameDef> = {
   overwatch: overwatch as GameDef,
+  genshin: genshin as GameDef,
+  starrail: starrail as GameDef,
 };
 
 export const gameIndex: GameIndexEntry[] = index;
