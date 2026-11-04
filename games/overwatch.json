@@ -27,16 +27,6 @@
   ],
   "characters": [
     {
-      "id": "reinhardt",
-      "addedIn": 1,
-      "groups": { "role": "tank" },
-      "names": {
-        "ko": { "full": ["라인하르트"], "short": ["라인"] },
-        "ja": { "full": ["ラインハルト"], "short": [] },
-        "en": { "full": ["Reinhardt"], "short": ["Rein"] }
-      }
-    },
-    {
       "id": "dva",
       "addedIn": 1,
       "groups": { "role": "tank" },
@@ -47,13 +37,223 @@
       }
     },
     {
-      "id": "tracer",
+      "id": "reinhardt",
+      "addedIn": 1,
+      "groups": { "role": "tank" },
+      "names": {
+        "ko": { "full": ["라인하르트"], "short": ["라인"] },
+        "ja": { "full": ["ラインハルト"], "short": ["ライン"] },
+        "en": { "full": ["Reinhardt"], "short": ["Rein"] }
+      }
+    },
+    {
+      "id": "roadhog",
+      "addedIn": 1,
+      "groups": { "role": "tank" },
+      "names": {
+        "ko": { "full": ["로드호그"], "short": ["호그"] },
+        "ja": { "full": ["ロードホッグ"], "short": ["ホッグ"] },
+        "en": { "full": ["Roadhog"], "short": ["Hog"] }
+      }
+    },
+    {
+      "id": "winston",
+      "addedIn": 1,
+      "groups": { "role": "tank" },
+      "names": {
+        "ko": { "full": ["윈스턴"], "short": [] },
+        "ja": { "full": ["ウィンストン"], "short": [] },
+        "en": { "full": ["Winston"], "short": [] }
+      }
+    },
+    {
+      "id": "zarya",
+      "addedIn": 1,
+      "groups": { "role": "tank" },
+      "names": {
+        "ko": { "full": ["자리야"], "short": [] },
+        "ja": { "full": ["ザリア"], "short": [] },
+        "en": { "full": ["Zarya"], "short": [] }
+      }
+    },
+    {
+      "id": "orisa",
+      "addedIn": 1,
+      "groups": { "role": "tank" },
+      "names": {
+        "ko": { "full": ["오리사"], "short": [] },
+        "ja": { "full": ["オリーサ"], "short": [] },
+        "en": { "full": ["Orisa"], "short": [] }
+      }
+    },
+    {
+      "id": "doomfist",
+      "addedIn": 1,
+      "groups": { "role": "tank" },
+      "names": {
+        "ko": { "full": ["둠피스트"], "short": ["둠"] },
+        "ja": { "full": ["ドゥームフィスト"], "short": ["ドゥーム"] },
+        "en": { "full": ["Doomfist"], "short": ["Doom"] }
+      }
+    },
+    {
+      "id": "wrecking_ball",
+      "addedIn": 1,
+      "groups": { "role": "tank" },
+      "names": {
+        "ko": { "full": ["레킹볼"], "short": ["햄찌"] },
+        "ja": { "full": ["レッキング・ボール"], "short": ["ハモンド"] },
+        "en": { "full": ["Wrecking Ball"], "short": ["Ball", "Hammond"] }
+      }
+    },
+    {
+      "id": "sigma",
+      "addedIn": 1,
+      "groups": { "role": "tank" },
+      "names": {
+        "ko": { "full": ["시그마"], "short": [] },
+        "ja": { "full": ["シグマ"], "short": [] },
+        "en": { "full": ["Sigma"], "short": [] }
+      }
+    },
+    {
+      "id": "junker_queen",
+      "addedIn": 1,
+      "groups": { "role": "tank" },
+      "names": {
+        "ko": { "full": ["정커퀸"], "short": ["퀸"] },
+        "ja": { "full": ["ジャンカー・クイーン"], "short": ["クイーン"] },
+        "en": { "full": ["Junker Queen"], "short": ["JQ", "Queen"] }
+      }
+    },
+    {
+      "id": "ramattra",
+      "addedIn": 1,
+      "groups": { "role": "tank" },
+      "names": {
+        "ko": { "full": ["라마트라"], "short": ["라마"] },
+        "ja": { "full": ["ラマットラ"], "short": [] },
+        "en": { "full": ["Ramattra"], "short": ["Ram"] }
+      }
+    },
+    {
+      "id": "mauga",
+      "addedIn": 1,
+      "groups": { "role": "tank" },
+      "names": {
+        "ko": { "full": ["마우가"], "short": [] },
+        "ja": { "full": ["マウガ"], "short": [] },
+        "en": { "full": ["Mauga"], "short": [] }
+      }
+    },
+    {
+      "id": "hazard",
+      "addedIn": 1,
+      "groups": { "role": "tank" },
+      "names": {
+        "ko": { "full": ["해저드"], "short": [] },
+        "ja": { "full": ["ハザード"], "short": [] },
+        "en": { "full": ["Hazard"], "short": [] }
+      }
+    },
+    {
+      "id": "domina",
+      "addedIn": 1,
+      "groups": { "role": "tank" },
+      "names": {
+        "ko": { "full": ["도미나"], "short": [] },
+        "ja": { "full": ["ドミナ"], "short": [] },
+        "en": { "full": ["Domina"], "short": [] }
+      }
+    },
+    {
+      "id": "dmon",
+      "addedIn": 1,
+      "groups": { "role": "tank" },
+      "names": {
+        "ko": { "full": ["D.Mon", "디몬"], "short": [] },
+        "ja": { "full": ["D.Mon"], "short": ["ディーモン"] },
+        "en": { "full": ["D.Mon"], "short": [] }
+      }
+    },
+    {
+      "id": "bastion",
       "addedIn": 1,
       "groups": { "role": "damage" },
       "names": {
-        "ko": { "full": ["트레이서"], "short": ["트레"] },
-        "ja": { "full": ["トレーサー"], "short": [] },
-        "en": { "full": ["Tracer"], "short": [] }
+        "ko": { "full": ["바스티온"], "short": ["바스"] },
+        "ja": { "full": ["バスティオン"], "short": [] },
+        "en": { "full": ["Bastion"], "short": [] }
+      }
+    },
+    {
+      "id": "cassidy",
+      "addedIn": 1,
+      "groups": { "role": "damage" },
+      "names": {
+        "ko": { "full": ["캐서디"], "short": ["맥크리"] },
+        "ja": { "full": ["キャスディ"], "short": ["マクリー"] },
+        "en": { "full": ["Cassidy"], "short": ["McCree", "Cass"] }
+      }
+    },
+    {
+      "id": "genji",
+      "addedIn": 1,
+      "groups": { "role": "damage" },
+      "names": {
+        "ko": { "full": ["겐지"], "short": [] },
+        "ja": { "full": ["ゲンジ"], "short": [] },
+        "en": { "full": ["Genji"], "short": [] }
+      }
+    },
+    {
+      "id": "hanzo",
+      "addedIn": 1,
+      "groups": { "role": "damage" },
+      "names": {
+        "ko": { "full": ["한조"], "short": [] },
+        "ja": { "full": ["ハンゾー"], "short": [] },
+        "en": { "full": ["Hanzo"], "short": [] }
+      }
+    },
+    {
+      "id": "junkrat",
+      "addedIn": 1,
+      "groups": { "role": "damage" },
+      "names": {
+        "ko": { "full": ["정크랫"], "short": [] },
+        "ja": { "full": ["ジャンクラット"], "short": ["ジャンクラ"] },
+        "en": { "full": ["Junkrat"], "short": [] }
+      }
+    },
+    {
+      "id": "mei",
+      "addedIn": 1,
+      "groups": { "role": "damage" },
+      "names": {
+        "ko": { "full": ["메이"], "short": [] },
+        "ja": { "full": ["メイ"], "short": [] },
+        "en": { "full": ["Mei"], "short": [] }
+      }
+    },
+    {
+      "id": "pharah",
+      "addedIn": 1,
+      "groups": { "role": "damage" },
+      "names": {
+        "ko": { "full": ["파라"], "short": [] },
+        "ja": { "full": ["ファラ"], "short": [] },
+        "en": { "full": ["Pharah"], "short": [] }
+      }
+    },
+    {
+      "id": "reaper",
+      "addedIn": 1,
+      "groups": { "role": "damage" },
+      "names": {
+        "ko": { "full": ["리퍼"], "short": [] },
+        "ja": { "full": ["リーパー"], "short": [] },
+        "en": { "full": ["Reaper"], "short": [] }
       }
     },
     {
@@ -67,6 +267,156 @@
       }
     },
     {
+      "id": "symmetra",
+      "addedIn": 1,
+      "groups": { "role": "damage" },
+      "names": {
+        "ko": { "full": ["시메트라"], "short": ["시메"] },
+        "ja": { "full": ["シンメトラ"], "short": ["シンメ"] },
+        "en": { "full": ["Symmetra"], "short": ["Sym"] }
+      }
+    },
+    {
+      "id": "torbjorn",
+      "addedIn": 1,
+      "groups": { "role": "damage" },
+      "names": {
+        "ko": { "full": ["토르비욘"], "short": ["토르"] },
+        "ja": { "full": ["トールビョーン"], "short": ["トール"] },
+        "en": { "full": ["Torbjörn", "Torbjorn"], "short": ["Torb"] }
+      }
+    },
+    {
+      "id": "tracer",
+      "addedIn": 1,
+      "groups": { "role": "damage" },
+      "names": {
+        "ko": { "full": ["트레이서"], "short": ["트레"] },
+        "ja": { "full": ["トレーサー"], "short": [] },
+        "en": { "full": ["Tracer"], "short": [] }
+      }
+    },
+    {
+      "id": "widowmaker",
+      "addedIn": 1,
+      "groups": { "role": "damage" },
+      "names": {
+        "ko": { "full": ["위도우메이커"], "short": ["위도우"] },
+        "ja": { "full": ["ウィドウメイカー"], "short": ["ウィドウ"] },
+        "en": { "full": ["Widowmaker"], "short": ["Widow"] }
+      }
+    },
+    {
+      "id": "ashe",
+      "addedIn": 1,
+      "groups": { "role": "damage" },
+      "names": {
+        "ko": { "full": ["애쉬"], "short": [] },
+        "ja": { "full": ["アッシュ"], "short": [] },
+        "en": { "full": ["Ashe"], "short": [] }
+      }
+    },
+    {
+      "id": "echo",
+      "addedIn": 1,
+      "groups": { "role": "damage" },
+      "names": {
+        "ko": { "full": ["에코"], "short": [] },
+        "ja": { "full": ["エコー"], "short": [] },
+        "en": { "full": ["Echo"], "short": [] }
+      }
+    },
+    {
+      "id": "sojourn",
+      "addedIn": 1,
+      "groups": { "role": "damage" },
+      "names": {
+        "ko": { "full": ["소전"], "short": [] },
+        "ja": { "full": ["ソジョーン"], "short": [] },
+        "en": { "full": ["Sojourn"], "short": [] }
+      }
+    },
+    {
+      "id": "venture",
+      "addedIn": 1,
+      "groups": { "role": "damage" },
+      "names": {
+        "ko": { "full": ["벤처"], "short": [] },
+        "ja": { "full": ["ベンチャー"], "short": [] },
+        "en": { "full": ["Venture"], "short": [] }
+      }
+    },
+    {
+      "id": "freja",
+      "addedIn": 1,
+      "groups": { "role": "damage" },
+      "names": {
+        "ko": { "full": ["프레야"], "short": [] },
+        "ja": { "full": ["フレイヤ"], "short": [] },
+        "en": { "full": ["Freja"], "short": [] }
+      }
+    },
+    {
+      "id": "vendetta",
+      "addedIn": 1,
+      "groups": { "role": "damage" },
+      "names": {
+        "ko": { "full": ["벤데타"], "short": [] },
+        "ja": { "full": ["ヴェンデッタ"], "short": [] },
+        "en": { "full": ["Vendetta"], "short": [] }
+      }
+    },
+    {
+      "id": "emre",
+      "addedIn": 1,
+      "groups": { "role": "damage" },
+      "names": {
+        "ko": { "full": ["엠레"], "short": [] },
+        "ja": { "full": ["エムレ"], "short": [] },
+        "en": { "full": ["Emre"], "short": [] }
+      }
+    },
+    {
+      "id": "anran",
+      "addedIn": 1,
+      "groups": { "role": "damage" },
+      "names": {
+        "ko": { "full": ["안란"], "short": [] },
+        "ja": { "full": ["アンラン"], "short": [] },
+        "en": { "full": ["Anran"], "short": [] }
+      }
+    },
+    {
+      "id": "sierra",
+      "addedIn": 1,
+      "groups": { "role": "damage" },
+      "names": {
+        "ko": { "full": ["시에라"], "short": [] },
+        "ja": { "full": ["シエラ"], "short": [] },
+        "en": { "full": ["Sierra"], "short": [] }
+      }
+    },
+    {
+      "id": "shion",
+      "addedIn": 1,
+      "groups": { "role": "damage" },
+      "names": {
+        "ko": { "full": ["시온"], "short": [] },
+        "ja": { "full": ["シオン"], "short": [] },
+        "en": { "full": ["Shion"], "short": [] }
+      }
+    },
+    {
+      "id": "lucio",
+      "addedIn": 1,
+      "groups": { "role": "support" },
+      "names": {
+        "ko": { "full": ["루시우"], "short": [] },
+        "ja": { "full": ["ルシオ"], "short": [] },
+        "en": { "full": ["Lúcio", "Lucio"], "short": [] }
+      }
+    },
+    {
       "id": "mercy",
       "addedIn": 1,
       "groups": { "role": "support" },
@@ -77,6 +427,16 @@
       }
     },
     {
+      "id": "zenyatta",
+      "addedIn": 1,
+      "groups": { "role": "support" },
+      "names": {
+        "ko": { "full": ["젠야타"], "short": ["젠"] },
+        "ja": { "full": ["ゼニヤッタ"], "short": [] },
+        "en": { "full": ["Zenyatta"], "short": ["Zen"] }
+      }
+    },
+    {
       "id": "ana",
       "addedIn": 1,
       "groups": { "role": "support" },
@@ -84,6 +444,126 @@
         "ko": { "full": ["아나"], "short": [] },
         "ja": { "full": ["アナ"], "short": [] },
         "en": { "full": ["Ana"], "short": [] }
+      }
+    },
+    {
+      "id": "sombra",
+      "addedIn": 1,
+      "groups": { "role": "support" },
+      "names": {
+        "ko": { "full": ["솜브라"], "short": [] },
+        "ja": { "full": ["ソンブラ"], "short": [] },
+        "en": { "full": ["Sombra"], "short": [] }
+      }
+    },
+    {
+      "id": "moira",
+      "addedIn": 1,
+      "groups": { "role": "support" },
+      "names": {
+        "ko": { "full": ["모이라"], "short": [] },
+        "ja": { "full": ["モイラ"], "short": [] },
+        "en": { "full": ["Moira"], "short": [] }
+      }
+    },
+    {
+      "id": "brigitte",
+      "addedIn": 1,
+      "groups": { "role": "support" },
+      "names": {
+        "ko": { "full": ["브리기테"], "short": ["브리"] },
+        "ja": { "full": ["ブリギッテ"], "short": [] },
+        "en": { "full": ["Brigitte"], "short": ["Brig"] }
+      }
+    },
+    {
+      "id": "baptiste",
+      "addedIn": 1,
+      "groups": { "role": "support" },
+      "names": {
+        "ko": { "full": ["바티스트"], "short": ["바티"] },
+        "ja": { "full": ["バティスト"], "short": [] },
+        "en": { "full": ["Baptiste"], "short": ["Bap"] }
+      }
+    },
+    {
+      "id": "kiriko",
+      "addedIn": 1,
+      "groups": { "role": "support" },
+      "names": {
+        "ko": { "full": ["키리코"], "short": [] },
+        "ja": { "full": ["キリコ"], "short": [] },
+        "en": { "full": ["Kiriko"], "short": [] }
+      }
+    },
+    {
+      "id": "lifeweaver",
+      "addedIn": 1,
+      "groups": { "role": "support" },
+      "names": {
+        "ko": { "full": ["라이프위버"], "short": ["위버"] },
+        "ja": { "full": ["ライフウィーバー"], "short": [] },
+        "en": { "full": ["Lifeweaver"], "short": ["LW"] }
+      }
+    },
+    {
+      "id": "illari",
+      "addedIn": 1,
+      "groups": { "role": "support" },
+      "names": {
+        "ko": { "full": ["일리아리"], "short": [] },
+        "ja": { "full": ["イラリー"], "short": [] },
+        "en": { "full": ["Illari"], "short": [] }
+      }
+    },
+    {
+      "id": "juno",
+      "addedIn": 1,
+      "groups": { "role": "support" },
+      "names": {
+        "ko": { "full": ["주노"], "short": [] },
+        "ja": { "full": ["ジュノ"], "short": [] },
+        "en": { "full": ["Juno"], "short": [] }
+      }
+    },
+    {
+      "id": "wuyang",
+      "addedIn": 1,
+      "groups": { "role": "support" },
+      "names": {
+        "ko": { "full": ["우양"], "short": [] },
+        "ja": { "full": ["ウーヤン"], "short": [] },
+        "en": { "full": ["Wuyang"], "short": [] }
+      }
+    },
+    {
+      "id": "mizuki",
+      "addedIn": 1,
+      "groups": { "role": "support" },
+      "names": {
+        "ko": { "full": ["미즈키"], "short": [] },
+        "ja": { "full": ["ミズキ"], "short": [] },
+        "en": { "full": ["Mizuki"], "short": [] }
+      }
+    },
+    {
+      "id": "jetpack_cat",
+      "addedIn": 1,
+      "groups": { "role": "support" },
+      "names": {
+        "ko": { "full": ["제트팩 캣"], "short": [] },
+        "ja": { "full": ["ジェットパック・キャット"], "short": [] },
+        "en": { "full": ["Jetpack Cat"], "short": [] }
+      }
+    },
+    {
+      "id": "doctrine",
+      "addedIn": 1,
+      "groups": { "role": "support" },
+      "names": {
+        "ko": { "full": ["독트린"], "short": [] },
+        "ja": { "full": ["ドクトリン"], "short": [] },
+        "en": { "full": ["Doctrine"], "short": [] }
       }
     }
   ]
