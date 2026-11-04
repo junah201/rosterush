@@ -1,0 +1,987 @@
+{
+  "id": "starrail",
+  "rosterVer": 1,
+  "name": { "ko": "붕괴: 스타레일", "ja": "崩壊：スターレイル", "en": "Honkai: Star Rail" },
+  "groupings": [
+    {
+      "id": "path",
+      "name": { "ko": "운명의 길", "ja": "運命", "en": "Path" },
+      "groups": [
+        {
+          "id": "destruction",
+          "name": { "ko": "파멸", "ja": "壊滅", "en": "Destruction" },
+          "color": "#ffadad"
+        },
+        {
+          "id": "hunt",
+          "name": { "ko": "수렵", "ja": "巡狩", "en": "The Hunt" },
+          "color": "#a0e7e5"
+        },
+        {
+          "id": "erudition",
+          "name": { "ko": "지식", "ja": "知恵", "en": "Erudition" },
+          "color": "#d0c4ff"
+        },
+        {
+          "id": "harmony",
+          "name": { "ko": "화합", "ja": "調和", "en": "Harmony" },
+          "color": "#ffd6a5"
+        },
+        {
+          "id": "nihility",
+          "name": { "ko": "공허", "ja": "虚無", "en": "Nihility" },
+          "color": "#cdb4db"
+        },
+        {
+          "id": "preservation",
+          "name": { "ko": "보존", "ja": "存護", "en": "Preservation" },
+          "color": "#a0c4ff"
+        },
+        {
+          "id": "abundance",
+          "name": { "ko": "풍요", "ja": "豊穣", "en": "Abundance" },
+          "color": "#caffbf"
+        },
+        {
+          "id": "remembrance",
+          "name": { "ko": "기억", "ja": "記憶", "en": "Remembrance" },
+          "color": "#ffc6ff"
+        },
+        {
+          "id": "elation",
+          "name": { "ko": "환락", "ja": "愉悦", "en": "Elation" },
+          "color": "#fdffb6"
+        }
+      ]
+    },
+    {
+      "id": "element",
+      "name": { "ko": "속성", "ja": "属性", "en": "Combat Type" },
+      "groups": [
+        {
+          "id": "physical",
+          "name": { "ko": "물리", "ja": "物理", "en": "Physical" },
+          "color": "#c8c8c8"
+        },
+        {
+          "id": "fire",
+          "name": { "ko": "화염", "ja": "炎", "en": "Fire" },
+          "color": "#ff8a65"
+        },
+        {
+          "id": "ice",
+          "name": { "ko": "얼음", "ja": "氷", "en": "Ice" },
+          "color": "#8fd3ff"
+        },
+        {
+          "id": "lightning",
+          "name": { "ko": "번개", "ja": "雷", "en": "Lightning" },
+          "color": "#c792ea"
+        },
+        {
+          "id": "wind",
+          "name": { "ko": "바람", "ja": "風", "en": "Wind" },
+          "color": "#6ee7b7"
+        },
+        {
+          "id": "quantum",
+          "name": { "ko": "양자", "ja": "量子", "en": "Quantum" },
+          "color": "#8c8ff5"
+        },
+        {
+          "id": "imaginary",
+          "name": { "ko": "허수", "ja": "虚数", "en": "Imaginary" },
+          "color": "#ffd54f"
+        }
+      ]
+    }
+  ],
+  "characters": [
+    {
+      "id": "trailblazer",
+      "addedIn": 1,
+      "groups": { "path": "destruction", "element": "physical" },
+      "names": {
+        "ko": { "full": ["개척자", "스텔레", "카일루스"], "short": [] },
+        "ja": {
+          "full": ["開拓者", "かいたくしゃ", "星", "ほし", "穹", "そら"],
+          "short": ["主人公"]
+        },
+        "en": { "full": ["Trailblazer", "Stelle", "Caelus"], "short": [] }
+      }
+    },
+    {
+      "id": "march_7th",
+      "addedIn": 1,
+      "groups": { "path": "preservation", "element": "ice" },
+      "names": {
+        "ko": { "full": ["Mar. 7th", "Mar. 7th·수렵"], "short": ["삼칠이"] },
+        "ja": { "full": ["三月なのか", "みつきなのか"], "short": ["なのか"] },
+        "en": { "full": ["March 7th"], "short": ["March"] }
+      }
+    },
+    {
+      "id": "dan_heng",
+      "addedIn": 1,
+      "groups": { "path": "hunt", "element": "wind" },
+      "names": {
+        "ko": { "full": ["단항"], "short": [] },
+        "ja": { "full": ["丹恒", "たんこう"], "short": [] },
+        "en": { "full": ["Dan Heng"], "short": [] }
+      }
+    },
+    {
+      "id": "himeko",
+      "addedIn": 1,
+      "groups": { "path": "erudition", "element": "fire" },
+      "names": {
+        "ko": { "full": ["히메코"], "short": [] },
+        "ja": { "full": ["姫子", "ひめこ"], "short": [] },
+        "en": { "full": ["Himeko"], "short": [] }
+      }
+    },
+    {
+      "id": "welt",
+      "addedIn": 1,
+      "groups": { "path": "nihility", "element": "imaginary" },
+      "names": {
+        "ko": { "full": ["웰트"], "short": [] },
+        "ja": { "full": ["ヴェルト"], "short": [] },
+        "en": { "full": ["Welt"], "short": [] }
+      }
+    },
+    {
+      "id": "arlan",
+      "addedIn": 1,
+      "groups": { "path": "destruction", "element": "lightning" },
+      "names": {
+        "ko": { "full": ["아를란"], "short": [] },
+        "ja": { "full": ["アーラン"], "short": [] },
+        "en": { "full": ["Arlan"], "short": [] }
+      }
+    },
+    {
+      "id": "asta",
+      "addedIn": 1,
+      "groups": { "path": "harmony", "element": "fire" },
+      "names": {
+        "ko": { "full": ["아스타"], "short": [] },
+        "ja": { "full": ["アスター"], "short": [] },
+        "en": { "full": ["Asta"], "short": [] }
+      }
+    },
+    {
+      "id": "herta",
+      "addedIn": 1,
+      "groups": { "path": "erudition", "element": "ice" },
+      "names": {
+        "ko": { "full": ["헤르타"], "short": [] },
+        "ja": { "full": ["ヘルタ"], "short": [] },
+        "en": { "full": ["Herta"], "short": [] }
+      }
+    },
+    {
+      "id": "serval",
+      "addedIn": 1,
+      "groups": { "path": "erudition", "element": "lightning" },
+      "names": {
+        "ko": { "full": ["서벌"], "short": [] },
+        "ja": { "full": ["セーバル"], "short": [] },
+        "en": { "full": ["Serval"], "short": [] }
+      }
+    },
+    {
+      "id": "natasha",
+      "addedIn": 1,
+      "groups": { "path": "abundance", "element": "physical" },
+      "names": {
+        "ko": { "full": ["나타샤"], "short": [] },
+        "ja": { "full": ["ナターシャ"], "short": [] },
+        "en": { "full": ["Natasha"], "short": [] }
+      }
+    },
+    {
+      "id": "pela",
+      "addedIn": 1,
+      "groups": { "path": "nihility", "element": "ice" },
+      "names": {
+        "ko": { "full": ["페라"], "short": [] },
+        "ja": { "full": ["ペラ"], "short": [] },
+        "en": { "full": ["Pela"], "short": [] }
+      }
+    },
+    {
+      "id": "sampo",
+      "addedIn": 1,
+      "groups": { "path": "nihility", "element": "wind" },
+      "names": {
+        "ko": { "full": ["삼포"], "short": [] },
+        "ja": { "full": ["サンポ"], "short": [] },
+        "en": { "full": ["Sampo"], "short": [] }
+      }
+    },
+    {
+      "id": "hook",
+      "addedIn": 1,
+      "groups": { "path": "destruction", "element": "fire" },
+      "names": {
+        "ko": { "full": ["후크"], "short": [] },
+        "ja": { "full": ["フック"], "short": [] },
+        "en": { "full": ["Hook"], "short": [] }
+      }
+    },
+    {
+      "id": "qingque",
+      "addedIn": 1,
+      "groups": { "path": "erudition", "element": "quantum" },
+      "names": {
+        "ko": { "full": ["청작"], "short": [] },
+        "ja": { "full": ["青雀", "せいじゃく"], "short": [] },
+        "en": { "full": ["Qingque"], "short": [] }
+      }
+    },
+    {
+      "id": "tingyun",
+      "addedIn": 1,
+      "groups": { "path": "harmony", "element": "lightning" },
+      "names": {
+        "ko": { "full": ["정운"], "short": [] },
+        "ja": { "full": ["停雲", "ていうん"], "short": [] },
+        "en": { "full": ["Tingyun"], "short": [] }
+      }
+    },
+    {
+      "id": "sushang",
+      "addedIn": 1,
+      "groups": { "path": "hunt", "element": "physical" },
+      "names": {
+        "ko": { "full": ["소상"], "short": [] },
+        "ja": { "full": ["素裳", "そしょう"], "short": [] },
+        "en": { "full": ["Sushang"], "short": [] }
+      }
+    },
+    {
+      "id": "yanqing",
+      "addedIn": 1,
+      "groups": { "path": "hunt", "element": "ice" },
+      "names": {
+        "ko": { "full": ["연경"], "short": [] },
+        "ja": { "full": ["彦卿", "げんきょう"], "short": [] },
+        "en": { "full": ["Yanqing"], "short": [] }
+      }
+    },
+    {
+      "id": "bronya",
+      "addedIn": 1,
+      "groups": { "path": "harmony", "element": "wind" },
+      "names": {
+        "ko": { "full": ["브로냐"], "short": [] },
+        "ja": { "full": ["ブローニャ"], "short": [] },
+        "en": { "full": ["Bronya"], "short": [] }
+      }
+    },
+    {
+      "id": "gepard",
+      "addedIn": 1,
+      "groups": { "path": "preservation", "element": "ice" },
+      "names": {
+        "ko": { "full": ["게파드"], "short": [] },
+        "ja": { "full": ["ジェパード"], "short": [] },
+        "en": { "full": ["Gepard"], "short": [] }
+      }
+    },
+    {
+      "id": "clara",
+      "addedIn": 1,
+      "groups": { "path": "destruction", "element": "physical" },
+      "names": {
+        "ko": { "full": ["클라라"], "short": [] },
+        "ja": { "full": ["クラーラ"], "short": [] },
+        "en": { "full": ["Clara"], "short": [] }
+      }
+    },
+    {
+      "id": "seele",
+      "addedIn": 1,
+      "groups": { "path": "hunt", "element": "quantum" },
+      "names": {
+        "ko": { "full": ["제레"], "short": [] },
+        "ja": { "full": ["ゼーレ"], "short": [] },
+        "en": { "full": ["Seele"], "short": [] }
+      }
+    },
+    {
+      "id": "jing_yuan",
+      "addedIn": 1,
+      "groups": { "path": "erudition", "element": "lightning" },
+      "names": {
+        "ko": { "full": ["경원"], "short": [] },
+        "ja": { "full": ["景元", "けいげん"], "short": [] },
+        "en": { "full": ["Jing Yuan"], "short": [] }
+      }
+    },
+    {
+      "id": "bailu",
+      "addedIn": 1,
+      "groups": { "path": "abundance", "element": "lightning" },
+      "names": {
+        "ko": { "full": ["백로"], "short": [] },
+        "ja": { "full": ["白露", "はくろ"], "short": [] },
+        "en": { "full": ["Bailu"], "short": [] }
+      }
+    },
+    {
+      "id": "silver_wolf",
+      "addedIn": 1,
+      "groups": { "path": "nihility", "element": "quantum" },
+      "names": {
+        "ko": { "full": ["은랑"], "short": [] },
+        "ja": { "full": ["銀狼", "ぎんろう"], "short": [] },
+        "en": { "full": ["Silver Wolf"], "short": [] }
+      }
+    },
+    {
+      "id": "luka",
+      "addedIn": 1,
+      "groups": { "path": "nihility", "element": "physical" },
+      "names": {
+        "ko": { "full": ["루카"], "short": [] },
+        "ja": { "full": ["ルカ"], "short": [] },
+        "en": { "full": ["Luka"], "short": [] }
+      }
+    },
+    {
+      "id": "luocha",
+      "addedIn": 1,
+      "groups": { "path": "abundance", "element": "imaginary" },
+      "names": {
+        "ko": { "full": ["나찰"], "short": [] },
+        "ja": { "full": ["羅刹", "らせつ"], "short": [] },
+        "en": { "full": ["Luocha"], "short": [] }
+      }
+    },
+    {
+      "id": "yukong",
+      "addedIn": 1,
+      "groups": { "path": "harmony", "element": "imaginary" },
+      "names": {
+        "ko": { "full": ["어공"], "short": [] },
+        "ja": { "full": ["御空", "みそら"], "short": [] },
+        "en": { "full": ["Yukong"], "short": [] }
+      }
+    },
+    {
+      "id": "blade",
+      "addedIn": 1,
+      "groups": { "path": "destruction", "element": "wind" },
+      "names": {
+        "ko": { "full": ["블레이드"], "short": [] },
+        "ja": { "full": ["刃", "じん"], "short": [] },
+        "en": { "full": ["Blade"], "short": [] }
+      }
+    },
+    {
+      "id": "kafka",
+      "addedIn": 1,
+      "groups": { "path": "nihility", "element": "lightning" },
+      "names": {
+        "ko": { "full": ["카프카"], "short": [] },
+        "ja": { "full": ["カフカ"], "short": [] },
+        "en": { "full": ["Kafka"], "short": [] }
+      }
+    },
+    {
+      "id": "dan_heng_imbibitor_lunae",
+      "addedIn": 1,
+      "groups": { "path": "destruction", "element": "imaginary" },
+      "names": {
+        "ko": { "full": ["단항·음월"], "short": ["음월"] },
+        "ja": { "full": ["丹恒・飲月", "たんこういんげつ"], "short": ["飲月", "いんげつ"] },
+        "en": { "full": ["Dan Heng Imbibitor Lunae"], "short": ["Imbibitor Lunae", "DHIL"] }
+      }
+    },
+    {
+      "id": "fu_xuan",
+      "addedIn": 1,
+      "groups": { "path": "preservation", "element": "quantum" },
+      "names": {
+        "ko": { "full": ["부현"], "short": [] },
+        "ja": { "full": ["符玄", "ふげん"], "short": [] },
+        "en": { "full": ["Fu Xuan"], "short": [] }
+      }
+    },
+    {
+      "id": "lynx",
+      "addedIn": 1,
+      "groups": { "path": "abundance", "element": "quantum" },
+      "names": {
+        "ko": { "full": ["링스"], "short": [] },
+        "ja": { "full": ["リンクス"], "short": [] },
+        "en": { "full": ["Lynx"], "short": [] }
+      }
+    },
+    {
+      "id": "jingliu",
+      "addedIn": 1,
+      "groups": { "path": "destruction", "element": "ice" },
+      "names": {
+        "ko": { "full": ["경류"], "short": [] },
+        "ja": { "full": ["鏡流", "きょうりゅう"], "short": [] },
+        "en": { "full": ["Jingliu"], "short": [] }
+      }
+    },
+    {
+      "id": "topaz_and_numby",
+      "addedIn": 1,
+      "groups": { "path": "hunt", "element": "fire" },
+      "names": {
+        "ko": { "full": ["토파즈&복순이", "토파즈 복순이"], "short": ["토파즈"] },
+        "ja": { "full": ["トパーズ＆カブ", "トパーズカブ"], "short": ["トパーズ"] },
+        "en": { "full": ["Topaz & Numby", "Topaz and Numby"], "short": ["Topaz"] }
+      }
+    },
+    {
+      "id": "guinaifen",
+      "addedIn": 1,
+      "groups": { "path": "nihility", "element": "fire" },
+      "names": {
+        "ko": { "full": ["계네빈"], "short": [] },
+        "ja": { "full": ["桂乃芬", "けいないふん"], "short": [] },
+        "en": { "full": ["Guinaifen"], "short": [] }
+      }
+    },
+    {
+      "id": "huohuo",
+      "addedIn": 1,
+      "groups": { "path": "abundance", "element": "wind" },
+      "names": {
+        "ko": { "full": ["곽향"], "short": [] },
+        "ja": { "full": ["フォフォ"], "short": [] },
+        "en": { "full": ["Huohuo"], "short": [] }
+      }
+    },
+    {
+      "id": "argenti",
+      "addedIn": 1,
+      "groups": { "path": "erudition", "element": "physical" },
+      "names": {
+        "ko": { "full": ["아젠티"], "short": [] },
+        "ja": { "full": ["アルジェンティ"], "short": [] },
+        "en": { "full": ["Argenti"], "short": [] }
+      }
+    },
+    {
+      "id": "hanya",
+      "addedIn": 1,
+      "groups": { "path": "harmony", "element": "physical" },
+      "names": {
+        "ko": { "full": ["한아"], "short": [] },
+        "ja": { "full": ["寒鴉", "かんあ"], "short": [] },
+        "en": { "full": ["Hanya"], "short": [] }
+      }
+    },
+    {
+      "id": "ruan_mei",
+      "addedIn": 1,
+      "groups": { "path": "harmony", "element": "ice" },
+      "names": {
+        "ko": { "full": ["완·매"], "short": [] },
+        "ja": { "full": ["ルアン・メェイ"], "short": [] },
+        "en": { "full": ["Ruan Mei"], "short": [] }
+      }
+    },
+    {
+      "id": "dr_ratio",
+      "addedIn": 1,
+      "groups": { "path": "hunt", "element": "imaginary" },
+      "names": {
+        "ko": { "full": ["Dr. 레이시오"], "short": ["레이시오"] },
+        "ja": { "full": ["Dr.レイシオ"], "short": ["レイシオ"] },
+        "en": { "full": ["Dr. Ratio"], "short": ["Ratio"] }
+      }
+    },
+    {
+      "id": "xueyi",
+      "addedIn": 1,
+      "groups": { "path": "destruction", "element": "quantum" },
+      "names": {
+        "ko": { "full": ["설의"], "short": [] },
+        "ja": { "full": ["雪衣", "せつい"], "short": [] },
+        "en": { "full": ["Xueyi"], "short": [] }
+      }
+    },
+    {
+      "id": "black_swan",
+      "addedIn": 1,
+      "groups": { "path": "nihility", "element": "wind" },
+      "names": {
+        "ko": { "full": ["블랙 스완"], "short": ["블스"] },
+        "ja": { "full": ["ブラックスワン"], "short": [] },
+        "en": { "full": ["Black Swan"], "short": [] }
+      }
+    },
+    {
+      "id": "sparkle",
+      "addedIn": 1,
+      "groups": { "path": "harmony", "element": "quantum" },
+      "names": {
+        "ko": { "full": ["스파클"], "short": [] },
+        "ja": { "full": ["花火", "はなび"], "short": [] },
+        "en": { "full": ["Sparkle"], "short": [] }
+      }
+    },
+    {
+      "id": "misha",
+      "addedIn": 1,
+      "groups": { "path": "destruction", "element": "ice" },
+      "names": {
+        "ko": { "full": ["미샤"], "short": [] },
+        "ja": { "full": ["ミーシャ"], "short": [] },
+        "en": { "full": ["Misha"], "short": [] }
+      }
+    },
+    {
+      "id": "acheron",
+      "addedIn": 1,
+      "groups": { "path": "nihility", "element": "lightning" },
+      "names": {
+        "ko": { "full": ["아케론"], "short": [] },
+        "ja": { "full": ["黄泉", "よみ"], "short": [] },
+        "en": { "full": ["Acheron"], "short": [] }
+      }
+    },
+    {
+      "id": "aventurine",
+      "addedIn": 1,
+      "groups": { "path": "preservation", "element": "imaginary" },
+      "names": {
+        "ko": { "full": ["어벤츄린"], "short": [] },
+        "ja": { "full": ["アベンチュリン"], "short": [] },
+        "en": { "full": ["Aventurine"], "short": [] }
+      }
+    },
+    {
+      "id": "gallagher",
+      "addedIn": 1,
+      "groups": { "path": "abundance", "element": "fire" },
+      "names": {
+        "ko": { "full": ["갤러거"], "short": [] },
+        "ja": { "full": ["ギャラガー"], "short": [] },
+        "en": { "full": ["Gallagher"], "short": [] }
+      }
+    },
+    {
+      "id": "robin",
+      "addedIn": 1,
+      "groups": { "path": "harmony", "element": "physical" },
+      "names": {
+        "ko": { "full": ["로빈"], "short": [] },
+        "ja": { "full": ["ロビン"], "short": [] },
+        "en": { "full": ["Robin"], "short": [] }
+      }
+    },
+    {
+      "id": "boothill",
+      "addedIn": 1,
+      "groups": { "path": "hunt", "element": "physical" },
+      "names": {
+        "ko": { "full": ["부트힐"], "short": [] },
+        "ja": { "full": ["ブートヒル"], "short": [] },
+        "en": { "full": ["Boothill"], "short": [] }
+      }
+    },
+    {
+      "id": "firefly",
+      "addedIn": 1,
+      "groups": { "path": "destruction", "element": "fire" },
+      "names": {
+        "ko": { "full": ["반디"], "short": [] },
+        "ja": { "full": ["ホタル"], "short": [] },
+        "en": { "full": ["Firefly"], "short": [] }
+      }
+    },
+    {
+      "id": "jade",
+      "addedIn": 1,
+      "groups": { "path": "erudition", "element": "quantum" },
+      "names": {
+        "ko": { "full": ["제이드"], "short": [] },
+        "ja": { "full": ["ジェイド"], "short": [] },
+        "en": { "full": ["Jade"], "short": [] }
+      }
+    },
+    {
+      "id": "yunli",
+      "addedIn": 1,
+      "groups": { "path": "destruction", "element": "physical" },
+      "names": {
+        "ko": { "full": ["운리"], "short": [] },
+        "ja": { "full": ["雲璃", "うんり"], "short": [] },
+        "en": { "full": ["Yunli"], "short": [] }
+      }
+    },
+    {
+      "id": "jiaoqiu",
+      "addedIn": 1,
+      "groups": { "path": "nihility", "element": "fire" },
+      "names": {
+        "ko": { "full": ["초구"], "short": [] },
+        "ja": { "full": ["椒丘", "しょうきゅう"], "short": [] },
+        "en": { "full": ["Jiaoqiu"], "short": [] }
+      }
+    },
+    {
+      "id": "feixiao",
+      "addedIn": 1,
+      "groups": { "path": "hunt", "element": "wind" },
+      "names": {
+        "ko": { "full": ["비소"], "short": [] },
+        "ja": { "full": ["飛霄", "ひしょう"], "short": [] },
+        "en": { "full": ["Feixiao"], "short": [] }
+      }
+    },
+    {
+      "id": "lingsha",
+      "addedIn": 1,
+      "groups": { "path": "abundance", "element": "fire" },
+      "names": {
+        "ko": { "full": ["영사"], "short": [] },
+        "ja": { "full": ["霊砂", "れいさ"], "short": [] },
+        "en": { "full": ["Lingsha"], "short": [] }
+      }
+    },
+    {
+      "id": "moze",
+      "addedIn": 1,
+      "groups": { "path": "hunt", "element": "lightning" },
+      "names": {
+        "ko": { "full": ["맥택"], "short": [] },
+        "ja": { "full": ["モゼ"], "short": [] },
+        "en": { "full": ["Moze"], "short": [] }
+      }
+    },
+    {
+      "id": "rappa",
+      "addedIn": 1,
+      "groups": { "path": "erudition", "element": "imaginary" },
+      "names": {
+        "ko": { "full": ["라파"], "short": [] },
+        "ja": { "full": ["乱破", "らっぱ"], "short": [] },
+        "en": { "full": ["Rappa"], "short": [] }
+      }
+    },
+    {
+      "id": "sunday",
+      "addedIn": 1,
+      "groups": { "path": "harmony", "element": "imaginary" },
+      "names": {
+        "ko": { "full": ["선데이"], "short": [] },
+        "ja": { "full": ["サンデー"], "short": [] },
+        "en": { "full": ["Sunday"], "short": [] }
+      }
+    },
+    {
+      "id": "fugue",
+      "addedIn": 1,
+      "groups": { "path": "nihility", "element": "fire" },
+      "names": {
+        "ko": { "full": ["망귀인"], "short": [] },
+        "ja": { "full": ["帰忘の流離人", "きぼうのるりじん"], "short": [] },
+        "en": { "full": ["Fugue"], "short": [] }
+      }
+    },
+    {
+      "id": "the_herta",
+      "addedIn": 1,
+      "groups": { "path": "erudition", "element": "ice" },
+      "names": {
+        "ko": { "full": ["더 헤르타"], "short": [] },
+        "ja": { "full": ["マダム・ヘルタ"], "short": [] },
+        "en": { "full": ["The Herta"], "short": [] }
+      }
+    },
+    {
+      "id": "aglaea",
+      "addedIn": 1,
+      "groups": { "path": "remembrance", "element": "lightning" },
+      "names": {
+        "ko": { "full": ["아글라이아"], "short": [] },
+        "ja": { "full": ["アグライア"], "short": [] },
+        "en": { "full": ["Aglaea"], "short": [] }
+      }
+    },
+    {
+      "id": "tribbie",
+      "addedIn": 1,
+      "groups": { "path": "harmony", "element": "quantum" },
+      "names": {
+        "ko": { "full": ["트리비"], "short": [] },
+        "ja": { "full": ["トリビー"], "short": [] },
+        "en": { "full": ["Tribbie"], "short": [] }
+      }
+    },
+    {
+      "id": "mydei",
+      "addedIn": 1,
+      "groups": { "path": "destruction", "element": "imaginary" },
+      "names": {
+        "ko": { "full": ["마이데이"], "short": [] },
+        "ja": { "full": ["モーディス"], "short": [] },
+        "en": { "full": ["Mydei"], "short": [] }
+      }
+    },
+    {
+      "id": "castorice",
+      "addedIn": 1,
+      "groups": { "path": "remembrance", "element": "quantum" },
+      "names": {
+        "ko": { "full": ["카스토리스"], "short": [] },
+        "ja": { "full": ["キャストリス"], "short": [] },
+        "en": { "full": ["Castorice"], "short": [] }
+      }
+    },
+    {
+      "id": "anaxa",
+      "addedIn": 1,
+      "groups": { "path": "erudition", "element": "wind" },
+      "names": {
+        "ko": { "full": ["아낙사"], "short": [] },
+        "ja": { "full": ["アナイクス"], "short": [] },
+        "en": { "full": ["Anaxa"], "short": [] }
+      }
+    },
+    {
+      "id": "hyacine",
+      "addedIn": 1,
+      "groups": { "path": "remembrance", "element": "wind" },
+      "names": {
+        "ko": { "full": ["히아킨"], "short": [] },
+        "ja": { "full": ["ヒアンシー"], "short": [] },
+        "en": { "full": ["Hyacine"], "short": [] }
+      }
+    },
+    {
+      "id": "cipher",
+      "addedIn": 1,
+      "groups": { "path": "nihility", "element": "quantum" },
+      "names": {
+        "ko": { "full": ["사이퍼"], "short": [] },
+        "ja": { "full": ["サフェル"], "short": [] },
+        "en": { "full": ["Cipher"], "short": [] }
+      }
+    },
+    {
+      "id": "phainon",
+      "addedIn": 1,
+      "groups": { "path": "destruction", "element": "physical" },
+      "names": {
+        "ko": { "full": ["파이논"], "short": [] },
+        "ja": { "full": ["ファイノン"], "short": [] },
+        "en": { "full": ["Phainon"], "short": [] }
+      }
+    },
+    {
+      "id": "saber",
+      "addedIn": 1,
+      "groups": { "path": "destruction", "element": "wind" },
+      "names": {
+        "ko": { "full": ["세이버"], "short": [] },
+        "ja": { "full": ["セイバー"], "short": [] },
+        "en": { "full": ["Saber"], "short": [] }
+      }
+    },
+    {
+      "id": "archer",
+      "addedIn": 1,
+      "groups": { "path": "hunt", "element": "quantum" },
+      "names": {
+        "ko": { "full": ["아처"], "short": [] },
+        "ja": { "full": ["アーチャー"], "short": [] },
+        "en": { "full": ["Archer"], "short": [] }
+      }
+    },
+    {
+      "id": "hysilens",
+      "addedIn": 1,
+      "groups": { "path": "nihility", "element": "physical" },
+      "names": {
+        "ko": { "full": ["히실렌스"], "short": [] },
+        "ja": { "full": ["セイレンス"], "short": [] },
+        "en": { "full": ["Hysilens"], "short": [] }
+      }
+    },
+    {
+      "id": "cerydra",
+      "addedIn": 1,
+      "groups": { "path": "harmony", "element": "wind" },
+      "names": {
+        "ko": { "full": ["케리드라"], "short": [] },
+        "ja": { "full": ["ケリュドラ"], "short": [] },
+        "en": { "full": ["Cerydra"], "short": [] }
+      }
+    },
+    {
+      "id": "evernight",
+      "addedIn": 1,
+      "groups": { "path": "remembrance", "element": "ice" },
+      "names": {
+        "ko": { "full": ["에버나이트"], "short": [] },
+        "ja": { "full": ["長夜月", "ながよづき"], "short": [] },
+        "en": { "full": ["Evernight"], "short": [] }
+      }
+    },
+    {
+      "id": "dan_heng_permansor_terrae",
+      "addedIn": 1,
+      "groups": { "path": "preservation", "element": "physical" },
+      "names": {
+        "ko": { "full": ["단항·등황"], "short": ["등황"] },
+        "ja": { "full": ["丹恒・騰荒", "たんこうとうこう"], "short": ["騰荒", "とうこう"] },
+        "en": { "full": ["Dan Heng Permansor Terrae"], "short": ["Permansor Terrae"] }
+      }
+    },
+    {
+      "id": "cyrene",
+      "addedIn": 1,
+      "groups": { "path": "remembrance", "element": "ice" },
+      "names": {
+        "ko": { "full": ["키레네"], "short": [] },
+        "ja": { "full": ["キュレネ"], "short": [] },
+        "en": { "full": ["Cyrene"], "short": [] }
+      }
+    },
+    {
+      "id": "the_dahlia",
+      "addedIn": 1,
+      "groups": { "path": "nihility", "element": "fire" },
+      "names": {
+        "ko": { "full": ["달리아", "더 달리아"], "short": [] },
+        "ja": { "full": ["ダリア"], "short": [] },
+        "en": { "full": ["The Dahlia"], "short": ["Dahlia", "Constance"] }
+      }
+    },
+    {
+      "id": "yao_guang",
+      "addedIn": 1,
+      "groups": { "path": "elation", "element": "physical" },
+      "names": {
+        "ko": { "full": ["효광"], "short": [] },
+        "ja": { "full": ["爻光", "こうこう"], "short": [] },
+        "en": { "full": ["Yao Guang"], "short": [] }
+      }
+    },
+    {
+      "id": "sparxie",
+      "addedIn": 1,
+      "groups": { "path": "elation", "element": "fire" },
+      "names": {
+        "ko": { "full": ["스파키"], "short": [] },
+        "ja": { "full": ["火花", "ひばな"], "short": [] },
+        "en": { "full": ["Sparxie"], "short": [] }
+      }
+    },
+    {
+      "id": "ashveil",
+      "addedIn": 1,
+      "groups": { "path": "hunt", "element": "lightning" },
+      "names": {
+        "ko": { "full": ["애쉬베일"], "short": [] },
+        "ja": { "full": ["不死途", "しなず"], "short": [] },
+        "en": { "full": ["Ashveil"], "short": [] }
+      }
+    },
+    {
+      "id": "silver_wolf_lv_999",
+      "addedIn": 1,
+      "groups": { "path": "elation", "element": "imaginary" },
+      "names": {
+        "ko": { "full": ["은랑 LV.999"], "short": [] },
+        "ja": { "full": ["銀狼LV.999", "ぎんろうLV.999"], "short": [] },
+        "en": { "full": ["Silver Wolf LV.999"], "short": [] }
+      }
+    },
+    {
+      "id": "evanescia",
+      "addedIn": 1,
+      "groups": { "path": "elation", "element": "physical" },
+      "names": {
+        "ko": { "full": ["에바네시아"], "short": [] },
+        "ja": { "full": ["緋英", "ひえい"], "short": [] },
+        "en": { "full": ["Evanescia"], "short": [] }
+      }
+    },
+    {
+      "id": "mortenax_blade",
+      "addedIn": 1,
+      "groups": { "path": "nihility", "element": "fire" },
+      "names": {
+        "ko": { "full": ["천야·블레이드"], "short": ["천야"] },
+        "ja": { "full": ["千冶・刃", "せんやじん"], "short": ["千冶", "せんや"] },
+        "en": { "full": ["Mortenax Blade"], "short": ["Mortenax"] }
+      }
+    },
+    {
+      "id": "himeko_nova",
+      "addedIn": 1,
+      "groups": { "path": "erudition", "element": "fire" },
+      "names": {
+        "ko": { "full": ["히메코·노바"], "short": [] },
+        "ja": { "full": ["姫子・旅立ち", "ひめこたびだち"], "short": [] },
+        "en": { "full": ["Himeko Nova"], "short": [] }
+      }
+    },
+    {
+      "id": "gilgamesh",
+      "addedIn": 1,
+      "groups": { "path": "destruction", "element": "lightning" },
+      "names": {
+        "ko": { "full": ["길가메시"], "short": [] },
+        "ja": { "full": ["ギルガメッシュ"], "short": [] },
+        "en": { "full": ["Gilgamesh"], "short": [] }
+      }
+    },
+    {
+      "id": "rin_tohsaka",
+      "addedIn": 1,
+      "groups": { "path": "erudition", "element": "quantum" },
+      "names": {
+        "ko": { "full": ["토오사카 린"], "short": ["린"] },
+        "ja": { "full": ["遠坂凛", "とおさかりん"], "short": ["凛", "りん"] },
+        "en": { "full": ["Rin Tohsaka", "Tohsaka Rin"], "short": ["Rin"] }
+      }
+    },
+    {
+      "id": "robin_summeretto",
+      "addedIn": 1,
+      "groups": { "path": "remembrance", "element": "wind" },
+      "names": {
+        "ko": { "full": ["로빈·서머레토"], "short": ["서머레토"] },
+        "ja": { "full": ["ロビン・夏空の歌", "ろびんなつぞらのうた"], "short": [] },
+        "en": { "full": ["Robin Summeretto"], "short": ["Summeretto"] }
+      }
+    },
+    {
+      "id": "aventurine_waveflair",
+      "addedIn": 1,
+      "groups": { "path": "elation", "element": "quantum" },
+      "names": {
+        "ko": { "full": ["어벤츄린·웨이브"], "short": [] },
+        "ja": {
+          "full": ["アベンチュリン・波と戯れる夏", "あべんちゅりんなみとたわむれるなつ"],
+          "short": []
+        },
+        "en": { "full": ["Aventurine Waveflair"], "short": ["Waveflair"] }
+      }
+    },
+    {
+      "id": "pearl",
+      "addedIn": 1,
+      "groups": { "path": "elation", "element": "ice" },
+      "names": {
+        "ko": { "full": ["펄"], "short": [] },
+        "ja": { "full": ["パール"], "short": [] },
+        "en": { "full": ["Pearl"], "short": [] }
+      }
+    }
+  ]
+}
