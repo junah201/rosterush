@@ -3,14 +3,15 @@
 import { DIFFICULTIES, type GameDef, groupCharacters, type Lang } from "@rosterush/core";
 import { useState } from "react";
 import { formatClock } from "@/lib/format";
-import type { Dict } from "@/lib/i18n";
+import { t } from "@/lib/i18n";
 import { AnswerInput } from "./answer-input";
 import { ResultPanel } from "./result-panel";
 import { usePlay } from "./use-play";
 
 const TILTS = [-3, 2, -1, 3, 0, -2];
 
-export function PlayView({ game, lang, d }: { game: GameDef; lang: Lang; d: Dict }) {
+export function PlayView({ game, lang }: { game: GameDef; lang: Lang }) {
+  const d = t(lang);
   const play = usePlay(game, lang);
   const groupings = game.groupings ?? [];
   const [groupingId, setGroupingId] = useState(groupings[0]?.id);

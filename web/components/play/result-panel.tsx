@@ -6,6 +6,7 @@ import { postResult } from "@/lib/api";
 import { formatTime } from "@/lib/format";
 import type { Dict } from "@/lib/i18n";
 import { saveRecord } from "@/lib/records";
+import { PercentileCard } from "./percentile-card";
 import type { PlayResult } from "./use-play";
 
 type SaveState = "saving" | "saved" | "failed";
@@ -77,9 +78,7 @@ export function ResultPanel({ game, lang, d, difficulty, result, onRetry }: Prop
         </div>
       </div>
 
-      <div className="shadow-sticker rounded-2xl border-2 border-dashed border-black bg-white p-4 text-center text-sm font-bold text-[#5b6577]">
-        {d.percentilePending}
-      </div>
+      <PercentileCard game={game} lang={lang} d={d} difficulty={difficulty} result={result} />
 
       <div className="text-center text-xs font-bold" aria-live="polite">
         {save === "saving" && <span className="text-[#5b6577]">{d.saving}</span>}

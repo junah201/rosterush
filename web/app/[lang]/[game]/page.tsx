@@ -2,7 +2,7 @@ import { LANGS } from "@rosterush/core";
 import { games, getGame } from "@rosterush/games";
 import { notFound } from "next/navigation";
 import { PlayView } from "@/components/play/play";
-import { isLang, t } from "@/lib/i18n";
+import { isLang } from "@/lib/i18n";
 
 export const dynamicParams = false;
 export const generateStaticParams = () =>
@@ -13,5 +13,5 @@ export default async function GamePage({ params }: PageProps<"/[lang]/[game]">) 
   const game = getGame(gameId);
   if (!isLang(lang) || !game) notFound();
 
-  return <PlayView game={game} lang={lang} d={t(lang)} />;
+  return <PlayView game={game} lang={lang} />;
 }

@@ -27,6 +27,12 @@ const dict = {
     saveFailed: "기록 저장에 실패했어요",
     saveRetry: "다시 시도",
     percentilePending: "상위 %는 기록이 충분히 모이면 공개돼요",
+    top: (p: number) => `상위 ${p}%`,
+    amongClears: (n: number) => `완주자 ${n.toLocaleString()}명 중`,
+    clearRate: "완주율",
+    collecting: (n: number, min: number) => `데이터 수집 중 (${n}/${min})`,
+    rankNeedsClear: "전원을 맞히면 순위가 표시돼요",
+    rosterChanged: "캐릭터가 추가되어 이전 기록과 비교할 수 없어요",
   },
   ja: {
     tagline: "キャラの名前を全部言えるかな？",
@@ -52,6 +58,12 @@ const dict = {
     saveFailed: "記録の保存に失敗しました",
     saveRetry: "再試行",
     percentilePending: "上位%はデータが集まると公開されます",
+    top: (p: number) => `上位 ${p}%`,
+    amongClears: (n: number) => `完走者 ${n.toLocaleString()}人中`,
+    clearRate: "完走率",
+    collecting: (n: number, min: number) => `データ収集中 (${n}/${min})`,
+    rankNeedsClear: "全員正解すると順位が表示されます",
+    rosterChanged: "キャラが追加されたため比較できません",
   },
   en: {
     tagline: "Name every character you can!",
@@ -77,6 +89,12 @@ const dict = {
     saveFailed: "Couldn't save your run",
     saveRetry: "Retry",
     percentilePending: "Your percentile appears once enough runs are collected",
+    top: (p: number) => `Top ${p}%`,
+    amongClears: (n: number) => `among ${n.toLocaleString()} finishers`,
+    clearRate: "Clear rate",
+    collecting: (n: number, min: number) => `Collecting data (${n}/${min})`,
+    rankNeedsClear: "Name everyone to get ranked",
+    rosterChanged: "New characters were added, so this run can't be compared",
   },
 } satisfies Record<Lang, unknown>;
 
