@@ -3,6 +3,17 @@
 service: rosterush
 frameworkVersion: "4"
 
+# stage별 기본값 (환경변수가 있으면 환경변수가 우선)
+params:
+  local:
+    dynamodbEndpoint: http://localhost:8000
+    ipHashSecret: local-only-secret
+    originVerifySecret: ""
+  default:
+    dynamodbEndpoint: ""
+    ipHashSecret: ""
+    originVerifySecret: ""
+
 plugins:
   - serverless-offline
 
@@ -17,9 +28,9 @@ provider:
   logRetentionInDays: 14
   environment:
     STAGE: ${self:provider.stage}
-    IP_HASH_SECRET: ${env:IP_HASH_SECRET, ''}
-    ORIGIN_VERIFY_SECRET: ${env:ORIGIN_VERIFY_SECRET, ''}
-    DYNAMODB_ENDPOINT: ${env:DYNAMODB_ENDPOINT, ''}
+    IP_HASH_SECRET: ${env:IP_HASH_SECRET, param:ipHashSecret}
+    ORIGIN_VERIFY_SECRET: ${env:ORIGIN_VERIFY_SECRET, param:originVerifySecret}
+    DYNAMODB_ENDPOINT: ${env:DYNAMODB_ENDPOINT, param:dynamodbEndpoint}
   httpApi:
     payload: "2.0"
   iam:

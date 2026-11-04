@@ -1,4 +1,6 @@
 # 로컬 개발용 DynamoDB Local (http://localhost:8000)
+name: rosterush
+
 services:
   dynamodb:
     image: amazon/dynamodb-local:latest
