@@ -1,9 +1,14 @@
-import { decodeTime, ulid } from "ulid";
+import { decodeTime, encodeTime, ulid } from "ulid";
 import { DIFFICULTIES, type Difficulty, LANGS, type Lang } from "./types";
 
 const ULID_RE = /^[0-9A-HJKMNP-TV-Z]{26}$/;
 
-export const newUlid = (time?: number) => ulid(time);
+export const newUlid = (time?: number) => ulid(time === undefined ? undefined : Math.floor(time));
+
+/** 해당 시각(ms)에 만들어질 수 있는 가장 큰 ULID — 시각 기준 범위 조회의 상한으로 사용 */
+export function maxUlidAt(ms: number): string {
+  return encodeTime(Math.floor(ms), 10) + "Z".repeat(16);
+}
 
 /** ULID 시각 → UTC 날짜 (YYYY-MM-DD) */
 export function ulidDate(id: string): string {
