@@ -43,6 +43,27 @@ pnpm --filter @rosterush/api aggregate:local --reset           # 로컬 집계 �
 
 `serverless` 명령은 Serverless Framework v4 로그인이 필요합니다 (`npx serverless login`).
 
+## 배포
+
+AWS 프로필 `rosterush`를 사용합니다 (`aws login --profile rosterush`).
+
+`api/.env.{stage}` 파일에 비밀값이 필요합니다 (git에 올리지 않음):
+
+```bash
+IP_HASH_SECRET=...        # IP 해시용 HMAC 키
+ORIGIN_VERIFY_SECRET=...  # CloudFront → API Gateway 비밀 헤더 값
+```
+
+```bash
+pnpm --filter @rosterush/api deploy:dev   # API, DynamoDB, S3, CloudFront (스택 rosterush-dev)
+bash scripts/deploy-web.sh dev            # 웹 빌드 → S3 업로드 → CloudFront 무효화
+```
+
+| stage | 도메인                    |
+| ----- | ------------------------- |
+| dev   | `rosterush-dev.junah.dev` |
+| prod  | `rosterush.junah.dev`     |
+
 ## 게임 추가
 
 1. `games/{id}.json` 작성 (형식은 `core/src/types.ts`의 `GameDef`)
