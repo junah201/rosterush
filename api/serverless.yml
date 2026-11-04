@@ -1,0 +1,116 @@
+# Rosterush API — Serverless Framework v4
+# stage: local(serverless-offline) / dev / prod
+service: rosterush
+frameworkVersion: "4"
+
+plugins:
+  - serverless-offline
+
+provider:
+  name: aws
+  runtime: nodejs24.x
+  region: ap-northeast-2
+  stage: ${opt:stage, 'dev'}
+  architecture: arm64
+  memorySize: 512
+  timeout: 10
+  logRetentionInDays: 14
+  environment:
+    STAGE: ${self:provider.stage}
+    IP_HASH_SECRET: ${env:IP_HASH_SECRET, ''}
+    ORIGIN_VERIFY_SECRET: ${env:ORIGIN_VERIFY_SECRET, ''}
+    DYNAMODB_ENDPOINT: ${env:DYNAMODB_ENDPOINT, ''}
+  httpApi:
+    payload: "2.0"
+  iam:
+    role:
+      statements:
+        - Effect: Allow
+          Action:
+            - dynamodb:GetItem
+            - dynamodb:PutItem
+            - dynamodb:UpdateItem
+            - dynamodb:DeleteItem
+            - dynamodb:Query
+            - dynamodb:TransactWriteItems
+          Resource:
+            - !GetAtt ResultsTable.Arn
+            - !GetAtt SharesTable.Arn
+            - !GetAtt CommentsTable.Arn
+            - !GetAtt RateLimitsTable.Arn
+
+build:
+  esbuild:
+    bundle: true
+    minify: false
+    sourcemap: true
+
+functions:
+  results:
+    handler: src/results.main
+    events:
+      - httpApi:
+          method: POST
+          path: /api/results
+
+custom:
+  serverless-offline:
+    httpPort: 4000
+    noPrependStageInUrl: true
+
+# 키 스키마는 src/lib/tables.ts (로컬 생성용)와 동일하게 유지
+resources:
+  Resources:
+    ResultsTable:
+      Type: AWS::DynamoDB::Table
+      Properties:
+        TableName: rosterush-${self:provider.stage}-results
+        BillingMode: PAY_PER_REQUEST
+        AttributeDefinitions:
+          - { AttributeName: pk, AttributeType: S }
+          - { AttributeName: sk, AttributeType: S }
+        KeySchema:
+          - { AttributeName: pk, KeyType: HASH }
+          - { AttributeName: sk, KeyType: RANGE }
+        TimeToLiveSpecification:
+          AttributeName: expiresAt
+          Enabled: true
+
+    SharesTable:
+      Type: AWS::DynamoDB::Table
+      DeletionPolicy: Retain
+      Properties:
+        TableName: rosterush-${self:provider.stage}-shares
+        BillingMode: PAY_PER_REQUEST
+        AttributeDefinitions:
+          - { AttributeName: shareId, AttributeType: S }
+        KeySchema:
+          - { AttributeName: shareId, KeyType: HASH }
+        PointInTimeRecoverySpecification:
+          PointInTimeRecoveryEnabled: true
+
+    CommentsTable:
+      Type: AWS::DynamoDB::Table
+      DeletionPolicy: Retain
+      Properties:
+        TableName: rosterush-${self:provider.stage}-comments
+        BillingMode: PAY_PER_REQUEST
+        AttributeDefinitions:
+          - { AttributeName: pk, AttributeType: S }
+          - { AttributeName: sk, AttributeType: S }
+        KeySchema:
+          - { AttributeName: pk, KeyType: HASH }
+          - { AttributeName: sk, KeyType: RANGE }
+
+    RateLimitsTable:
+      Type: AWS::DynamoDB::Table
+      Properties:
+        TableName: rosterush-${self:provider.stage}-ratelimits
+        BillingMode: PAY_PER_REQUEST
+        AttributeDefinitions:
+          - { AttributeName: pk, AttributeType: S }
+        KeySchema:
+          - { AttributeName: pk, KeyType: HASH }
+        TimeToLiveSpecification:
+          AttributeName: expiresAt
+          Enabled: true
