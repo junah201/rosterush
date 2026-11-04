@@ -1,0 +1,22 @@
+node_modules/
+.pnpm-store/
+
+# Next.js
+web/.next/
+web/out/
+web/next-env.d.ts
+
+# Serverless
+api/.serverless/
+api/.esbuild/
+
+# env
+.env
+.env.*
+!.env.example
+
+# misc
+*.log
+.DS_Store
+coverage/
+*.tsbuildinfo
