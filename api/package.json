@@ -1,0 +1,26 @@
+{
+  "name": "@rosterush/api",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "typecheck": "tsc -p tsconfig.json",
+    "db:up": "docker compose up -d",
+    "db:down": "docker compose down",
+    "db:init": "tsx scripts/create-tables.ts",
+    "dev": "serverless offline --stage local",
+    "deploy:dev": "serverless deploy --stage dev",
+    "deploy:prod": "serverless deploy --stage prod"
+  },
+  "dependencies": {
+    "@aws-sdk/client-dynamodb": "^3.1161.0",
+    "@aws-sdk/lib-dynamodb": "^3.1161.0",
+    "@rosterush/core": "workspace:*",
+    "@rosterush/games": "workspace:*",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.152",
+    "serverless": "^4.46.0",
+    "serverless-offline": "^14.8.4"
+  }
+}
