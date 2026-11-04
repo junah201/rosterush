@@ -9,10 +9,12 @@ params:
     dynamodbEndpoint: http://localhost:8000
     ipHashSecret: local-only-secret
     originVerifySecret: ""
+    minSample: 100
   default:
     dynamodbEndpoint: ""
     ipHashSecret: ""
     originVerifySecret: ""
+    minSample: 100
 
 plugins:
   - serverless-offline
@@ -31,6 +33,8 @@ provider:
     IP_HASH_SECRET: ${env:IP_HASH_SECRET, param:ipHashSecret}
     ORIGIN_VERIFY_SECRET: ${env:ORIGIN_VERIFY_SECRET, param:originVerifySecret}
     DYNAMODB_ENDPOINT: ${env:DYNAMODB_ENDPOINT, param:dynamodbEndpoint}
+    STATS_BUCKET: !Ref StatsBucket
+    MIN_SAMPLE: ${param:minSample}
   httpApi:
     payload: "2.0"
   iam:
@@ -49,6 +53,18 @@ provider:
             - !GetAtt SharesTable.Arn
             - !GetAtt CommentsTable.Arn
             - !GetAtt RateLimitsTable.Arn
+        - Effect: Allow
+          Action:
+            - s3:GetObject
+            - s3:PutObject
+          Resource:
+            - !Sub "${StatsBucket.Arn}/*"
+        # 없는 키를 읽을 때 AccessDenied 대신 NoSuchKey를 받기 위해 필요
+        - Effect: Allow
+          Action:
+            - s3:ListBucket
+          Resource:
+            - !GetAtt StatsBucket.Arn
 
 build:
   esbuild:
@@ -64,6 +80,14 @@ functions:
           method: POST
           path: /api/results
 
+  # 증분 집계: 초기 3일마다 → 이후 rate(7 days)로 변경
+  aggregate:
+    handler: src/aggregate.main
+    timeout: 300
+    memorySize: 1024
+    events:
+      - schedule: rate(3 days)
+
 custom:
   serverless-offline:
     httpPort: 4000
@@ -72,6 +96,19 @@ custom:
 # 키 스키마는 src/lib/tables.ts (로컬 생성용)와 동일하게 유지
 resources:
   Resources:
+    # 집계 결과: internal/ (state, 비공개) + stats/ (CloudFront로 공개 예정)
+    StatsBucket:
+      Type: AWS::S3::Bucket
+      Properties:
+        BucketName: rosterush-${self:provider.stage}-stats-${aws:accountId}
+        PublicAccessBlockConfiguration:
+          BlockPublicAcls: true
+          BlockPublicPolicy: true
+          IgnorePublicAcls: true
+          RestrictPublicBuckets: true
+        VersioningConfiguration:
+          Status: Enabled
+
     ResultsTable:
       Type: AWS::DynamoDB::Table
       Properties:
