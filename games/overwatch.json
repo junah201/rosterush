@@ -1,0 +1,90 @@
+{
+  "id": "overwatch",
+  "rosterVer": 1,
+  "name": { "ko": "오버워치 2", "ja": "オーバーウォッチ 2", "en": "Overwatch 2" },
+  "groupings": [
+    {
+      "id": "role",
+      "name": { "ko": "역할", "ja": "ロール", "en": "Role" },
+      "groups": [
+        {
+          "id": "tank",
+          "name": { "ko": "돌격", "ja": "タンク", "en": "Tank" },
+          "color": "#ffd23f"
+        },
+        {
+          "id": "damage",
+          "name": { "ko": "공격", "ja": "ダメージ", "en": "Damage" },
+          "color": "#ff8fa3"
+        },
+        {
+          "id": "support",
+          "name": { "ko": "지원", "ja": "サポート", "en": "Support" },
+          "color": "#7ee0c3"
+        }
+      ]
+    }
+  ],
+  "characters": [
+    {
+      "id": "reinhardt",
+      "addedIn": 1,
+      "groups": { "role": "tank" },
+      "names": {
+        "ko": { "full": ["라인하르트"], "short": ["라인"] },
+        "ja": { "full": ["ラインハルト"], "short": [] },
+        "en": { "full": ["Reinhardt"], "short": ["Rein"] }
+      }
+    },
+    {
+      "id": "dva",
+      "addedIn": 1,
+      "groups": { "role": "tank" },
+      "names": {
+        "ko": { "full": ["D.Va", "디바"], "short": [] },
+        "ja": { "full": ["D.Va", "ディーヴァ"], "short": [] },
+        "en": { "full": ["D.Va"], "short": [] }
+      }
+    },
+    {
+      "id": "tracer",
+      "addedIn": 1,
+      "groups": { "role": "damage" },
+      "names": {
+        "ko": { "full": ["트레이서"], "short": ["트레"] },
+        "ja": { "full": ["トレーサー"], "short": [] },
+        "en": { "full": ["Tracer"], "short": [] }
+      }
+    },
+    {
+      "id": "soldier_76",
+      "addedIn": 1,
+      "groups": { "role": "damage" },
+      "names": {
+        "ko": { "full": ["솔저: 76"], "short": ["솔저"] },
+        "ja": { "full": ["ソルジャー76"], "short": ["ソルジャー"] },
+        "en": { "full": ["Soldier: 76"], "short": ["Soldier"] }
+      }
+    },
+    {
+      "id": "mercy",
+      "addedIn": 1,
+      "groups": { "role": "support" },
+      "names": {
+        "ko": { "full": ["메르시"], "short": [] },
+        "ja": { "full": ["マーシー"], "short": [] },
+        "en": { "full": ["Mercy"], "short": [] }
+      }
+    },
+    {
+      "id": "ana",
+      "addedIn": 1,
+      "groups": { "role": "support" },
+      "names": {
+        "ko": { "full": ["아나"], "short": [] },
+        "ja": { "full": ["アナ"], "short": [] },
+        "en": { "full": ["Ana"], "short": [] }
+      }
+    }
+  ]
+}
