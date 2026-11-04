@@ -20,3 +20,7 @@ api/.esbuild/
 .DS_Store
 coverage/
 *.tsbuildinfo
+
+# 로컬 전용 문서/시안
+PLAN.md
+mockups/
