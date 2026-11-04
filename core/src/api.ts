@@ -50,6 +50,30 @@ export type CommentDeleteRequest = z.infer<typeof CommentDeleteRequest>;
 
 export type ResultResponse = { resultId: string };
 export type ShareResponse = { shareId: string; url: string };
+
+/** shareId: 8자 base62 */
+export const SHARE_ID_RE = /^[0-9A-Za-z]{8}$/;
+
+/** GET /api/shares/{shareId} 응답. resultId(본인 확인용 비밀값)는 절대 포함하지 않는다 */
+export type ShareView = {
+  shareId: string;
+  game: string;
+  lang: (typeof LANGS)[number];
+  difficulty: (typeof DIFFICULTIES)[number];
+  rosterVer: number;
+  endReason: (typeof END_REASONS)[number];
+  totalMs: number;
+  solved: number;
+  total: number;
+  /** 캐릭터 id → 맞힌 시각(ms) */
+  solves: Record<string, number>;
+  /** 공유 시점의 "상위 X%" (완주 + 같은 rosterVer + 표본 충분할 때만) */
+  percentile: number | null;
+  /** percentile을 계산한 집계 버전 (latest.json의 aggVersion) */
+  aggVersion: string | null;
+  nickname: string | null;
+  createdAt: string;
+};
 export type Page<T> = { items: T[]; nextCursor: string | null };
 
 export type CommentRecord = {
