@@ -70,10 +70,10 @@ export function ipHash(event: Event): string {
   const ip = viewer
     ? viewer.replace(/:\d+$/, "").replace(/^\[|\]$/g, "")
     : event.requestContext.http.sourceIp;
-  return createHmac("sha256", process.env.IP_HASH_SECRET ?? "dev")
-    .update(ip)
-    .digest("hex")
-    .slice(0, 32);
+  const secret = process.env.IP_HASH_SECRET;
+  // 비밀키 없이 해시하면 IPv4는 전수 대입으로 쉽게 복원되므로 거부
+  if (!secret) throw new Error("IP_HASH_SECRET is not set");
+  return createHmac("sha256", secret).update(ip).digest("hex").slice(0, 32);
 }
 
 /** 핸들러 래퍼: 에러를 표준 응답으로 변환 */

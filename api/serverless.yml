@@ -3,7 +3,8 @@
 service: rosterush
 frameworkVersion: "4"
 
-# stage별 기본값 (환경변수가 있으면 환경변수가 우선)
+# stage별 기본값
+# - dev/prod는 환경변수 IP_HASH_SECRET 필수 (api/.env.{stage} 또는 셸 환경변수). 없으면 배포 실패
 params:
   local:
     dynamodbEndpoint: http://localhost:8000
@@ -12,7 +13,7 @@ params:
     minSample: 100
   default:
     dynamodbEndpoint: ""
-    ipHashSecret: ""
+    ipHashSecret: ${env:IP_HASH_SECRET}
     originVerifySecret: ""
     minSample: 100
 
@@ -31,7 +32,7 @@ provider:
   logRetentionInDays: 14
   environment:
     STAGE: ${self:provider.stage}
-    IP_HASH_SECRET: ${env:IP_HASH_SECRET, param:ipHashSecret}
+    IP_HASH_SECRET: ${param:ipHashSecret}
     ORIGIN_VERIFY_SECRET: ${env:ORIGIN_VERIFY_SECRET, param:originVerifySecret}
     DYNAMODB_ENDPOINT: ${env:DYNAMODB_ENDPOINT, param:dynamodbEndpoint}
     STATS_BUCKET: !Ref StatsBucket
