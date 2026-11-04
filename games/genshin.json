@@ -1,0 +1,2883 @@
+{
+  "id": "genshin",
+  "rosterVer": 1,
+  "name": {
+    "ko": "원신",
+    "ja": "原神",
+    "en": "Genshin Impact"
+  },
+  "groupings": [
+    {
+      "id": "region",
+      "name": {
+        "ko": "지역",
+        "ja": "地域",
+        "en": "Region"
+      },
+      "groups": [
+        {
+          "id": "mondstadt",
+          "name": {
+            "ko": "몬드",
+            "ja": "モンド",
+            "en": "Mondstadt"
+          },
+          "color": "#a8e6cf"
+        },
+        {
+          "id": "liyue",
+          "name": {
+            "ko": "리월",
+            "ja": "璃月",
+            "en": "Liyue"
+          },
+          "color": "#ffd23f"
+        },
+        {
+          "id": "inazuma",
+          "name": {
+            "ko": "이나즈마",
+            "ja": "稲妻",
+            "en": "Inazuma"
+          },
+          "color": "#c7b8ff"
+        },
+        {
+          "id": "sumeru",
+          "name": {
+            "ko": "수메르",
+            "ja": "スメール",
+            "en": "Sumeru"
+          },
+          "color": "#8fd3a8"
+        },
+        {
+          "id": "fontaine",
+          "name": {
+            "ko": "폰타인",
+            "ja": "フォンテーヌ",
+            "en": "Fontaine"
+          },
+          "color": "#9ad0ff"
+        },
+        {
+          "id": "natlan",
+          "name": {
+            "ko": "나타",
+            "ja": "ナタ",
+            "en": "Natlan"
+          },
+          "color": "#ffb38a"
+        },
+        {
+          "id": "nod_krai",
+          "name": {
+            "ko": "노드크라이",
+            "ja": "ナド・クライ",
+            "en": "Nod-Krai"
+          },
+          "color": "#f5b8d8"
+        },
+        {
+          "id": "snezhnaya",
+          "name": {
+            "ko": "스네즈나야",
+            "ja": "スネージナヤ",
+            "en": "Snezhnaya"
+          },
+          "color": "#cfe8f3"
+        },
+        {
+          "id": "other",
+          "name": {
+            "ko": "기타",
+            "ja": "その他",
+            "en": "Other"
+          },
+          "color": "#e0d6c8"
+        }
+      ]
+    },
+    {
+      "id": "element",
+      "name": {
+        "ko": "원소",
+        "ja": "元素",
+        "en": "Element"
+      },
+      "groups": [
+        {
+          "id": "pyro",
+          "name": {
+            "ko": "불",
+            "ja": "炎",
+            "en": "Pyro"
+          },
+          "color": "#ff9b85"
+        },
+        {
+          "id": "hydro",
+          "name": {
+            "ko": "물",
+            "ja": "水",
+            "en": "Hydro"
+          },
+          "color": "#7cc4f5"
+        },
+        {
+          "id": "anemo",
+          "name": {
+            "ko": "바람",
+            "ja": "風",
+            "en": "Anemo"
+          },
+          "color": "#8ee6c9"
+        },
+        {
+          "id": "electro",
+          "name": {
+            "ko": "번개",
+            "ja": "雷",
+            "en": "Electro"
+          },
+          "color": "#c9a7f5"
+        },
+        {
+          "id": "dendro",
+          "name": {
+            "ko": "풀",
+            "ja": "草",
+            "en": "Dendro"
+          },
+          "color": "#b5e07a"
+        },
+        {
+          "id": "cryo",
+          "name": {
+            "ko": "얼음",
+            "ja": "氷",
+            "en": "Cryo"
+          },
+          "color": "#b8ecf5"
+        },
+        {
+          "id": "geo",
+          "name": {
+            "ko": "바위",
+            "ja": "岩",
+            "en": "Geo"
+          },
+          "color": "#f5d67a"
+        }
+      ]
+    }
+  ],
+  "characters": [
+    {
+      "id": "traveler",
+      "addedIn": 1,
+      "groups": {
+        "region": "other",
+        "element": "anemo"
+      },
+      "names": {
+        "ko": {
+          "full": ["여행자", "아이테르", "루미네"],
+          "short": []
+        },
+        "ja": {
+          "full": ["旅人", "たびびと", "空", "そら", "蛍", "ほたる"],
+          "short": []
+        },
+        "en": {
+          "full": ["Traveler", "Aether", "Lumine"],
+          "short": []
+        }
+      }
+    },
+    {
+      "id": "amber",
+      "addedIn": 1,
+      "groups": {
+        "region": "mondstadt",
+        "element": "pyro"
+      },
+      "names": {
+        "ko": {
+          "full": ["엠버"],
+          "short": []
+        },
+        "ja": {
+          "full": ["アンバー"],
+          "short": []
+        },
+        "en": {
+          "full": ["Amber"],
+          "short": []
+        }
+      }
+    },
+    {
+      "id": "kaeya",
+      "addedIn": 1,
+      "groups": {
+        "region": "mondstadt",
+        "element": "cryo"
+      },
+      "names": {
+        "ko": {
+          "full": ["케이아"],
+          "short": []
+        },
+        "ja": {
+          "full": ["ガイア"],
+          "short": []
+        },
+        "en": {
+          "full": ["Kaeya"],
+          "short": []
+        }
+      }
+    },
+    {
+      "id": "lisa",
+      "addedIn": 1,
+      "groups": {
+        "region": "mondstadt",
+        "element": "electro"
+      },
+      "names": {
+        "ko": {
+          "full": ["리사"],
+          "short": []
+        },
+        "ja": {
+          "full": ["リサ"],
+          "short": []
+        },
+        "en": {
+          "full": ["Lisa"],
+          "short": []
+        }
+      }
+    },
+    {
+      "id": "barbara",
+      "addedIn": 1,
+      "groups": {
+        "region": "mondstadt",
+        "element": "hydro"
+      },
+      "names": {
+        "ko": {
+          "full": ["바바라"],
+          "short": []
+        },
+        "ja": {
+          "full": ["バーバラ"],
+          "short": []
+        },
+        "en": {
+          "full": ["Barbara"],
+          "short": []
+        }
+      }
+    },
+    {
+      "id": "razor",
+      "addedIn": 1,
+      "groups": {
+        "region": "mondstadt",
+        "element": "electro"
+      },
+      "names": {
+        "ko": {
+          "full": ["레이저"],
+          "short": []
+        },
+        "ja": {
+          "full": ["レザー"],
+          "short": []
+        },
+        "en": {
+          "full": ["Razor"],
+          "short": []
+        }
+      }
+    },
+    {
+      "id": "xiangling",
+      "addedIn": 1,
+      "groups": {
+        "region": "liyue",
+        "element": "pyro"
+      },
+      "names": {
+        "ko": {
+          "full": ["향릉"],
+          "short": []
+        },
+        "ja": {
+          "full": ["香菱", "シャンリン"],
+          "short": []
+        },
+        "en": {
+          "full": ["Xiangling"],
+          "short": []
+        }
+      }
+    },
+    {
+      "id": "beidou",
+      "addedIn": 1,
+      "groups": {
+        "region": "liyue",
+        "element": "electro"
+      },
+      "names": {
+        "ko": {
+          "full": ["북두"],
+          "short": []
+        },
+        "ja": {
+          "full": ["北斗", "ほくと"],
+          "short": []
+        },
+        "en": {
+          "full": ["Beidou"],
+          "short": []
+        }
+      }
+    },
+    {
+      "id": "xingqiu",
+      "addedIn": 1,
+      "groups": {
+        "region": "liyue",
+        "element": "hydro"
+      },
+      "names": {
+        "ko": {
+          "full": ["행추"],
+          "short": []
+        },
+        "ja": {
+          "full": ["行秋", "ゆくあき"],
+          "short": []
+        },
+        "en": {
+          "full": ["Xingqiu"],
+          "short": []
+        }
+      }
+    },
+    {
+      "id": "ningguang",
+      "addedIn": 1,
+      "groups": {
+        "region": "liyue",
+        "element": "geo"
+      },
+      "names": {
+        "ko": {
+          "full": ["응광"],
+          "short": []
+        },
+        "ja": {
+          "full": ["凝光", "ぎょうこう"],
+          "short": []
+        },
+        "en": {
+          "full": ["Ningguang"],
+          "short": []
+        }
+      }
+    },
+    {
+      "id": "fischl",
+      "addedIn": 1,
+      "groups": {
+        "region": "mondstadt",
+        "element": "electro"
+      },
+      "names": {
+        "ko": {
+          "full": ["피슬"],
+          "short": []
+        },
+        "ja": {
+          "full": ["フィッシュル"],
+          "short": []
+        },
+        "en": {
+          "full": ["Fischl"],
+          "short": []
+        }
+      }
+    },
+    {
+      "id": "bennett",
+      "addedIn": 1,
+      "groups": {
+        "region": "mondstadt",
+        "element": "pyro"
+      },
+      "names": {
+        "ko": {
+          "full": ["베넷"],
+          "short": []
+        },
+        "ja": {
+          "full": ["ベネット"],
+          "short": []
+        },
+        "en": {
+          "full": ["Bennett"],
+          "short": []
+        }
+      }
+    },
+    {
+      "id": "noelle",
+      "addedIn": 1,
+      "groups": {
+        "region": "mondstadt",
+        "element": "geo"
+      },
+      "names": {
+        "ko": {
+          "full": ["노엘"],
+          "short": []
+        },
+        "ja": {
+          "full": ["ノエル"],
+          "short": []
+        },
+        "en": {
+          "full": ["Noelle"],
+          "short": []
+        }
+      }
+    },
+    {
+      "id": "chongyun",
+      "addedIn": 1,
+      "groups": {
+        "region": "liyue",
+        "element": "cryo"
+      },
+      "names": {
+        "ko": {
+          "full": ["중운"],
+          "short": []
+        },
+        "ja": {
+          "full": ["重雲", "ちょううん"],
+          "short": []
+        },
+        "en": {
+          "full": ["Chongyun"],
+          "short": []
+        }
+      }
+    },
+    {
+      "id": "sucrose",
+      "addedIn": 1,
+      "groups": {
+        "region": "mondstadt",
+        "element": "anemo"
+      },
+      "names": {
+        "ko": {
+          "full": ["설탕"],
+          "short": []
+        },
+        "ja": {
+          "full": ["スクロース"],
+          "short": []
+        },
+        "en": {
+          "full": ["Sucrose"],
+          "short": []
+        }
+      }
+    },
+    {
+      "id": "jean",
+      "addedIn": 1,
+      "groups": {
+        "region": "mondstadt",
+        "element": "anemo"
+      },
+      "names": {
+        "ko": {
+          "full": ["진"],
+          "short": []
+        },
+        "ja": {
+          "full": ["ジン"],
+          "short": []
+        },
+        "en": {
+          "full": ["Jean"],
+          "short": []
+        }
+      }
+    },
+    {
+      "id": "diluc",
+      "addedIn": 1,
+      "groups": {
+        "region": "mondstadt",
+        "element": "pyro"
+      },
+      "names": {
+        "ko": {
+          "full": ["다이루크"],
+          "short": []
+        },
+        "ja": {
+          "full": ["ディルック"],
+          "short": []
+        },
+        "en": {
+          "full": ["Diluc"],
+          "short": []
+        }
+      }
+    },
+    {
+      "id": "qiqi",
+      "addedIn": 1,
+      "groups": {
+        "region": "liyue",
+        "element": "cryo"
+      },
+      "names": {
+        "ko": {
+          "full": ["치치"],
+          "short": []
+        },
+        "ja": {
+          "full": ["七七", "なな"],
+          "short": []
+        },
+        "en": {
+          "full": ["Qiqi"],
+          "short": []
+        }
+      }
+    },
+    {
+      "id": "mona",
+      "addedIn": 1,
+      "groups": {
+        "region": "mondstadt",
+        "element": "hydro"
+      },
+      "names": {
+        "ko": {
+          "full": ["모나"],
+          "short": []
+        },
+        "ja": {
+          "full": ["モナ"],
+          "short": []
+        },
+        "en": {
+          "full": ["Mona"],
+          "short": []
+        }
+      }
+    },
+    {
+      "id": "keqing",
+      "addedIn": 1,
+      "groups": {
+        "region": "liyue",
+        "element": "electro"
+      },
+      "names": {
+        "ko": {
+          "full": ["각청"],
+          "short": []
+        },
+        "ja": {
+          "full": ["刻晴", "こくせい"],
+          "short": []
+        },
+        "en": {
+          "full": ["Keqing"],
+          "short": []
+        }
+      }
+    },
+    {
+      "id": "venti",
+      "addedIn": 1,
+      "groups": {
+        "region": "mondstadt",
+        "element": "anemo"
+      },
+      "names": {
+        "ko": {
+          "full": ["벤티"],
+          "short": []
+        },
+        "ja": {
+          "full": ["ウェンティ"],
+          "short": []
+        },
+        "en": {
+          "full": ["Venti"],
+          "short": []
+        }
+      }
+    },
+    {
+      "id": "klee",
+      "addedIn": 1,
+      "groups": {
+        "region": "mondstadt",
+        "element": "pyro"
+      },
+      "names": {
+        "ko": {
+          "full": ["클레"],
+          "short": []
+        },
+        "ja": {
+          "full": ["クレー"],
+          "short": []
+        },
+        "en": {
+          "full": ["Klee"],
+          "short": []
+        }
+      }
+    },
+    {
+      "id": "tartaglia",
+      "addedIn": 1,
+      "groups": {
+        "region": "snezhnaya",
+        "element": "hydro"
+      },
+      "names": {
+        "ko": {
+          "full": ["타르탈리아"],
+          "short": ["타탈", "공자"]
+        },
+        "ja": {
+          "full": ["タルタリヤ"],
+          "short": ["公子", "こうし"]
+        },
+        "en": {
+          "full": ["Tartaglia"],
+          "short": ["Childe"]
+        }
+      }
+    },
+    {
+      "id": "diona",
+      "addedIn": 1,
+      "groups": {
+        "region": "mondstadt",
+        "element": "cryo"
+      },
+      "names": {
+        "ko": {
+          "full": ["디오나"],
+          "short": []
+        },
+        "ja": {
+          "full": ["ディオナ"],
+          "short": []
+        },
+        "en": {
+          "full": ["Diona"],
+          "short": []
+        }
+      }
+    },
+    {
+      "id": "zhongli",
+      "addedIn": 1,
+      "groups": {
+        "region": "liyue",
+        "element": "geo"
+      },
+      "names": {
+        "ko": {
+          "full": ["종려"],
+          "short": []
+        },
+        "ja": {
+          "full": ["鍾離", "しょうり"],
+          "short": []
+        },
+        "en": {
+          "full": ["Zhongli"],
+          "short": []
+        }
+      }
+    },
+    {
+      "id": "xinyan",
+      "addedIn": 1,
+      "groups": {
+        "region": "liyue",
+        "element": "pyro"
+      },
+      "names": {
+        "ko": {
+          "full": ["신염"],
+          "short": []
+        },
+        "ja": {
+          "full": ["辛炎", "しんえん"],
+          "short": []
+        },
+        "en": {
+          "full": ["Xinyan"],
+          "short": []
+        }
+      }
+    },
+    {
+      "id": "albedo",
+      "addedIn": 1,
+      "groups": {
+        "region": "mondstadt",
+        "element": "geo"
+      },
+      "names": {
+        "ko": {
+          "full": ["알베도"],
+          "short": []
+        },
+        "ja": {
+          "full": ["アルベド"],
+          "short": []
+        },
+        "en": {
+          "full": ["Albedo"],
+          "short": []
+        }
+      }
+    },
+    {
+      "id": "ganyu",
+      "addedIn": 1,
+      "groups": {
+        "region": "liyue",
+        "element": "cryo"
+      },
+      "names": {
+        "ko": {
+          "full": ["감우"],
+          "short": []
+        },
+        "ja": {
+          "full": ["甘雨", "かんう"],
+          "short": []
+        },
+        "en": {
+          "full": ["Ganyu"],
+          "short": []
+        }
+      }
+    },
+    {
+      "id": "xiao",
+      "addedIn": 1,
+      "groups": {
+        "region": "liyue",
+        "element": "anemo"
+      },
+      "names": {
+        "ko": {
+          "full": ["소"],
+          "short": []
+        },
+        "ja": {
+          "full": ["魈", "しょう"],
+          "short": []
+        },
+        "en": {
+          "full": ["Xiao"],
+          "short": []
+        }
+      }
+    },
+    {
+      "id": "hu_tao",
+      "addedIn": 1,
+      "groups": {
+        "region": "liyue",
+        "element": "pyro"
+      },
+      "names": {
+        "ko": {
+          "full": ["호두"],
+          "short": []
+        },
+        "ja": {
+          "full": ["胡桃", "フータオ"],
+          "short": []
+        },
+        "en": {
+          "full": ["Hu Tao"],
+          "short": []
+        }
+      }
+    },
+    {
+      "id": "rosaria",
+      "addedIn": 1,
+      "groups": {
+        "region": "mondstadt",
+        "element": "cryo"
+      },
+      "names": {
+        "ko": {
+          "full": ["로자리아"],
+          "short": []
+        },
+        "ja": {
+          "full": ["ロサリア"],
+          "short": []
+        },
+        "en": {
+          "full": ["Rosaria"],
+          "short": []
+        }
+      }
+    },
+    {
+      "id": "yanfei",
+      "addedIn": 1,
+      "groups": {
+        "region": "liyue",
+        "element": "pyro"
+      },
+      "names": {
+        "ko": {
+          "full": ["연비"],
+          "short": []
+        },
+        "ja": {
+          "full": ["煙緋", "えんひ"],
+          "short": []
+        },
+        "en": {
+          "full": ["Yanfei"],
+          "short": []
+        }
+      }
+    },
+    {
+      "id": "eula",
+      "addedIn": 1,
+      "groups": {
+        "region": "mondstadt",
+        "element": "cryo"
+      },
+      "names": {
+        "ko": {
+          "full": ["유라"],
+          "short": []
+        },
+        "ja": {
+          "full": ["エウルア"],
+          "short": []
+        },
+        "en": {
+          "full": ["Eula"],
+          "short": []
+        }
+      }
+    },
+    {
+      "id": "kaedehara_kazuha",
+      "addedIn": 1,
+      "groups": {
+        "region": "inazuma",
+        "element": "anemo"
+      },
+      "names": {
+        "ko": {
+          "full": ["카에데하라 카즈하"],
+          "short": ["카즈하", "만엽"]
+        },
+        "ja": {
+          "full": ["楓原万葉", "かえではらかずは"],
+          "short": ["万葉", "かずは"]
+        },
+        "en": {
+          "full": ["Kaedehara Kazuha"],
+          "short": ["Kazuha"]
+        }
+      }
+    },
+    {
+      "id": "kamisato_ayaka",
+      "addedIn": 1,
+      "groups": {
+        "region": "inazuma",
+        "element": "cryo"
+      },
+      "names": {
+        "ko": {
+          "full": ["카미사토 아야카"],
+          "short": ["아야카"]
+        },
+        "ja": {
+          "full": ["神里綾華", "かみさとあやか"],
+          "short": ["綾華", "あやか"]
+        },
+        "en": {
+          "full": ["Kamisato Ayaka"],
+          "short": ["Ayaka"]
+        }
+      }
+    },
+    {
+      "id": "sayu",
+      "addedIn": 1,
+      "groups": {
+        "region": "inazuma",
+        "element": "anemo"
+      },
+      "names": {
+        "ko": {
+          "full": ["사유"],
+          "short": []
+        },
+        "ja": {
+          "full": ["早柚", "さゆ"],
+          "short": []
+        },
+        "en": {
+          "full": ["Sayu"],
+          "short": []
+        }
+      }
+    },
+    {
+      "id": "yoimiya",
+      "addedIn": 1,
+      "groups": {
+        "region": "inazuma",
+        "element": "pyro"
+      },
+      "names": {
+        "ko": {
+          "full": ["요이미야"],
+          "short": []
+        },
+        "ja": {
+          "full": ["宵宮", "よいみや"],
+          "short": []
+        },
+        "en": {
+          "full": ["Yoimiya"],
+          "short": []
+        }
+      }
+    },
+    {
+      "id": "raiden_shogun",
+      "addedIn": 1,
+      "groups": {
+        "region": "inazuma",
+        "element": "electro"
+      },
+      "names": {
+        "ko": {
+          "full": ["라이덴 쇼군"],
+          "short": ["라이덴", "쇼군"]
+        },
+        "ja": {
+          "full": ["雷電将軍", "らいでんしょうぐん"],
+          "short": ["雷電", "らいでん", "将軍", "しょうぐん"]
+        },
+        "en": {
+          "full": ["Raiden Shogun"],
+          "short": ["Raiden", "Shogun"]
+        }
+      }
+    },
+    {
+      "id": "kujou_sara",
+      "addedIn": 1,
+      "groups": {
+        "region": "inazuma",
+        "element": "electro"
+      },
+      "names": {
+        "ko": {
+          "full": ["쿠죠 사라"],
+          "short": ["사라"]
+        },
+        "ja": {
+          "full": ["九条裟羅", "くじょうさら"],
+          "short": ["裟羅", "さら"]
+        },
+        "en": {
+          "full": ["Kujou Sara"],
+          "short": ["Sara"]
+        }
+      }
+    },
+    {
+      "id": "aloy",
+      "addedIn": 1,
+      "groups": {
+        "region": "other",
+        "element": "cryo"
+      },
+      "names": {
+        "ko": {
+          "full": ["에일로이"],
+          "short": []
+        },
+        "ja": {
+          "full": ["アーロイ"],
+          "short": []
+        },
+        "en": {
+          "full": ["Aloy"],
+          "short": []
+        }
+      }
+    },
+    {
+      "id": "sangonomiya_kokomi",
+      "addedIn": 1,
+      "groups": {
+        "region": "inazuma",
+        "element": "hydro"
+      },
+      "names": {
+        "ko": {
+          "full": ["산고노미야 코코미"],
+          "short": ["코코미"]
+        },
+        "ja": {
+          "full": ["珊瑚宮心海", "さんごのみやここみ"],
+          "short": ["心海", "ここみ"]
+        },
+        "en": {
+          "full": ["Sangonomiya Kokomi"],
+          "short": ["Kokomi"]
+        }
+      }
+    },
+    {
+      "id": "thoma",
+      "addedIn": 1,
+      "groups": {
+        "region": "inazuma",
+        "element": "pyro"
+      },
+      "names": {
+        "ko": {
+          "full": ["토마"],
+          "short": []
+        },
+        "ja": {
+          "full": ["トーマ"],
+          "short": []
+        },
+        "en": {
+          "full": ["Thoma"],
+          "short": []
+        }
+      }
+    },
+    {
+      "id": "arataki_itto",
+      "addedIn": 1,
+      "groups": {
+        "region": "inazuma",
+        "element": "geo"
+      },
+      "names": {
+        "ko": {
+          "full": ["아라타키 이토"],
+          "short": ["이토"]
+        },
+        "ja": {
+          "full": ["荒瀧一斗", "あらたきいっと"],
+          "short": ["一斗", "いっと"]
+        },
+        "en": {
+          "full": ["Arataki Itto"],
+          "short": ["Itto"]
+        }
+      }
+    },
+    {
+      "id": "gorou",
+      "addedIn": 1,
+      "groups": {
+        "region": "inazuma",
+        "element": "geo"
+      },
+      "names": {
+        "ko": {
+          "full": ["고로"],
+          "short": []
+        },
+        "ja": {
+          "full": ["ゴロー"],
+          "short": []
+        },
+        "en": {
+          "full": ["Gorou"],
+          "short": []
+        }
+      }
+    },
+    {
+      "id": "shenhe",
+      "addedIn": 1,
+      "groups": {
+        "region": "liyue",
+        "element": "cryo"
+      },
+      "names": {
+        "ko": {
+          "full": ["신학"],
+          "short": []
+        },
+        "ja": {
+          "full": ["申鶴", "しんかく"],
+          "short": []
+        },
+        "en": {
+          "full": ["Shenhe"],
+          "short": []
+        }
+      }
+    },
+    {
+      "id": "yun_jin",
+      "addedIn": 1,
+      "groups": {
+        "region": "liyue",
+        "element": "geo"
+      },
+      "names": {
+        "ko": {
+          "full": ["운근"],
+          "short": []
+        },
+        "ja": {
+          "full": ["雲菫", "うんきん"],
+          "short": []
+        },
+        "en": {
+          "full": ["Yun Jin"],
+          "short": []
+        }
+      }
+    },
+    {
+      "id": "yae_miko",
+      "addedIn": 1,
+      "groups": {
+        "region": "inazuma",
+        "element": "electro"
+      },
+      "names": {
+        "ko": {
+          "full": ["야에 미코"],
+          "short": ["야에"]
+        },
+        "ja": {
+          "full": ["八重神子", "やえみこ"],
+          "short": ["八重", "やえ"]
+        },
+        "en": {
+          "full": ["Yae Miko"],
+          "short": ["Yae"]
+        }
+      }
+    },
+    {
+      "id": "kamisato_ayato",
+      "addedIn": 1,
+      "groups": {
+        "region": "inazuma",
+        "element": "hydro"
+      },
+      "names": {
+        "ko": {
+          "full": ["카미사토 아야토"],
+          "short": ["아야토"]
+        },
+        "ja": {
+          "full": ["神里綾人", "かみさとあやと"],
+          "short": ["綾人", "あやと"]
+        },
+        "en": {
+          "full": ["Kamisato Ayato"],
+          "short": ["Ayato"]
+        }
+      }
+    },
+    {
+      "id": "yelan",
+      "addedIn": 1,
+      "groups": {
+        "region": "liyue",
+        "element": "hydro"
+      },
+      "names": {
+        "ko": {
+          "full": ["야란"],
+          "short": []
+        },
+        "ja": {
+          "full": ["夜蘭", "イェラン"],
+          "short": []
+        },
+        "en": {
+          "full": ["Yelan"],
+          "short": []
+        }
+      }
+    },
+    {
+      "id": "kuki_shinobu",
+      "addedIn": 1,
+      "groups": {
+        "region": "inazuma",
+        "element": "electro"
+      },
+      "names": {
+        "ko": {
+          "full": ["쿠키 시노부"],
+          "short": ["시노부"]
+        },
+        "ja": {
+          "full": ["久岐忍", "くきしのぶ"],
+          "short": ["忍", "しのぶ"]
+        },
+        "en": {
+          "full": ["Kuki Shinobu"],
+          "short": ["Shinobu"]
+        }
+      }
+    },
+    {
+      "id": "shikanoin_heizou",
+      "addedIn": 1,
+      "groups": {
+        "region": "inazuma",
+        "element": "anemo"
+      },
+      "names": {
+        "ko": {
+          "full": ["시카노인 헤이조"],
+          "short": ["헤이조"]
+        },
+        "ja": {
+          "full": ["鹿野院平蔵", "しかのいんへいぞう"],
+          "short": ["平蔵", "へいぞう"]
+        },
+        "en": {
+          "full": ["Shikanoin Heizou"],
+          "short": ["Heizou"]
+        }
+      }
+    },
+    {
+      "id": "tighnari",
+      "addedIn": 1,
+      "groups": {
+        "region": "sumeru",
+        "element": "dendro"
+      },
+      "names": {
+        "ko": {
+          "full": ["타이나리"],
+          "short": []
+        },
+        "ja": {
+          "full": ["ティナリ"],
+          "short": []
+        },
+        "en": {
+          "full": ["Tighnari"],
+          "short": []
+        }
+      }
+    },
+    {
+      "id": "collei",
+      "addedIn": 1,
+      "groups": {
+        "region": "sumeru",
+        "element": "dendro"
+      },
+      "names": {
+        "ko": {
+          "full": ["콜레이"],
+          "short": []
+        },
+        "ja": {
+          "full": ["コレイ"],
+          "short": []
+        },
+        "en": {
+          "full": ["Collei"],
+          "short": []
+        }
+      }
+    },
+    {
+      "id": "dori",
+      "addedIn": 1,
+      "groups": {
+        "region": "sumeru",
+        "element": "electro"
+      },
+      "names": {
+        "ko": {
+          "full": ["도리"],
+          "short": []
+        },
+        "ja": {
+          "full": ["ドリー"],
+          "short": []
+        },
+        "en": {
+          "full": ["Dori"],
+          "short": []
+        }
+      }
+    },
+    {
+      "id": "cyno",
+      "addedIn": 1,
+      "groups": {
+        "region": "sumeru",
+        "element": "electro"
+      },
+      "names": {
+        "ko": {
+          "full": ["사이노"],
+          "short": []
+        },
+        "ja": {
+          "full": ["セノ"],
+          "short": []
+        },
+        "en": {
+          "full": ["Cyno"],
+          "short": []
+        }
+      }
+    },
+    {
+      "id": "candace",
+      "addedIn": 1,
+      "groups": {
+        "region": "sumeru",
+        "element": "hydro"
+      },
+      "names": {
+        "ko": {
+          "full": ["캔디스"],
+          "short": []
+        },
+        "ja": {
+          "full": ["キャンディス"],
+          "short": []
+        },
+        "en": {
+          "full": ["Candace"],
+          "short": []
+        }
+      }
+    },
+    {
+      "id": "nilou",
+      "addedIn": 1,
+      "groups": {
+        "region": "sumeru",
+        "element": "hydro"
+      },
+      "names": {
+        "ko": {
+          "full": ["닐루"],
+          "short": []
+        },
+        "ja": {
+          "full": ["ニィロウ"],
+          "short": []
+        },
+        "en": {
+          "full": ["Nilou"],
+          "short": []
+        }
+      }
+    },
+    {
+      "id": "nahida",
+      "addedIn": 1,
+      "groups": {
+        "region": "sumeru",
+        "element": "dendro"
+      },
+      "names": {
+        "ko": {
+          "full": ["나히다"],
+          "short": []
+        },
+        "ja": {
+          "full": ["ナヒーダ"],
+          "short": []
+        },
+        "en": {
+          "full": ["Nahida"],
+          "short": []
+        }
+      }
+    },
+    {
+      "id": "layla",
+      "addedIn": 1,
+      "groups": {
+        "region": "sumeru",
+        "element": "cryo"
+      },
+      "names": {
+        "ko": {
+          "full": ["레일라"],
+          "short": []
+        },
+        "ja": {
+          "full": ["レイラ"],
+          "short": []
+        },
+        "en": {
+          "full": ["Layla"],
+          "short": []
+        }
+      }
+    },
+    {
+      "id": "wanderer",
+      "addedIn": 1,
+      "groups": {
+        "region": "sumeru",
+        "element": "anemo"
+      },
+      "names": {
+        "ko": {
+          "full": ["방랑자"],
+          "short": ["스카라무슈", "산병"]
+        },
+        "ja": {
+          "full": ["放浪者", "ほうろうしゃ"],
+          "short": ["散兵", "スカラマシュ"]
+        },
+        "en": {
+          "full": ["Wanderer"],
+          "short": ["Scaramouche", "Scara"]
+        }
+      }
+    },
+    {
+      "id": "faruzan",
+      "addedIn": 1,
+      "groups": {
+        "region": "sumeru",
+        "element": "anemo"
+      },
+      "names": {
+        "ko": {
+          "full": ["파루잔"],
+          "short": []
+        },
+        "ja": {
+          "full": ["ファルザン"],
+          "short": []
+        },
+        "en": {
+          "full": ["Faruzan"],
+          "short": []
+        }
+      }
+    },
+    {
+      "id": "alhaitham",
+      "addedIn": 1,
+      "groups": {
+        "region": "sumeru",
+        "element": "dendro"
+      },
+      "names": {
+        "ko": {
+          "full": ["알하이탐"],
+          "short": []
+        },
+        "ja": {
+          "full": ["アルハイゼン"],
+          "short": []
+        },
+        "en": {
+          "full": ["Alhaitham"],
+          "short": []
+        }
+      }
+    },
+    {
+      "id": "yaoyao",
+      "addedIn": 1,
+      "groups": {
+        "region": "liyue",
+        "element": "dendro"
+      },
+      "names": {
+        "ko": {
+          "full": ["요요"],
+          "short": []
+        },
+        "ja": {
+          "full": ["ヨォーヨ"],
+          "short": []
+        },
+        "en": {
+          "full": ["Yaoyao"],
+          "short": []
+        }
+      }
+    },
+    {
+      "id": "dehya",
+      "addedIn": 1,
+      "groups": {
+        "region": "sumeru",
+        "element": "pyro"
+      },
+      "names": {
+        "ko": {
+          "full": ["데히야"],
+          "short": []
+        },
+        "ja": {
+          "full": ["ディシア"],
+          "short": []
+        },
+        "en": {
+          "full": ["Dehya"],
+          "short": []
+        }
+      }
+    },
+    {
+      "id": "mika",
+      "addedIn": 1,
+      "groups": {
+        "region": "mondstadt",
+        "element": "cryo"
+      },
+      "names": {
+        "ko": {
+          "full": ["미카"],
+          "short": []
+        },
+        "ja": {
+          "full": ["ミカ"],
+          "short": []
+        },
+        "en": {
+          "full": ["Mika"],
+          "short": []
+        }
+      }
+    },
+    {
+      "id": "baizhu",
+      "addedIn": 1,
+      "groups": {
+        "region": "liyue",
+        "element": "dendro"
+      },
+      "names": {
+        "ko": {
+          "full": ["백출"],
+          "short": []
+        },
+        "ja": {
+          "full": ["白朮", "びゃくじゅつ"],
+          "short": []
+        },
+        "en": {
+          "full": ["Baizhu"],
+          "short": []
+        }
+      }
+    },
+    {
+      "id": "kaveh",
+      "addedIn": 1,
+      "groups": {
+        "region": "sumeru",
+        "element": "dendro"
+      },
+      "names": {
+        "ko": {
+          "full": ["카베"],
+          "short": []
+        },
+        "ja": {
+          "full": ["カーヴェ"],
+          "short": []
+        },
+        "en": {
+          "full": ["Kaveh"],
+          "short": []
+        }
+      }
+    },
+    {
+      "id": "kirara",
+      "addedIn": 1,
+      "groups": {
+        "region": "inazuma",
+        "element": "dendro"
+      },
+      "names": {
+        "ko": {
+          "full": ["키라라"],
+          "short": []
+        },
+        "ja": {
+          "full": ["綺良々", "きらら"],
+          "short": []
+        },
+        "en": {
+          "full": ["Kirara"],
+          "short": []
+        }
+      }
+    },
+    {
+      "id": "lyney",
+      "addedIn": 1,
+      "groups": {
+        "region": "fontaine",
+        "element": "pyro"
+      },
+      "names": {
+        "ko": {
+          "full": ["리니"],
+          "short": []
+        },
+        "ja": {
+          "full": ["リネ"],
+          "short": []
+        },
+        "en": {
+          "full": ["Lyney"],
+          "short": []
+        }
+      }
+    },
+    {
+      "id": "lynette",
+      "addedIn": 1,
+      "groups": {
+        "region": "fontaine",
+        "element": "anemo"
+      },
+      "names": {
+        "ko": {
+          "full": ["리넷"],
+          "short": []
+        },
+        "ja": {
+          "full": ["リネット"],
+          "short": []
+        },
+        "en": {
+          "full": ["Lynette"],
+          "short": []
+        }
+      }
+    },
+    {
+      "id": "freminet",
+      "addedIn": 1,
+      "groups": {
+        "region": "fontaine",
+        "element": "cryo"
+      },
+      "names": {
+        "ko": {
+          "full": ["프레미네"],
+          "short": []
+        },
+        "ja": {
+          "full": ["フレミネ"],
+          "short": []
+        },
+        "en": {
+          "full": ["Freminet"],
+          "short": []
+        }
+      }
+    },
+    {
+      "id": "neuvillette",
+      "addedIn": 1,
+      "groups": {
+        "region": "fontaine",
+        "element": "hydro"
+      },
+      "names": {
+        "ko": {
+          "full": ["느비예트"],
+          "short": ["느비"]
+        },
+        "ja": {
+          "full": ["ヌヴィレット"],
+          "short": []
+        },
+        "en": {
+          "full": ["Neuvillette"],
+          "short": []
+        }
+      }
+    },
+    {
+      "id": "wriothesley",
+      "addedIn": 1,
+      "groups": {
+        "region": "fontaine",
+        "element": "cryo"
+      },
+      "names": {
+        "ko": {
+          "full": ["라이오슬리"],
+          "short": []
+        },
+        "ja": {
+          "full": ["リオセスリ"],
+          "short": []
+        },
+        "en": {
+          "full": ["Wriothesley"],
+          "short": []
+        }
+      }
+    },
+    {
+      "id": "furina",
+      "addedIn": 1,
+      "groups": {
+        "region": "fontaine",
+        "element": "hydro"
+      },
+      "names": {
+        "ko": {
+          "full": ["푸리나"],
+          "short": []
+        },
+        "ja": {
+          "full": ["フリーナ"],
+          "short": []
+        },
+        "en": {
+          "full": ["Furina"],
+          "short": []
+        }
+      }
+    },
+    {
+      "id": "charlotte",
+      "addedIn": 1,
+      "groups": {
+        "region": "fontaine",
+        "element": "cryo"
+      },
+      "names": {
+        "ko": {
+          "full": ["샤를로트"],
+          "short": []
+        },
+        "ja": {
+          "full": ["シャルロット"],
+          "short": []
+        },
+        "en": {
+          "full": ["Charlotte"],
+          "short": []
+        }
+      }
+    },
+    {
+      "id": "navia",
+      "addedIn": 1,
+      "groups": {
+        "region": "fontaine",
+        "element": "geo"
+      },
+      "names": {
+        "ko": {
+          "full": ["나비아"],
+          "short": []
+        },
+        "ja": {
+          "full": ["ナヴィア"],
+          "short": []
+        },
+        "en": {
+          "full": ["Navia"],
+          "short": []
+        }
+      }
+    },
+    {
+      "id": "chevreuse",
+      "addedIn": 1,
+      "groups": {
+        "region": "fontaine",
+        "element": "pyro"
+      },
+      "names": {
+        "ko": {
+          "full": ["슈브르즈"],
+          "short": []
+        },
+        "ja": {
+          "full": ["シュヴルーズ"],
+          "short": []
+        },
+        "en": {
+          "full": ["Chevreuse"],
+          "short": []
+        }
+      }
+    },
+    {
+      "id": "xianyun",
+      "addedIn": 1,
+      "groups": {
+        "region": "liyue",
+        "element": "anemo"
+      },
+      "names": {
+        "ko": {
+          "full": ["한운"],
+          "short": []
+        },
+        "ja": {
+          "full": ["閑雲", "かんうん"],
+          "short": []
+        },
+        "en": {
+          "full": ["Xianyun"],
+          "short": []
+        }
+      }
+    },
+    {
+      "id": "gaming",
+      "addedIn": 1,
+      "groups": {
+        "region": "liyue",
+        "element": "pyro"
+      },
+      "names": {
+        "ko": {
+          "full": ["가명"],
+          "short": []
+        },
+        "ja": {
+          "full": ["嘉明", "ガミン"],
+          "short": []
+        },
+        "en": {
+          "full": ["Gaming"],
+          "short": []
+        }
+      }
+    },
+    {
+      "id": "chiori",
+      "addedIn": 1,
+      "groups": {
+        "region": "inazuma",
+        "element": "geo"
+      },
+      "names": {
+        "ko": {
+          "full": ["치오리"],
+          "short": []
+        },
+        "ja": {
+          "full": ["千織", "ちおり"],
+          "short": []
+        },
+        "en": {
+          "full": ["Chiori"],
+          "short": []
+        }
+      }
+    },
+    {
+      "id": "arlecchino",
+      "addedIn": 1,
+      "groups": {
+        "region": "snezhnaya",
+        "element": "pyro"
+      },
+      "names": {
+        "ko": {
+          "full": ["아를레키노"],
+          "short": ["아를"]
+        },
+        "ja": {
+          "full": ["アルレッキーノ"],
+          "short": ["召使", "めしつかい"]
+        },
+        "en": {
+          "full": ["Arlecchino"],
+          "short": ["Arle"]
+        }
+      }
+    },
+    {
+      "id": "sethos",
+      "addedIn": 1,
+      "groups": {
+        "region": "sumeru",
+        "element": "electro"
+      },
+      "names": {
+        "ko": {
+          "full": ["세토스"],
+          "short": []
+        },
+        "ja": {
+          "full": ["セトス"],
+          "short": []
+        },
+        "en": {
+          "full": ["Sethos"],
+          "short": []
+        }
+      }
+    },
+    {
+      "id": "clorinde",
+      "addedIn": 1,
+      "groups": {
+        "region": "fontaine",
+        "element": "electro"
+      },
+      "names": {
+        "ko": {
+          "full": ["클로린드"],
+          "short": []
+        },
+        "ja": {
+          "full": ["クロリンデ"],
+          "short": []
+        },
+        "en": {
+          "full": ["Clorinde"],
+          "short": []
+        }
+      }
+    },
+    {
+      "id": "sigewinne",
+      "addedIn": 1,
+      "groups": {
+        "region": "fontaine",
+        "element": "hydro"
+      },
+      "names": {
+        "ko": {
+          "full": ["시그윈"],
+          "short": []
+        },
+        "ja": {
+          "full": ["シグウィン"],
+          "short": []
+        },
+        "en": {
+          "full": ["Sigewinne"],
+          "short": []
+        }
+      }
+    },
+    {
+      "id": "emilie",
+      "addedIn": 1,
+      "groups": {
+        "region": "fontaine",
+        "element": "dendro"
+      },
+      "names": {
+        "ko": {
+          "full": ["에밀리"],
+          "short": []
+        },
+        "ja": {
+          "full": ["エミリエ"],
+          "short": []
+        },
+        "en": {
+          "full": ["Emilie"],
+          "short": []
+        }
+      }
+    },
+    {
+      "id": "kachina",
+      "addedIn": 1,
+      "groups": {
+        "region": "natlan",
+        "element": "geo"
+      },
+      "names": {
+        "ko": {
+          "full": ["카치나"],
+          "short": []
+        },
+        "ja": {
+          "full": ["カチーナ"],
+          "short": []
+        },
+        "en": {
+          "full": ["Kachina"],
+          "short": []
+        }
+      }
+    },
+    {
+      "id": "kinich",
+      "addedIn": 1,
+      "groups": {
+        "region": "natlan",
+        "element": "dendro"
+      },
+      "names": {
+        "ko": {
+          "full": ["키니치"],
+          "short": []
+        },
+        "ja": {
+          "full": ["キィニチ"],
+          "short": []
+        },
+        "en": {
+          "full": ["Kinich"],
+          "short": []
+        }
+      }
+    },
+    {
+      "id": "mualani",
+      "addedIn": 1,
+      "groups": {
+        "region": "natlan",
+        "element": "hydro"
+      },
+      "names": {
+        "ko": {
+          "full": ["말라니"],
+          "short": []
+        },
+        "ja": {
+          "full": ["ムアラニ"],
+          "short": []
+        },
+        "en": {
+          "full": ["Mualani"],
+          "short": []
+        }
+      }
+    },
+    {
+      "id": "xilonen",
+      "addedIn": 1,
+      "groups": {
+        "region": "natlan",
+        "element": "geo"
+      },
+      "names": {
+        "ko": {
+          "full": ["실로닌"],
+          "short": []
+        },
+        "ja": {
+          "full": ["シロネン"],
+          "short": []
+        },
+        "en": {
+          "full": ["Xilonen"],
+          "short": []
+        }
+      }
+    },
+    {
+      "id": "chasca",
+      "addedIn": 1,
+      "groups": {
+        "region": "natlan",
+        "element": "anemo"
+      },
+      "names": {
+        "ko": {
+          "full": ["차스카"],
+          "short": []
+        },
+        "ja": {
+          "full": ["チャスカ"],
+          "short": []
+        },
+        "en": {
+          "full": ["Chasca"],
+          "short": []
+        }
+      }
+    },
+    {
+      "id": "ororon",
+      "addedIn": 1,
+      "groups": {
+        "region": "natlan",
+        "element": "electro"
+      },
+      "names": {
+        "ko": {
+          "full": ["올로룬"],
+          "short": []
+        },
+        "ja": {
+          "full": ["オロルン"],
+          "short": []
+        },
+        "en": {
+          "full": ["Ororon"],
+          "short": []
+        }
+      }
+    },
+    {
+      "id": "mavuika",
+      "addedIn": 1,
+      "groups": {
+        "region": "natlan",
+        "element": "pyro"
+      },
+      "names": {
+        "ko": {
+          "full": ["마비카"],
+          "short": []
+        },
+        "ja": {
+          "full": ["マーヴィカ"],
+          "short": []
+        },
+        "en": {
+          "full": ["Mavuika"],
+          "short": []
+        }
+      }
+    },
+    {
+      "id": "citlali",
+      "addedIn": 1,
+      "groups": {
+        "region": "natlan",
+        "element": "cryo"
+      },
+      "names": {
+        "ko": {
+          "full": ["시틀라리"],
+          "short": []
+        },
+        "ja": {
+          "full": ["シトラリ"],
+          "short": []
+        },
+        "en": {
+          "full": ["Citlali"],
+          "short": []
+        }
+      }
+    },
+    {
+      "id": "lan_yan",
+      "addedIn": 1,
+      "groups": {
+        "region": "liyue",
+        "element": "anemo"
+      },
+      "names": {
+        "ko": {
+          "full": ["남연"],
+          "short": []
+        },
+        "ja": {
+          "full": ["藍硯", "ランヤン"],
+          "short": []
+        },
+        "en": {
+          "full": ["Lan Yan"],
+          "short": []
+        }
+      }
+    },
+    {
+      "id": "yumemizuki_mizuki",
+      "addedIn": 1,
+      "groups": {
+        "region": "inazuma",
+        "element": "anemo"
+      },
+      "names": {
+        "ko": {
+          "full": ["유메미즈키 미즈키"],
+          "short": ["미즈키"]
+        },
+        "ja": {
+          "full": ["夢見月瑞希", "ゆめみづきみずき"],
+          "short": ["瑞希", "みずき"]
+        },
+        "en": {
+          "full": ["Yumemizuki Mizuki"],
+          "short": ["Mizuki"]
+        }
+      }
+    },
+    {
+      "id": "varesa",
+      "addedIn": 1,
+      "groups": {
+        "region": "natlan",
+        "element": "electro"
+      },
+      "names": {
+        "ko": {
+          "full": ["바레사"],
+          "short": []
+        },
+        "ja": {
+          "full": ["ヴァレサ"],
+          "short": []
+        },
+        "en": {
+          "full": ["Varesa"],
+          "short": []
+        }
+      }
+    },
+    {
+      "id": "iansan",
+      "addedIn": 1,
+      "groups": {
+        "region": "natlan",
+        "element": "electro"
+      },
+      "names": {
+        "ko": {
+          "full": ["얀사"],
+          "short": []
+        },
+        "ja": {
+          "full": ["イアンサ"],
+          "short": []
+        },
+        "en": {
+          "full": ["Iansan"],
+          "short": []
+        }
+      }
+    },
+    {
+      "id": "escoffier",
+      "addedIn": 1,
+      "groups": {
+        "region": "fontaine",
+        "element": "cryo"
+      },
+      "names": {
+        "ko": {
+          "full": ["에스코피에"],
+          "short": []
+        },
+        "ja": {
+          "full": ["エスコフィエ"],
+          "short": []
+        },
+        "en": {
+          "full": ["Escoffier"],
+          "short": []
+        }
+      }
+    },
+    {
+      "id": "ifa",
+      "addedIn": 1,
+      "groups": {
+        "region": "natlan",
+        "element": "anemo"
+      },
+      "names": {
+        "ko": {
+          "full": ["이파"],
+          "short": []
+        },
+        "ja": {
+          "full": ["イファ"],
+          "short": []
+        },
+        "en": {
+          "full": ["Ifa"],
+          "short": []
+        }
+      }
+    },
+    {
+      "id": "skirk",
+      "addedIn": 1,
+      "groups": {
+        "region": "other",
+        "element": "cryo"
+      },
+      "names": {
+        "ko": {
+          "full": ["스커크"],
+          "short": []
+        },
+        "ja": {
+          "full": ["スカーク"],
+          "short": []
+        },
+        "en": {
+          "full": ["Skirk"],
+          "short": []
+        }
+      }
+    },
+    {
+      "id": "dahlia",
+      "addedIn": 1,
+      "groups": {
+        "region": "mondstadt",
+        "element": "hydro"
+      },
+      "names": {
+        "ko": {
+          "full": ["달리아"],
+          "short": []
+        },
+        "ja": {
+          "full": ["ダリア"],
+          "short": []
+        },
+        "en": {
+          "full": ["Dahlia"],
+          "short": []
+        }
+      }
+    },
+    {
+      "id": "ineffa",
+      "addedIn": 1,
+      "groups": {
+        "region": "nod_krai",
+        "element": "electro"
+      },
+      "names": {
+        "ko": {
+          "full": ["이네파"],
+          "short": []
+        },
+        "ja": {
+          "full": ["イネファ"],
+          "short": []
+        },
+        "en": {
+          "full": ["Ineffa"],
+          "short": []
+        }
+      }
+    },
+    {
+      "id": "lauma",
+      "addedIn": 1,
+      "groups": {
+        "region": "nod_krai",
+        "element": "dendro"
+      },
+      "names": {
+        "ko": {
+          "full": ["라우마"],
+          "short": []
+        },
+        "ja": {
+          "full": ["ラウマ"],
+          "short": []
+        },
+        "en": {
+          "full": ["Lauma"],
+          "short": []
+        }
+      }
+    },
+    {
+      "id": "flins",
+      "addedIn": 1,
+      "groups": {
+        "region": "nod_krai",
+        "element": "electro"
+      },
+      "names": {
+        "ko": {
+          "full": ["플린스"],
+          "short": []
+        },
+        "ja": {
+          "full": ["フリンズ"],
+          "short": []
+        },
+        "en": {
+          "full": ["Flins"],
+          "short": []
+        }
+      }
+    },
+    {
+      "id": "aino",
+      "addedIn": 1,
+      "groups": {
+        "region": "nod_krai",
+        "element": "hydro"
+      },
+      "names": {
+        "ko": {
+          "full": ["아이노"],
+          "short": []
+        },
+        "ja": {
+          "full": ["アイノ"],
+          "short": []
+        },
+        "en": {
+          "full": ["Aino"],
+          "short": []
+        }
+      }
+    },
+    {
+      "id": "nefer",
+      "addedIn": 1,
+      "groups": {
+        "region": "nod_krai",
+        "element": "dendro"
+      },
+      "names": {
+        "ko": {
+          "full": ["네페르"],
+          "short": []
+        },
+        "ja": {
+          "full": ["ネフェル"],
+          "short": []
+        },
+        "en": {
+          "full": ["Nefer"],
+          "short": []
+        }
+      }
+    },
+    {
+      "id": "durin",
+      "addedIn": 1,
+      "groups": {
+        "region": "mondstadt",
+        "element": "pyro"
+      },
+      "names": {
+        "ko": {
+          "full": ["두린"],
+          "short": []
+        },
+        "ja": {
+          "full": ["ドゥリン"],
+          "short": []
+        },
+        "en": {
+          "full": ["Durin"],
+          "short": []
+        }
+      }
+    },
+    {
+      "id": "jahoda",
+      "addedIn": 1,
+      "groups": {
+        "region": "nod_krai",
+        "element": "anemo"
+      },
+      "names": {
+        "ko": {
+          "full": ["야호다"],
+          "short": []
+        },
+        "ja": {
+          "full": ["ヤフォダ"],
+          "short": []
+        },
+        "en": {
+          "full": ["Jahoda"],
+          "short": []
+        }
+      }
+    },
+    {
+      "id": "columbina",
+      "addedIn": 1,
+      "groups": {
+        "region": "nod_krai",
+        "element": "hydro"
+      },
+      "names": {
+        "ko": {
+          "full": ["콜롬비나"],
+          "short": []
+        },
+        "ja": {
+          "full": ["コロンビーナ"],
+          "short": []
+        },
+        "en": {
+          "full": ["Columbina"],
+          "short": []
+        }
+      }
+    },
+    {
+      "id": "illuga",
+      "addedIn": 1,
+      "groups": {
+        "region": "nod_krai",
+        "element": "geo"
+      },
+      "names": {
+        "ko": {
+          "full": ["일루가"],
+          "short": []
+        },
+        "ja": {
+          "full": ["イルーガ"],
+          "short": []
+        },
+        "en": {
+          "full": ["Illuga"],
+          "short": []
+        }
+      }
+    },
+    {
+      "id": "zibai",
+      "addedIn": 1,
+      "groups": {
+        "region": "liyue",
+        "element": "geo"
+      },
+      "names": {
+        "ko": {
+          "full": ["자백"],
+          "short": []
+        },
+        "ja": {
+          "full": ["兹白", "茲白", "シハク"],
+          "short": []
+        },
+        "en": {
+          "full": ["Zibai"],
+          "short": []
+        }
+      }
+    },
+    {
+      "id": "varka",
+      "addedIn": 1,
+      "groups": {
+        "region": "mondstadt",
+        "element": "anemo"
+      },
+      "names": {
+        "ko": {
+          "full": ["바르카"],
+          "short": []
+        },
+        "ja": {
+          "full": ["ファルカ"],
+          "short": []
+        },
+        "en": {
+          "full": ["Varka"],
+          "short": []
+        }
+      }
+    },
+    {
+      "id": "linnea",
+      "addedIn": 1,
+      "groups": {
+        "region": "nod_krai",
+        "element": "geo"
+      },
+      "names": {
+        "ko": {
+          "full": ["린네아"],
+          "short": []
+        },
+        "ja": {
+          "full": ["リンネア"],
+          "short": []
+        },
+        "en": {
+          "full": ["Linnea"],
+          "short": []
+        }
+      }
+    },
+    {
+      "id": "nicole",
+      "addedIn": 1,
+      "groups": {
+        "region": "other",
+        "element": "pyro"
+      },
+      "names": {
+        "ko": {
+          "full": ["니콜"],
+          "short": []
+        },
+        "ja": {
+          "full": ["ニコ"],
+          "short": []
+        },
+        "en": {
+          "full": ["Nicole", "Nicole Reeyn"],
+          "short": []
+        }
+      }
+    },
+    {
+      "id": "lohen",
+      "addedIn": 1,
+      "groups": {
+        "region": "mondstadt",
+        "element": "cryo"
+      },
+      "names": {
+        "ko": {
+          "full": ["로엔"],
+          "short": []
+        },
+        "ja": {
+          "full": ["ローエン"],
+          "short": []
+        },
+        "en": {
+          "full": ["Lohen"],
+          "short": []
+        }
+      }
+    },
+    {
+      "id": "prune",
+      "addedIn": 1,
+      "groups": {
+        "region": "mondstadt",
+        "element": "anemo"
+      },
+      "names": {
+        "ko": {
+          "full": ["프루네"],
+          "short": []
+        },
+        "ja": {
+          "full": ["プルーネ"],
+          "short": []
+        },
+        "en": {
+          "full": ["Prune"],
+          "short": []
+        }
+      }
+    },
+    {
+      "id": "sandrone",
+      "addedIn": 1,
+      "groups": {
+        "region": "snezhnaya",
+        "element": "cryo"
+      },
+      "names": {
+        "ko": {
+          "full": ["산드로네"],
+          "short": []
+        },
+        "ja": {
+          "full": ["サンドローネ"],
+          "short": []
+        },
+        "en": {
+          "full": ["Sandrone"],
+          "short": []
+        }
+      }
+    },
+    {
+      "id": "odette",
+      "addedIn": 1,
+      "groups": {
+        "region": "snezhnaya",
+        "element": "cryo"
+      },
+      "names": {
+        "ko": {
+          "full": ["오데트"],
+          "short": []
+        },
+        "ja": {
+          "full": ["オデット"],
+          "short": []
+        },
+        "en": {
+          "full": ["Odette"],
+          "short": []
+        }
+      }
+    },
+    {
+      "id": "alyosha",
+      "addedIn": 1,
+      "groups": {
+        "region": "snezhnaya",
+        "element": "electro"
+      },
+      "names": {
+        "ko": {
+          "full": ["알료샤"],
+          "short": []
+        },
+        "ja": {
+          "full": ["アリョーシャ"],
+          "short": []
+        },
+        "en": {
+          "full": ["Alyosha"],
+          "short": []
+        }
+      }
+    },
+    {
+      "id": "vesna",
+      "addedIn": 1,
+      "groups": {
+        "region": "snezhnaya",
+        "element": "anemo"
+      },
+      "names": {
+        "ko": {
+          "full": ["베스나"],
+          "short": []
+        },
+        "ja": {
+          "full": ["ヴェスナ"],
+          "short": []
+        },
+        "en": {
+          "full": ["Vesna"],
+          "short": []
+        }
+      }
+    },
+    {
+      "id": "vodyanitsa",
+      "addedIn": 1,
+      "groups": {
+        "region": "snezhnaya",
+        "element": "hydro"
+      },
+      "names": {
+        "ko": {
+          "full": ["보댜니차"],
+          "short": []
+        },
+        "ja": {
+          "full": ["ヴォジャニーツァ"],
+          "short": []
+        },
+        "en": {
+          "full": ["Vodyanitsa"],
+          "short": []
+        }
+      }
+    },
+    {
+      "id": "mitya",
+      "addedIn": 1,
+      "groups": {
+        "region": "snezhnaya",
+        "element": "electro"
+      },
+      "names": {
+        "ko": {
+          "full": ["미탸"],
+          "short": []
+        },
+        "ja": {
+          "full": ["ミティヤ"],
+          "short": []
+        },
+        "en": {
+          "full": ["Mitya"],
+          "short": []
+        }
+      }
+    },
+    {
+      "id": "valeriy",
+      "addedIn": 1,
+      "groups": {
+        "region": "snezhnaya",
+        "element": "electro"
+      },
+      "names": {
+        "ko": {
+          "full": ["발레리"],
+          "short": []
+        },
+        "ja": {
+          "full": ["バレリー"],
+          "short": []
+        },
+        "en": {
+          "full": ["Valeriy", "Valery"],
+          "short": []
+        }
+      }
+    }
+  ]
+}
