@@ -2,11 +2,12 @@
 
 import type { Comment, Lang } from "@rosterush/core";
 import { useState } from "react";
+import { Button } from "@/components/ui/button";
 import { createReply, deleteComment, listReplies, updateComment } from "@/lib/api";
 import type { Dict } from "@/lib/i18n";
 import { CommentForm } from "./comment-form";
 import { RecordChip } from "./record-chip";
-import { errorText, inputCls, smallBtn, timeAgo } from "./util";
+import { errorText, inputCls, timeAgo } from "./util";
 
 type Props = {
   comment: Comment;
@@ -206,16 +207,17 @@ function PasswordRow(p: {
           autoFocus
           className={`${inputCls} w-40 flex-none py-1.5`}
         />
-        <button
+        <Button
           type="submit"
+          size="sm"
+          variant={p.danger ? "danger" : "sun"}
           disabled={p.busy || p.disabled}
-          className={`${smallBtn} ${p.danger ? "bg-[#ff8fa3]" : "bg-sun"}`}
         >
           {p.submitLabel}
-        </button>
-        <button type="button" onClick={p.close} className={`${smallBtn} bg-white`}>
+        </Button>
+        <Button size="sm" variant="white" onClick={p.close}>
           {p.d.cancel}
-        </button>
+        </Button>
       </div>
       {p.error && (
         <p className="text-xs font-bold text-[#c2405b]" role="alert">

@@ -2,6 +2,7 @@
 
 import { type Comment, type CommentCreateRequest, formatTime } from "@rosterush/core";
 import { useEffect, useId, useState } from "react";
+import { Button } from "@/components/ui/button";
 import type { Dict } from "@/lib/i18n";
 import { loadNickname, NICKNAME_MAX, saveNickname } from "@/lib/nickname";
 import { type LocalRecord, loadRecords, onRecordsChange } from "@/lib/records";
@@ -159,13 +160,9 @@ export function CommentForm({
             {d.cancel}
           </button>
         )}
-        <button
-          type="submit"
-          disabled={sending || !ready}
-          className="bg-brand rounded-xl border-2 border-black px-5 py-2 text-sm font-black text-white shadow-[3px_3px_0_#000] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none disabled:opacity-50"
-        >
+        <Button type="submit" variant="brand" disabled={sending || !ready}>
           {sending ? d.posting : d.post}
-        </button>
+        </Button>
       </div>
     </form>
   );

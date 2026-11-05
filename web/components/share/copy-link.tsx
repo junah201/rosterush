@@ -1,10 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { Button } from "@/components/ui/button";
 import type { Dict } from "@/lib/i18n";
-
-const btn =
-  "rounded-xl border-2 border-black px-3 py-2 text-sm font-black shadow-[2px_2px_0_#000] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none";
 
 /** 링크 표시 + 복사 + (지원하면) 기기 공유 시트 */
 export function CopyLink({ url, title, d }: { url: string; title: string; d: Dict }) {
@@ -44,13 +42,13 @@ export function CopyLink({ url, title, d }: { url: string; title: string; d: Dic
         className="w-full rounded-xl border-2 border-black bg-[#f6f7fb] px-3 py-2 text-sm font-bold"
       />
       <div className="flex gap-2">
-        <button type="button" onClick={copy} className={`${btn} flex-1 bg-white`}>
+        <Button variant="white" className="flex-1" onClick={copy}>
           {copied ? `✓ ${d.copied}` : d.copyLink}
-        </button>
+        </Button>
         {canShare && (
-          <button type="button" onClick={share} className={`${btn} bg-sun`}>
+          <Button variant="sun" onClick={share}>
             {d.shareNative}
-          </button>
+          </Button>
         )}
       </div>
     </div>

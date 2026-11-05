@@ -29,6 +29,3 @@ export function timeAgo(iso: string, lang: Lang, now = Date.now()): string {
 
 export const inputCls =
   "w-full rounded-xl border-2 border-black bg-white px-3 py-2 text-sm font-bold placeholder:font-medium placeholder:text-[#8a93a5] disabled:opacity-60";
-
-export const smallBtn =
-  "rounded-lg border-2 border-black px-2.5 py-1 text-xs font-black shadow-[2px_2px_0_#000] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none disabled:opacity-60";

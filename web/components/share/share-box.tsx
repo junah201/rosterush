@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { Button } from "@/components/ui/button";
 import { ApiRequestError, postShare } from "@/lib/api";
 import type { Dict } from "@/lib/i18n";
 import { loadNickname, NICKNAME_MAX, saveNickname } from "@/lib/nickname";
@@ -55,13 +56,15 @@ export function ShareBox({ resultId, title, d }: { resultId: string; title: stri
             disabled={state.s === "sending"}
             className="w-full rounded-xl border-2 border-black px-3 py-2 text-sm font-bold"
           />
-          <button
+          <Button
             type="submit"
+            variant="sun"
+            size="lg"
+            className="w-full"
             disabled={state.s === "sending"}
-            className="bg-sun w-full rounded-xl border-2 border-black py-2.5 font-black shadow-[3px_3px_0_#000] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none disabled:opacity-60"
           >
             {state.s === "sending" ? d.makingLink : d.makeLink}
-          </button>
+          </Button>
           {state.s === "failed" && (
             <p className="text-center text-xs font-bold text-[#c2405b]" role="alert">
               {state.message}

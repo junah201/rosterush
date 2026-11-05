@@ -5,6 +5,7 @@ import { getGame } from "@rosterush/games";
 import Link from "next/link";
 import { useCallback, useEffect, useState } from "react";
 import { RecordSummary, recordTitle } from "@/components/record/record-summary";
+import { buttonVariants } from "@/components/ui/button";
 import { ApiRequestError, getShare } from "@/lib/api";
 import { type Dict, t } from "@/lib/i18n";
 import { CopyLink } from "./copy-link";
@@ -124,7 +125,7 @@ function ShareCard({ share, lang, d }: { share: Share; lang: Lang; d: Dict }) {
 
       <Link
         href={`/${lang}/${share.game}/`}
-        className="bg-brand block w-full rounded-xl border-2 border-black py-3 text-center font-black text-white shadow-[3px_3px_0_#000] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none"
+        className={buttonVariants({ variant: "brand", size: "lg", className: "w-full" })}
       >
         {d.tryIt}
       </Link>

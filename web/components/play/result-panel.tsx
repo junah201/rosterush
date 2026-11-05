@@ -4,6 +4,7 @@ import { type Difficulty, type GameDef, type Lang, rosterAt } from "@rosterush/c
 import { useCallback, useEffect, useRef, useState } from "react";
 import { RecordSummary, recordTitle } from "@/components/record/record-summary";
 import { ShareBox } from "@/components/share/share-box";
+import { Button } from "@/components/ui/button";
 import { ApiRequestError, postResult } from "@/lib/api";
 import type { Dict } from "@/lib/i18n";
 import { saveRecord } from "@/lib/records";
@@ -105,13 +106,9 @@ export function ResultPanel({ game, lang, d, difficulty, result, onRetry }: Prop
         />
       )}
 
-      <button
-        type="button"
-        onClick={onRetry}
-        className="bg-brand w-full rounded-xl border-2 border-black py-3 font-black text-white shadow-[3px_3px_0_#000] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none"
-      >
+      <Button variant="brand" size="lg" className="w-full" onClick={onRetry}>
         {d.retry}
-      </button>
+      </Button>
     </div>
   );
 }
