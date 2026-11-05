@@ -180,6 +180,8 @@
         "region": "other",
         "element": "anemo"
       },
+      "image": "genshin/c162a7f13b9b.webp",
+      "silhouette": "genshin/c63c2da47c9c.webp",
       "names": {
         "ko": {
           "full": ["여행자", "아이테르", "루미네"],
@@ -202,6 +204,8 @@
         "region": "mondstadt",
         "element": "pyro"
       },
+      "image": "genshin/6dfbb0020911.webp",
+      "silhouette": "genshin/70adfd97d499.webp",
       "names": {
         "ko": {
           "full": ["엠버"],
@@ -224,6 +228,8 @@
         "region": "mondstadt",
         "element": "cryo"
       },
+      "image": "genshin/cd768df5a499.webp",
+      "silhouette": "genshin/aa2040fd69e4.webp",
       "names": {
         "ko": {
           "full": ["케이아"],
@@ -246,6 +252,8 @@
         "region": "mondstadt",
         "element": "electro"
       },
+      "image": "genshin/d54dcddddaf1.webp",
+      "silhouette": "genshin/fd5361b8c34c.webp",
       "names": {
         "ko": {
           "full": ["리사"],
@@ -268,6 +276,8 @@
         "region": "mondstadt",
         "element": "hydro"
       },
+      "image": "genshin/2405f6175881.webp",
+      "silhouette": "genshin/e6348faf84e8.webp",
       "names": {
         "ko": {
           "full": ["바바라"],
@@ -290,6 +300,8 @@
         "region": "mondstadt",
         "element": "electro"
       },
+      "image": "genshin/562fb6b51d4b.webp",
+      "silhouette": "genshin/eb5457ee8c20.webp",
       "names": {
         "ko": {
           "full": ["레이저"],
@@ -312,6 +324,8 @@
         "region": "liyue",
         "element": "pyro"
       },
+      "image": "genshin/59e869648d04.webp",
+      "silhouette": "genshin/6d7599dee930.webp",
       "names": {
         "ko": {
           "full": ["향릉"],
@@ -334,6 +348,8 @@
         "region": "liyue",
         "element": "electro"
       },
+      "image": "genshin/183df8525fc2.webp",
+      "silhouette": "genshin/61ce688ac60d.webp",
       "names": {
         "ko": {
           "full": ["북두"],
@@ -356,6 +372,8 @@
         "region": "liyue",
         "element": "hydro"
       },
+      "image": "genshin/003017388c93.webp",
+      "silhouette": "genshin/8515ec2595cb.webp",
       "names": {
         "ko": {
           "full": ["행추"],
@@ -378,6 +396,8 @@
         "region": "liyue",
         "element": "geo"
       },
+      "image": "genshin/60eed66ef406.webp",
+      "silhouette": "genshin/6719c2427034.webp",
       "names": {
         "ko": {
           "full": ["응광"],
@@ -400,6 +420,8 @@
         "region": "mondstadt",
         "element": "electro"
       },
+      "image": "genshin/17546ce0e6f1.webp",
+      "silhouette": "genshin/e1087e1ca5b0.webp",
       "names": {
         "ko": {
           "full": ["피슬"],
@@ -422,6 +444,8 @@
         "region": "mondstadt",
         "element": "pyro"
       },
+      "image": "genshin/e9a6e82de24f.webp",
+      "silhouette": "genshin/6300db83fdac.webp",
       "names": {
         "ko": {
           "full": ["베넷"],
@@ -444,6 +468,8 @@
         "region": "mondstadt",
         "element": "geo"
       },
+      "image": "genshin/763289764683.webp",
+      "silhouette": "genshin/dffbf5541562.webp",
       "names": {
         "ko": {
           "full": ["노엘"],
@@ -466,6 +492,8 @@
         "region": "liyue",
         "element": "cryo"
       },
+      "image": "genshin/6a28b77f339c.webp",
+      "silhouette": "genshin/6fa5ee8a6b47.webp",
       "names": {
         "ko": {
           "full": ["중운"],
@@ -488,6 +516,8 @@
         "region": "mondstadt",
         "element": "anemo"
       },
+      "image": "genshin/ad6d62d148a8.webp",
+      "silhouette": "genshin/49fdc0ba8dfc.webp",
       "names": {
         "ko": {
           "full": ["설탕"],
@@ -510,6 +540,8 @@
         "region": "mondstadt",
         "element": "anemo"
       },
+      "image": "genshin/f4b281cd3dd0.webp",
+      "silhouette": "genshin/572fdd21fd77.webp",
       "names": {
         "ko": {
           "full": ["진"],
@@ -532,6 +564,8 @@
         "region": "mondstadt",
         "element": "pyro"
       },
+      "image": "genshin/3e9041e2f5e2.webp",
+      "silhouette": "genshin/45326935a1d6.webp",
       "names": {
         "ko": {
           "full": ["다이루크"],
@@ -554,6 +588,8 @@
         "region": "liyue",
         "element": "cryo"
       },
+      "image": "genshin/919a97fc8edf.webp",
+      "silhouette": "genshin/d97079182ce0.webp",
       "names": {
         "ko": {
           "full": ["치치"],
@@ -576,6 +612,8 @@
         "region": "mondstadt",
         "element": "hydro"
       },
+      "image": "genshin/4e10b82c8786.webp",
+      "silhouette": "genshin/3ac283d6a2e5.webp",
       "names": {
         "ko": {
           "full": ["모나"],
@@ -598,6 +636,8 @@
         "region": "liyue",
         "element": "electro"
       },
+      "image": "genshin/1c73e9fb2c42.webp",
+      "silhouette": "genshin/9fb701ebbd9f.webp",
       "names": {
         "ko": {
           "full": ["각청"],
@@ -620,6 +660,8 @@
         "region": "mondstadt",
         "element": "anemo"
       },
+      "image": "genshin/deb8f3a8b21b.webp",
+      "silhouette": "genshin/9d05e0cc0ed0.webp",
       "names": {
         "ko": {
           "full": ["벤티"],
@@ -642,6 +684,8 @@
         "region": "mondstadt",
         "element": "pyro"
       },
+      "image": "genshin/348a8797109c.webp",
+      "silhouette": "genshin/c34c2024bcfb.webp",
       "names": {
         "ko": {
           "full": ["클레"],
@@ -664,6 +708,8 @@
         "region": "snezhnaya",
         "element": "hydro"
       },
+      "image": "genshin/9bad4ecaeb10.webp",
+      "silhouette": "genshin/d36e38364148.webp",
       "names": {
         "ko": {
           "full": ["타르탈리아"],
@@ -686,6 +732,8 @@
         "region": "mondstadt",
         "element": "cryo"
       },
+      "image": "genshin/b11c1e4add43.webp",
+      "silhouette": "genshin/a5027fb3d5b8.webp",
       "names": {
         "ko": {
           "full": ["디오나"],
@@ -708,6 +756,8 @@
         "region": "liyue",
         "element": "geo"
       },
+      "image": "genshin/58d0064cdfc1.webp",
+      "silhouette": "genshin/7b5e1ff59720.webp",
       "names": {
         "ko": {
           "full": ["종려"],
@@ -730,6 +780,8 @@
         "region": "liyue",
         "element": "pyro"
       },
+      "image": "genshin/3ddf0b218114.webp",
+      "silhouette": "genshin/c5ad79fbe904.webp",
       "names": {
         "ko": {
           "full": ["신염"],
@@ -752,6 +804,8 @@
         "region": "mondstadt",
         "element": "geo"
       },
+      "image": "genshin/56e7da706590.webp",
+      "silhouette": "genshin/8c227bb766eb.webp",
       "names": {
         "ko": {
           "full": ["알베도"],
@@ -774,6 +828,8 @@
         "region": "liyue",
         "element": "cryo"
       },
+      "image": "genshin/1244458a58bc.webp",
+      "silhouette": "genshin/ff6046c970f9.webp",
       "names": {
         "ko": {
           "full": ["감우"],
@@ -796,6 +852,8 @@
         "region": "liyue",
         "element": "anemo"
       },
+      "image": "genshin/c5bd9efa43e0.webp",
+      "silhouette": "genshin/10f3ee086193.webp",
       "names": {
         "ko": {
           "full": ["소"],
@@ -818,6 +876,8 @@
         "region": "liyue",
         "element": "pyro"
       },
+      "image": "genshin/c6937e6e228c.webp",
+      "silhouette": "genshin/789a5ec6b5be.webp",
       "names": {
         "ko": {
           "full": ["호두"],
@@ -840,6 +900,8 @@
         "region": "mondstadt",
         "element": "cryo"
       },
+      "image": "genshin/a01d03cc76bd.webp",
+      "silhouette": "genshin/22606b805180.webp",
       "names": {
         "ko": {
           "full": ["로자리아"],
@@ -862,6 +924,8 @@
         "region": "liyue",
         "element": "pyro"
       },
+      "image": "genshin/2a6e37689527.webp",
+      "silhouette": "genshin/f6ef5bee6419.webp",
       "names": {
         "ko": {
           "full": ["연비"],
@@ -884,6 +948,8 @@
         "region": "mondstadt",
         "element": "cryo"
       },
+      "image": "genshin/d4340ac1da78.webp",
+      "silhouette": "genshin/3ccc16cbd96b.webp",
       "names": {
         "ko": {
           "full": ["유라"],
@@ -906,6 +972,8 @@
         "region": "inazuma",
         "element": "anemo"
       },
+      "image": "genshin/0c1655a41f56.webp",
+      "silhouette": "genshin/27c59ec043c2.webp",
       "names": {
         "ko": {
           "full": ["카에데하라 카즈하"],
@@ -928,6 +996,8 @@
         "region": "inazuma",
         "element": "cryo"
       },
+      "image": "genshin/b112defa9d94.webp",
+      "silhouette": "genshin/b073e37b6c34.webp",
       "names": {
         "ko": {
           "full": ["카미사토 아야카"],
@@ -950,6 +1020,8 @@
         "region": "inazuma",
         "element": "anemo"
       },
+      "image": "genshin/d9d66e4cae86.webp",
+      "silhouette": "genshin/fd7d6c19ed84.webp",
       "names": {
         "ko": {
           "full": ["사유"],
@@ -972,6 +1044,8 @@
         "region": "inazuma",
         "element": "pyro"
       },
+      "image": "genshin/c969853afa72.webp",
+      "silhouette": "genshin/225344a9188e.webp",
       "names": {
         "ko": {
           "full": ["요이미야"],
@@ -994,6 +1068,8 @@
         "region": "inazuma",
         "element": "electro"
       },
+      "image": "genshin/b31af5d725c5.webp",
+      "silhouette": "genshin/1630f4902b02.webp",
       "names": {
         "ko": {
           "full": ["라이덴 쇼군"],
@@ -1016,6 +1092,8 @@
         "region": "inazuma",
         "element": "electro"
       },
+      "image": "genshin/96ea045ea8ad.webp",
+      "silhouette": "genshin/5809f68d84b0.webp",
       "names": {
         "ko": {
           "full": ["쿠죠 사라"],
@@ -1038,6 +1116,8 @@
         "region": "other",
         "element": "cryo"
       },
+      "image": "genshin/31daf702ad94.webp",
+      "silhouette": "genshin/63cfea2d8ab5.webp",
       "names": {
         "ko": {
           "full": ["에일로이"],
@@ -1060,6 +1140,8 @@
         "region": "inazuma",
         "element": "hydro"
       },
+      "image": "genshin/1ab0c3a62c6c.webp",
+      "silhouette": "genshin/b83e4b590529.webp",
       "names": {
         "ko": {
           "full": ["산고노미야 코코미"],
@@ -1082,6 +1164,8 @@
         "region": "inazuma",
         "element": "pyro"
       },
+      "image": "genshin/df7adbe72238.webp",
+      "silhouette": "genshin/76c56c8819dc.webp",
       "names": {
         "ko": {
           "full": ["토마"],
@@ -1104,6 +1188,8 @@
         "region": "inazuma",
         "element": "geo"
       },
+      "image": "genshin/9f57d91fea99.webp",
+      "silhouette": "genshin/94fc107922f5.webp",
       "names": {
         "ko": {
           "full": ["아라타키 이토"],
@@ -1126,6 +1212,8 @@
         "region": "inazuma",
         "element": "geo"
       },
+      "image": "genshin/f78a32bf9f9b.webp",
+      "silhouette": "genshin/e1afd60588fc.webp",
       "names": {
         "ko": {
           "full": ["고로"],
@@ -1148,6 +1236,8 @@
         "region": "liyue",
         "element": "cryo"
       },
+      "image": "genshin/9eda77e026fc.webp",
+      "silhouette": "genshin/03a25a94d941.webp",
       "names": {
         "ko": {
           "full": ["신학"],
@@ -1170,6 +1260,8 @@
         "region": "liyue",
         "element": "geo"
       },
+      "image": "genshin/aab701595d72.webp",
+      "silhouette": "genshin/a092abe8abc5.webp",
       "names": {
         "ko": {
           "full": ["운근"],
@@ -1192,6 +1284,8 @@
         "region": "inazuma",
         "element": "electro"
       },
+      "image": "genshin/fe1cb95590c9.webp",
+      "silhouette": "genshin/0fc95d86342c.webp",
       "names": {
         "ko": {
           "full": ["야에 미코"],
@@ -1214,6 +1308,8 @@
         "region": "inazuma",
         "element": "hydro"
       },
+      "image": "genshin/c78fcd1fd06f.webp",
+      "silhouette": "genshin/374d3d98d5f4.webp",
       "names": {
         "ko": {
           "full": ["카미사토 아야토"],
@@ -1236,6 +1332,8 @@
         "region": "liyue",
         "element": "hydro"
       },
+      "image": "genshin/b9a7ee0bf343.webp",
+      "silhouette": "genshin/0a42f0aa73d2.webp",
       "names": {
         "ko": {
           "full": ["야란"],
@@ -1258,6 +1356,8 @@
         "region": "inazuma",
         "element": "electro"
       },
+      "image": "genshin/3822c0542f9d.webp",
+      "silhouette": "genshin/6ded0f57f6b2.webp",
       "names": {
         "ko": {
           "full": ["쿠키 시노부"],
@@ -1280,6 +1380,8 @@
         "region": "inazuma",
         "element": "anemo"
       },
+      "image": "genshin/211b8bce07d6.webp",
+      "silhouette": "genshin/b002e1fa6d3b.webp",
       "names": {
         "ko": {
           "full": ["시카노인 헤이조"],
@@ -1302,6 +1404,8 @@
         "region": "sumeru",
         "element": "dendro"
       },
+      "image": "genshin/94e4b3c85ee5.webp",
+      "silhouette": "genshin/edf7b1282b6e.webp",
       "names": {
         "ko": {
           "full": ["타이나리"],
@@ -1324,6 +1428,8 @@
         "region": "sumeru",
         "element": "dendro"
       },
+      "image": "genshin/e9aa25547789.webp",
+      "silhouette": "genshin/c85dc57eac42.webp",
       "names": {
         "ko": {
           "full": ["콜레이"],
@@ -1346,6 +1452,8 @@
         "region": "sumeru",
         "element": "electro"
       },
+      "image": "genshin/64045a11b088.webp",
+      "silhouette": "genshin/c8105d08a11c.webp",
       "names": {
         "ko": {
           "full": ["도리"],
@@ -1368,6 +1476,8 @@
         "region": "sumeru",
         "element": "electro"
       },
+      "image": "genshin/82a33a90edbf.webp",
+      "silhouette": "genshin/2a760d4edb66.webp",
       "names": {
         "ko": {
           "full": ["사이노"],
@@ -1390,6 +1500,8 @@
         "region": "sumeru",
         "element": "hydro"
       },
+      "image": "genshin/4bb014e846b5.webp",
+      "silhouette": "genshin/1afd07b6eab2.webp",
       "names": {
         "ko": {
           "full": ["캔디스"],
@@ -1412,6 +1524,8 @@
         "region": "sumeru",
         "element": "hydro"
       },
+      "image": "genshin/05b5454fb8a8.webp",
+      "silhouette": "genshin/8e09c9cf9db9.webp",
       "names": {
         "ko": {
           "full": ["닐루"],
@@ -1434,6 +1548,8 @@
         "region": "sumeru",
         "element": "dendro"
       },
+      "image": "genshin/741acfc0c2c8.webp",
+      "silhouette": "genshin/1ba5360e2646.webp",
       "names": {
         "ko": {
           "full": ["나히다"],
@@ -1456,6 +1572,8 @@
         "region": "sumeru",
         "element": "cryo"
       },
+      "image": "genshin/a4a428acc2f2.webp",
+      "silhouette": "genshin/ef665699cf67.webp",
       "names": {
         "ko": {
           "full": ["레일라"],
@@ -1478,6 +1596,8 @@
         "region": "sumeru",
         "element": "anemo"
       },
+      "image": "genshin/070a320d795a.webp",
+      "silhouette": "genshin/4f681664255d.webp",
       "names": {
         "ko": {
           "full": ["방랑자"],
@@ -1500,6 +1620,8 @@
         "region": "sumeru",
         "element": "anemo"
       },
+      "image": "genshin/0a8c17bcd36b.webp",
+      "silhouette": "genshin/42e1d04420c5.webp",
       "names": {
         "ko": {
           "full": ["파루잔"],
@@ -1522,6 +1644,8 @@
         "region": "sumeru",
         "element": "dendro"
       },
+      "image": "genshin/fa053b539f47.webp",
+      "silhouette": "genshin/55ca6c4898ea.webp",
       "names": {
         "ko": {
           "full": ["알하이탐"],
@@ -1544,6 +1668,8 @@
         "region": "liyue",
         "element": "dendro"
       },
+      "image": "genshin/3401a50d680a.webp",
+      "silhouette": "genshin/8cddba9557d9.webp",
       "names": {
         "ko": {
           "full": ["요요"],
@@ -1566,6 +1692,8 @@
         "region": "sumeru",
         "element": "pyro"
       },
+      "image": "genshin/bad38d4d0cff.webp",
+      "silhouette": "genshin/b2c883f68e28.webp",
       "names": {
         "ko": {
           "full": ["데히야"],
@@ -1588,6 +1716,8 @@
         "region": "mondstadt",
         "element": "cryo"
       },
+      "image": "genshin/9f6574c99d26.webp",
+      "silhouette": "genshin/0c06a699c921.webp",
       "names": {
         "ko": {
           "full": ["미카"],
@@ -1610,6 +1740,8 @@
         "region": "liyue",
         "element": "dendro"
       },
+      "image": "genshin/374bb0ae1317.webp",
+      "silhouette": "genshin/19a684ea303e.webp",
       "names": {
         "ko": {
           "full": ["백출"],
@@ -1632,6 +1764,8 @@
         "region": "sumeru",
         "element": "dendro"
       },
+      "image": "genshin/948e7947ba0b.webp",
+      "silhouette": "genshin/985ce39c8529.webp",
       "names": {
         "ko": {
           "full": ["카베"],
@@ -1654,6 +1788,8 @@
         "region": "inazuma",
         "element": "dendro"
       },
+      "image": "genshin/f0f04c218631.webp",
+      "silhouette": "genshin/c1c601854678.webp",
       "names": {
         "ko": {
           "full": ["키라라"],
@@ -1676,6 +1812,8 @@
         "region": "fontaine",
         "element": "pyro"
       },
+      "image": "genshin/ae6b47a32fe9.webp",
+      "silhouette": "genshin/08590de69850.webp",
       "names": {
         "ko": {
           "full": ["리니"],
@@ -1698,6 +1836,8 @@
         "region": "fontaine",
         "element": "anemo"
       },
+      "image": "genshin/bceb9ded34a7.webp",
+      "silhouette": "genshin/df37aaeb8861.webp",
       "names": {
         "ko": {
           "full": ["리넷"],
@@ -1720,6 +1860,8 @@
         "region": "fontaine",
         "element": "cryo"
       },
+      "image": "genshin/1e84169d0424.webp",
+      "silhouette": "genshin/08bf5bea2b30.webp",
       "names": {
         "ko": {
           "full": ["프레미네"],
@@ -1742,6 +1884,8 @@
         "region": "fontaine",
         "element": "hydro"
       },
+      "image": "genshin/5d3d3226940e.webp",
+      "silhouette": "genshin/6413deccc65c.webp",
       "names": {
         "ko": {
           "full": ["느비예트"],
@@ -1764,6 +1908,8 @@
         "region": "fontaine",
         "element": "cryo"
       },
+      "image": "genshin/46f12e5a4309.webp",
+      "silhouette": "genshin/16af0a82d8e6.webp",
       "names": {
         "ko": {
           "full": ["라이오슬리"],
@@ -1786,6 +1932,8 @@
         "region": "fontaine",
         "element": "hydro"
       },
+      "image": "genshin/b8435ce92e7f.webp",
+      "silhouette": "genshin/15ca2cba57b8.webp",
       "names": {
         "ko": {
           "full": ["푸리나"],
@@ -1808,6 +1956,8 @@
         "region": "fontaine",
         "element": "cryo"
       },
+      "image": "genshin/a41d8cf5cd93.webp",
+      "silhouette": "genshin/bd389cc1bb6b.webp",
       "names": {
         "ko": {
           "full": ["샤를로트"],
@@ -1830,6 +1980,8 @@
         "region": "fontaine",
         "element": "geo"
       },
+      "image": "genshin/330a032a32d3.webp",
+      "silhouette": "genshin/a2074030a3b0.webp",
       "names": {
         "ko": {
           "full": ["나비아"],
@@ -1852,6 +2004,8 @@
         "region": "fontaine",
         "element": "pyro"
       },
+      "image": "genshin/220f9660d540.webp",
+      "silhouette": "genshin/50980e851a28.webp",
       "names": {
         "ko": {
           "full": ["슈브르즈"],
@@ -1874,6 +2028,8 @@
         "region": "liyue",
         "element": "anemo"
       },
+      "image": "genshin/5032dd39e8d4.webp",
+      "silhouette": "genshin/873f89247072.webp",
       "names": {
         "ko": {
           "full": ["한운"],
@@ -1896,6 +2052,8 @@
         "region": "liyue",
         "element": "pyro"
       },
+      "image": "genshin/1ca792dbbf1e.webp",
+      "silhouette": "genshin/d9caec683dca.webp",
       "names": {
         "ko": {
           "full": ["가명"],
@@ -1918,6 +2076,8 @@
         "region": "inazuma",
         "element": "geo"
       },
+      "image": "genshin/b70f95e158e2.webp",
+      "silhouette": "genshin/c13cb859500c.webp",
       "names": {
         "ko": {
           "full": ["치오리"],
@@ -1940,6 +2100,8 @@
         "region": "snezhnaya",
         "element": "pyro"
       },
+      "image": "genshin/79b3452ab149.webp",
+      "silhouette": "genshin/67abfb7370fc.webp",
       "names": {
         "ko": {
           "full": ["아를레키노"],
@@ -1962,6 +2124,8 @@
         "region": "sumeru",
         "element": "electro"
       },
+      "image": "genshin/5f25cefeec77.webp",
+      "silhouette": "genshin/5f9f8b580038.webp",
       "names": {
         "ko": {
           "full": ["세토스"],
@@ -1984,6 +2148,8 @@
         "region": "fontaine",
         "element": "electro"
       },
+      "image": "genshin/1b33d7c95c3e.webp",
+      "silhouette": "genshin/3194204ea1b3.webp",
       "names": {
         "ko": {
           "full": ["클로린드"],
@@ -2006,6 +2172,8 @@
         "region": "fontaine",
         "element": "hydro"
       },
+      "image": "genshin/2d15f755ba42.webp",
+      "silhouette": "genshin/343e7129f912.webp",
       "names": {
         "ko": {
           "full": ["시그윈"],
@@ -2028,6 +2196,8 @@
         "region": "fontaine",
         "element": "dendro"
       },
+      "image": "genshin/092e120f9b27.webp",
+      "silhouette": "genshin/49174790fe25.webp",
       "names": {
         "ko": {
           "full": ["에밀리"],
@@ -2050,6 +2220,8 @@
         "region": "natlan",
         "element": "geo"
       },
+      "image": "genshin/a1fa5e79bf55.webp",
+      "silhouette": "genshin/ad7c779ae6ae.webp",
       "names": {
         "ko": {
           "full": ["카치나"],
@@ -2072,6 +2244,8 @@
         "region": "natlan",
         "element": "dendro"
       },
+      "image": "genshin/0f093115829c.webp",
+      "silhouette": "genshin/9f64b5c43859.webp",
       "names": {
         "ko": {
           "full": ["키니치"],
@@ -2094,6 +2268,8 @@
         "region": "natlan",
         "element": "hydro"
       },
+      "image": "genshin/d17d5ddb9f12.webp",
+      "silhouette": "genshin/45057dfa1589.webp",
       "names": {
         "ko": {
           "full": ["말라니"],
@@ -2116,6 +2292,8 @@
         "region": "natlan",
         "element": "geo"
       },
+      "image": "genshin/a17e03184a38.webp",
+      "silhouette": "genshin/0bbe69762481.webp",
       "names": {
         "ko": {
           "full": ["실로닌"],
@@ -2138,6 +2316,8 @@
         "region": "natlan",
         "element": "anemo"
       },
+      "image": "genshin/bec02bc1cee1.webp",
+      "silhouette": "genshin/d345d738da0e.webp",
       "names": {
         "ko": {
           "full": ["차스카"],
@@ -2160,6 +2340,8 @@
         "region": "natlan",
         "element": "electro"
       },
+      "image": "genshin/367a05e88231.webp",
+      "silhouette": "genshin/725e7d548dee.webp",
       "names": {
         "ko": {
           "full": ["올로룬"],
@@ -2182,6 +2364,8 @@
         "region": "natlan",
         "element": "pyro"
       },
+      "image": "genshin/cfe571d6c8ea.webp",
+      "silhouette": "genshin/b6d6e9d96a71.webp",
       "names": {
         "ko": {
           "full": ["마비카"],
@@ -2204,6 +2388,8 @@
         "region": "natlan",
         "element": "cryo"
       },
+      "image": "genshin/4d1c2f85b32f.webp",
+      "silhouette": "genshin/28a506289565.webp",
       "names": {
         "ko": {
           "full": ["시틀라리"],
@@ -2226,6 +2412,8 @@
         "region": "liyue",
         "element": "anemo"
       },
+      "image": "genshin/3dd5e82c5486.webp",
+      "silhouette": "genshin/b616a57dcad5.webp",
       "names": {
         "ko": {
           "full": ["남연"],
@@ -2248,6 +2436,8 @@
         "region": "inazuma",
         "element": "anemo"
       },
+      "image": "genshin/17b575074689.webp",
+      "silhouette": "genshin/5327f26ef233.webp",
       "names": {
         "ko": {
           "full": ["유메미즈키 미즈키"],
@@ -2270,6 +2460,8 @@
         "region": "natlan",
         "element": "electro"
       },
+      "image": "genshin/510ace09ac14.webp",
+      "silhouette": "genshin/dbd61d5a7542.webp",
       "names": {
         "ko": {
           "full": ["바레사"],
@@ -2292,6 +2484,8 @@
         "region": "natlan",
         "element": "electro"
       },
+      "image": "genshin/67a0df4f29a9.webp",
+      "silhouette": "genshin/5ce0de3823b4.webp",
       "names": {
         "ko": {
           "full": ["얀사"],
@@ -2314,6 +2508,8 @@
         "region": "fontaine",
         "element": "cryo"
       },
+      "image": "genshin/991f86142277.webp",
+      "silhouette": "genshin/c4c2651de5d9.webp",
       "names": {
         "ko": {
           "full": ["에스코피에"],
@@ -2336,6 +2532,8 @@
         "region": "natlan",
         "element": "anemo"
       },
+      "image": "genshin/ca5f762d20b7.webp",
+      "silhouette": "genshin/628cc931d09c.webp",
       "names": {
         "ko": {
           "full": ["이파"],
@@ -2358,6 +2556,8 @@
         "region": "other",
         "element": "cryo"
       },
+      "image": "genshin/8657a2b3906b.webp",
+      "silhouette": "genshin/a63132d6d6aa.webp",
       "names": {
         "ko": {
           "full": ["스커크"],
@@ -2380,6 +2580,8 @@
         "region": "mondstadt",
         "element": "hydro"
       },
+      "image": "genshin/422010662200.webp",
+      "silhouette": "genshin/0620690531a8.webp",
       "names": {
         "ko": {
           "full": ["달리아"],
@@ -2402,6 +2604,8 @@
         "region": "nod_krai",
         "element": "electro"
       },
+      "image": "genshin/7c51760b372c.webp",
+      "silhouette": "genshin/5ef96e8b900c.webp",
       "names": {
         "ko": {
           "full": ["이네파"],
@@ -2424,6 +2628,8 @@
         "region": "nod_krai",
         "element": "dendro"
       },
+      "image": "genshin/9df0e7c3bec9.webp",
+      "silhouette": "genshin/f19d0c1296c1.webp",
       "names": {
         "ko": {
           "full": ["라우마"],
@@ -2446,6 +2652,8 @@
         "region": "nod_krai",
         "element": "electro"
       },
+      "image": "genshin/2aaeb89a6476.webp",
+      "silhouette": "genshin/96432878d1c8.webp",
       "names": {
         "ko": {
           "full": ["플린스"],
@@ -2468,6 +2676,8 @@
         "region": "nod_krai",
         "element": "hydro"
       },
+      "image": "genshin/e224fbd02cf8.webp",
+      "silhouette": "genshin/a57ef96c1aa6.webp",
       "names": {
         "ko": {
           "full": ["아이노"],
@@ -2490,6 +2700,8 @@
         "region": "nod_krai",
         "element": "dendro"
       },
+      "image": "genshin/44d3f9906a05.webp",
+      "silhouette": "genshin/fd96fee3e254.webp",
       "names": {
         "ko": {
           "full": ["네페르"],
@@ -2512,6 +2724,8 @@
         "region": "mondstadt",
         "element": "pyro"
       },
+      "image": "genshin/38606f29f599.webp",
+      "silhouette": "genshin/069c43a09b8c.webp",
       "names": {
         "ko": {
           "full": ["두린"],
@@ -2534,6 +2748,8 @@
         "region": "nod_krai",
         "element": "anemo"
       },
+      "image": "genshin/69f65485edf2.webp",
+      "silhouette": "genshin/b26d772ccd76.webp",
       "names": {
         "ko": {
           "full": ["야호다"],
@@ -2556,6 +2772,8 @@
         "region": "nod_krai",
         "element": "hydro"
       },
+      "image": "genshin/28d347250081.webp",
+      "silhouette": "genshin/0dadf50fba1f.webp",
       "names": {
         "ko": {
           "full": ["콜롬비나"],
@@ -2578,6 +2796,8 @@
         "region": "nod_krai",
         "element": "geo"
       },
+      "image": "genshin/e50b97ffb0f5.webp",
+      "silhouette": "genshin/938ea4b23b02.webp",
       "names": {
         "ko": {
           "full": ["일루가"],
@@ -2600,6 +2820,8 @@
         "region": "liyue",
         "element": "geo"
       },
+      "image": "genshin/a02d9fd270cd.webp",
+      "silhouette": "genshin/1e1ce6214359.webp",
       "names": {
         "ko": {
           "full": ["자백"],
@@ -2622,6 +2844,8 @@
         "region": "mondstadt",
         "element": "anemo"
       },
+      "image": "genshin/b345a0d98c9b.webp",
+      "silhouette": "genshin/db5fc75d0931.webp",
       "names": {
         "ko": {
           "full": ["바르카"],
@@ -2644,6 +2868,8 @@
         "region": "nod_krai",
         "element": "geo"
       },
+      "image": "genshin/0144e85e59a8.webp",
+      "silhouette": "genshin/62ccd894ecce.webp",
       "names": {
         "ko": {
           "full": ["린네아"],
@@ -2666,6 +2892,8 @@
         "region": "other",
         "element": "pyro"
       },
+      "image": "genshin/03cc886aa5b2.webp",
+      "silhouette": "genshin/1dc90efc05f0.webp",
       "names": {
         "ko": {
           "full": ["니콜"],
@@ -2688,6 +2916,8 @@
         "region": "mondstadt",
         "element": "cryo"
       },
+      "image": "genshin/02068dbaeadc.webp",
+      "silhouette": "genshin/0f19a10ab09e.webp",
       "names": {
         "ko": {
           "full": ["로엔"],
@@ -2710,6 +2940,8 @@
         "region": "mondstadt",
         "element": "anemo"
       },
+      "image": "genshin/6723089010f2.webp",
+      "silhouette": "genshin/2cb4f1637ca0.webp",
       "names": {
         "ko": {
           "full": ["프루네"],
@@ -2732,6 +2964,8 @@
         "region": "snezhnaya",
         "element": "cryo"
       },
+      "image": "genshin/ec23771dbec1.webp",
+      "silhouette": "genshin/c05cd7b55cdb.webp",
       "names": {
         "ko": {
           "full": ["산드로네"],
@@ -2754,6 +2988,8 @@
         "region": "snezhnaya",
         "element": "cryo"
       },
+      "image": "genshin/e6e42aa26113.webp",
+      "silhouette": "genshin/83db49fede39.webp",
       "names": {
         "ko": {
           "full": ["오데트"],
@@ -2776,6 +3012,8 @@
         "region": "snezhnaya",
         "element": "electro"
       },
+      "image": "genshin/712d5841c18f.webp",
+      "silhouette": "genshin/fbc952df0521.webp",
       "names": {
         "ko": {
           "full": ["알료샤"],
@@ -2798,6 +3036,8 @@
         "region": "snezhnaya",
         "element": "anemo"
       },
+      "image": "genshin/e0ca189389dc.webp",
+      "silhouette": "genshin/159ad2be531b.webp",
       "names": {
         "ko": {
           "full": ["베스나"],
@@ -2820,6 +3060,8 @@
         "region": "snezhnaya",
         "element": "hydro"
       },
+      "image": "genshin/9a5574de9d4e.webp",
+      "silhouette": "genshin/257deb5932c4.webp",
       "names": {
         "ko": {
           "full": ["보댜니차"],
@@ -2842,6 +3084,8 @@
         "region": "snezhnaya",
         "element": "electro"
       },
+      "image": "genshin/d6c2984c9b0d.webp",
+      "silhouette": "genshin/9f19d33b9c2a.webp",
       "names": {
         "ko": {
           "full": ["미탸"],
@@ -2864,6 +3108,8 @@
         "region": "snezhnaya",
         "element": "electro"
       },
+      "image": "genshin/a9146481efd1.webp",
+      "silhouette": "genshin/1bb21cc03db4.webp",
       "names": {
         "ko": {
           "full": ["발레리"],

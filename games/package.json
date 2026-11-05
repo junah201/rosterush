@@ -8,7 +8,8 @@
   "scripts": {
     "typecheck": "tsc -p tsconfig.json",
     "validate": "tsx scripts/validate.ts",
-    "images:build": "tsx scripts/build-images.ts"
+    "images:build": "tsx scripts/build-images.ts",
+    "images:fetch": "tsx scripts/fetch-images.ts"
   },
   "dependencies": {
     "@rosterush/core": "workspace:*"

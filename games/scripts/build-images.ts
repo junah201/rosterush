@@ -28,7 +28,7 @@ const SIZE = 256;
 /** 실루엣 색 (빈 타일 배경 #f6f7fa 위에서 잘 보이는 어두운 회색) */
 const SILHOUETTE_RGB = [58, 65, 80] as const;
 
-type Built = { image: string; silhouette?: string };
+type Built = { image: string; silhouette: string };
 
 function hashName(buf: Buffer, charId: string): string {
   // 해시 16진수에 우연히 id(예: "ace")가 들어가면 검증에 걸리므로 소금을 바꿔 다시 뽑는다
@@ -38,9 +38,7 @@ function hashName(buf: Buffer, charId: string): string {
   }
 }
 
-async function build(src: string, charId: string): Promise<{ full: Buffer; sil?: Buffer }> {
-  // 투명도는 원본 기준으로 판단 (trim/contain 뒤에는 여백이 투명해져서 늘 투명하게 보임)
-  const { isOpaque } = await sharp(src).stats();
+async function build(src: string): Promise<{ full: Buffer; sil: Buffer }> {
   const resized = await sharp(src)
     .ensureAlpha()
     .trim() // 투명 여백 제거해서 캐릭터가 타일을 꽉 채우게
@@ -52,11 +50,7 @@ async function build(src: string, charId: string): Promise<{ full: Buffer; sil?:
 
   const full = await sharp(data, raw).webp({ quality: 82, alphaQuality: 90 }).toBuffer();
 
-  // 실루엣: 알파만 유지, 색은 단색으로. 원본에 투명 영역이 없으면 의미가 없으므로 생략
-  if (isOpaque) {
-    console.warn(`  ! ${charId}: 투명 배경이 없어 실루엣 생략 (배경 제거한 PNG 권장)`);
-    return { full };
-  }
+  // 실루엣: 알파만 유지, 색은 단색으로. 배경이 있는(투명하지 않은) 원본이면 네모 덩어리가 됨
   const sil = Buffer.from(data);
   for (let i = 0; i < sil.length; i += 4) {
     sil[i] = SILHOUETTE_RGB[0];
@@ -79,8 +73,9 @@ function patchJson(text: string, charId: string, built: Built): string {
     .slice(idAt, lineStart)
     .replace(/^[ \t]*"(image|silhouette)": "[^"]*",\r?\n/gm, "");
   const eol = text.includes("\r\n") ? "\r\n" : "\n";
-  let lines = `${indent}"image": "${built.image}",${eol}`;
-  if (built.silhouette) lines += `${indent}"silhouette": "${built.silhouette}",${eol}`;
+  const lines =
+    `${indent}"image": "${built.image}",${eol}` +
+    `${indent}"silhouette": "${built.silhouette}",${eol}`;
   return text.slice(0, idAt) + head + lines + text.slice(lineStart);
 }
 
@@ -105,13 +100,13 @@ async function main() {
         missing.push(c.id);
         continue;
       }
-      const { full, sil } = await build(join(SRC_DIR, gameId, `${c.id}.${ext}`), c.id);
-      const built: Built = { image: `${gameId}/${hashName(full, c.id)}.webp` };
+      const { full, sil } = await build(join(SRC_DIR, gameId, `${c.id}.${ext}`));
+      const built: Built = {
+        image: `${gameId}/${hashName(full, c.id)}.webp`,
+        silhouette: `${gameId}/${hashName(sil, c.id)}.webp`,
+      };
       await writeFile(join(OUT_DIR, built.image), full);
-      if (sil) {
-        built.silhouette = `${gameId}/${hashName(sil, c.id)}.webp`;
-        await writeFile(join(OUT_DIR, built.silhouette), sil);
-      }
+      await writeFile(join(OUT_DIR, built.silhouette), sil);
       text = patchJson(text, c.id, built);
       done++;
     }

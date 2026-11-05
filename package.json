@@ -14,6 +14,7 @@
     "format": "biome check --write .",
     "test": "vitest run",
     "validate:games": "pnpm --filter @rosterush/games validate",
+    "images:fetch": "pnpm --filter @rosterush/games images:fetch",
     "images:build": "pnpm --filter @rosterush/games images:build"
   },
   "devDependencies": {

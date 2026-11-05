@@ -30,6 +30,8 @@
       "id": "dva",
       "addedIn": 1,
       "groups": { "role": "tank" },
+      "image": "overwatch/26f9d1ef22d0.webp",
+      "silhouette": "overwatch/bc8edc6f8e3f.webp",
       "names": {
         "ko": { "full": ["D.Va", "디바"], "short": [] },
         "ja": { "full": ["D.Va", "ディーヴァ"], "short": [] },
@@ -40,6 +42,8 @@
       "id": "reinhardt",
       "addedIn": 1,
       "groups": { "role": "tank" },
+      "image": "overwatch/228a7f828ac2.webp",
+      "silhouette": "overwatch/3f4cd66f2bc5.webp",
       "names": {
         "ko": { "full": ["라인하르트"], "short": ["라인"] },
         "ja": { "full": ["ラインハルト"], "short": ["ライン"] },
@@ -50,6 +54,8 @@
       "id": "roadhog",
       "addedIn": 1,
       "groups": { "role": "tank" },
+      "image": "overwatch/7419e06e0355.webp",
+      "silhouette": "overwatch/3f6082c72d22.webp",
       "names": {
         "ko": { "full": ["로드호그"], "short": ["호그"] },
         "ja": { "full": ["ロードホッグ"], "short": ["ホッグ"] },
@@ -60,6 +66,8 @@
       "id": "winston",
       "addedIn": 1,
       "groups": { "role": "tank" },
+      "image": "overwatch/4087560d7826.webp",
+      "silhouette": "overwatch/52d4ba0fb808.webp",
       "names": {
         "ko": { "full": ["윈스턴"], "short": [] },
         "ja": { "full": ["ウィンストン"], "short": [] },
@@ -70,6 +78,8 @@
       "id": "zarya",
       "addedIn": 1,
       "groups": { "role": "tank" },
+      "image": "overwatch/51904dddfaf8.webp",
+      "silhouette": "overwatch/0fef3d5323a9.webp",
       "names": {
         "ko": { "full": ["자리야"], "short": [] },
         "ja": { "full": ["ザリア"], "short": [] },
@@ -80,6 +90,8 @@
       "id": "orisa",
       "addedIn": 1,
       "groups": { "role": "tank" },
+      "image": "overwatch/a9445338c696.webp",
+      "silhouette": "overwatch/570950984662.webp",
       "names": {
         "ko": { "full": ["오리사"], "short": [] },
         "ja": { "full": ["オリーサ"], "short": [] },
@@ -90,6 +102,8 @@
       "id": "doomfist",
       "addedIn": 1,
       "groups": { "role": "tank" },
+      "image": "overwatch/2b29f1e86c3e.webp",
+      "silhouette": "overwatch/c0d47a759180.webp",
       "names": {
         "ko": { "full": ["둠피스트"], "short": ["둠"] },
         "ja": { "full": ["ドゥームフィスト"], "short": ["ドゥーム"] },
@@ -100,6 +114,8 @@
       "id": "wrecking_ball",
       "addedIn": 1,
       "groups": { "role": "tank" },
+      "image": "overwatch/9b32f6f962d4.webp",
+      "silhouette": "overwatch/67d67a68a4e4.webp",
       "names": {
         "ko": { "full": ["레킹볼"], "short": ["햄찌"] },
         "ja": { "full": ["レッキング・ボール"], "short": ["ハモンド"] },
@@ -110,6 +126,8 @@
       "id": "sigma",
       "addedIn": 1,
       "groups": { "role": "tank" },
+      "image": "overwatch/56521a280b28.webp",
+      "silhouette": "overwatch/927caae928e2.webp",
       "names": {
         "ko": { "full": ["시그마"], "short": [] },
         "ja": { "full": ["シグマ"], "short": [] },
@@ -120,6 +138,8 @@
       "id": "junker_queen",
       "addedIn": 1,
       "groups": { "role": "tank" },
+      "image": "overwatch/8504b0ea8a1d.webp",
+      "silhouette": "overwatch/de86691921fe.webp",
       "names": {
         "ko": { "full": ["정커퀸"], "short": ["퀸"] },
         "ja": { "full": ["ジャンカー・クイーン"], "short": ["クイーン"] },
@@ -130,6 +150,8 @@
       "id": "ramattra",
       "addedIn": 1,
       "groups": { "role": "tank" },
+      "image": "overwatch/b08225da1a62.webp",
+      "silhouette": "overwatch/0e35cee6885e.webp",
       "names": {
         "ko": { "full": ["라마트라"], "short": ["라마"] },
         "ja": { "full": ["ラマットラ"], "short": [] },
@@ -140,6 +162,8 @@
       "id": "mauga",
       "addedIn": 1,
       "groups": { "role": "tank" },
+      "image": "overwatch/091a913de1d4.webp",
+      "silhouette": "overwatch/2a171c2fa544.webp",
       "names": {
         "ko": { "full": ["마우가"], "short": [] },
         "ja": { "full": ["マウガ"], "short": [] },
@@ -150,6 +174,8 @@
       "id": "hazard",
       "addedIn": 1,
       "groups": { "role": "tank" },
+      "image": "overwatch/8277aa470e4c.webp",
+      "silhouette": "overwatch/8ac77b79fa35.webp",
       "names": {
         "ko": { "full": ["해저드"], "short": [] },
         "ja": { "full": ["ハザード"], "short": [] },
@@ -160,6 +186,8 @@
       "id": "domina",
       "addedIn": 1,
       "groups": { "role": "tank" },
+      "image": "overwatch/3bb6aa06d72b.webp",
+      "silhouette": "overwatch/d9a169ad6e54.webp",
       "names": {
         "ko": { "full": ["도미나"], "short": [] },
         "ja": { "full": ["ドミナ"], "short": [] },
@@ -170,6 +198,8 @@
       "id": "dmon",
       "addedIn": 1,
       "groups": { "role": "tank" },
+      "image": "overwatch/626e2952eca5.webp",
+      "silhouette": "overwatch/dfd9a9f2bbf3.webp",
       "names": {
         "ko": { "full": ["D.Mon", "디몬"], "short": [] },
         "ja": { "full": ["D.Mon"], "short": ["ディーモン"] },
@@ -180,6 +210,8 @@
       "id": "bastion",
       "addedIn": 1,
       "groups": { "role": "damage" },
+      "image": "overwatch/5eee22dca506.webp",
+      "silhouette": "overwatch/9c59f2020901.webp",
       "names": {
         "ko": { "full": ["바스티온"], "short": ["바스"] },
         "ja": { "full": ["バスティオン"], "short": [] },
@@ -190,6 +222,8 @@
       "id": "cassidy",
       "addedIn": 1,
       "groups": { "role": "damage" },
+      "image": "overwatch/e6e427d47e4d.webp",
+      "silhouette": "overwatch/f9c5c754121f.webp",
       "names": {
         "ko": { "full": ["캐서디"], "short": ["맥크리"] },
         "ja": { "full": ["キャスディ"], "short": ["マクリー"] },
@@ -200,6 +234,8 @@
       "id": "genji",
       "addedIn": 1,
       "groups": { "role": "damage" },
+      "image": "overwatch/b3b41132a376.webp",
+      "silhouette": "overwatch/c9a850ac43a4.webp",
       "names": {
         "ko": { "full": ["겐지"], "short": [] },
         "ja": { "full": ["ゲンジ"], "short": [] },
@@ -210,6 +246,8 @@
       "id": "hanzo",
       "addedIn": 1,
       "groups": { "role": "damage" },
+      "image": "overwatch/7df95bd39da8.webp",
+      "silhouette": "overwatch/9472a578f124.webp",
       "names": {
         "ko": { "full": ["한조"], "short": [] },
         "ja": { "full": ["ハンゾー"], "short": [] },
@@ -220,6 +258,8 @@
       "id": "junkrat",
       "addedIn": 1,
       "groups": { "role": "damage" },
+      "image": "overwatch/acf8ffcad9aa.webp",
+      "silhouette": "overwatch/394b74b0e0dd.webp",
       "names": {
         "ko": { "full": ["정크랫"], "short": [] },
         "ja": { "full": ["ジャンクラット"], "short": ["ジャンクラ"] },
@@ -230,6 +270,8 @@
       "id": "mei",
       "addedIn": 1,
       "groups": { "role": "damage" },
+      "image": "overwatch/bb8985c1b26e.webp",
+      "silhouette": "overwatch/7cc354ee6f3c.webp",
       "names": {
         "ko": { "full": ["메이"], "short": [] },
         "ja": { "full": ["メイ"], "short": [] },
@@ -240,6 +282,8 @@
       "id": "pharah",
       "addedIn": 1,
       "groups": { "role": "damage" },
+      "image": "overwatch/b9ddb799ea9d.webp",
+      "silhouette": "overwatch/6cb3db531786.webp",
       "names": {
         "ko": { "full": ["파라"], "short": [] },
         "ja": { "full": ["ファラ"], "short": [] },
@@ -250,6 +294,8 @@
       "id": "reaper",
       "addedIn": 1,
       "groups": { "role": "damage" },
+      "image": "overwatch/f8ddb21ecce2.webp",
+      "silhouette": "overwatch/8c3049d66039.webp",
       "names": {
         "ko": { "full": ["리퍼"], "short": [] },
         "ja": { "full": ["リーパー"], "short": [] },
@@ -260,6 +306,8 @@
       "id": "soldier_76",
       "addedIn": 1,
       "groups": { "role": "damage" },
+      "image": "overwatch/1ea4cb69b9a6.webp",
+      "silhouette": "overwatch/d176d75e11da.webp",
       "names": {
         "ko": { "full": ["솔저: 76"], "short": ["솔저"] },
         "ja": { "full": ["ソルジャー76"], "short": ["ソルジャー"] },
@@ -270,6 +318,8 @@
       "id": "symmetra",
       "addedIn": 1,
       "groups": { "role": "damage" },
+      "image": "overwatch/c9f8a52c69b9.webp",
+      "silhouette": "overwatch/23e57b585dc4.webp",
       "names": {
         "ko": { "full": ["시메트라"], "short": ["시메"] },
         "ja": { "full": ["シンメトラ"], "short": ["シンメ"] },
@@ -280,6 +330,8 @@
       "id": "torbjorn",
       "addedIn": 1,
       "groups": { "role": "damage" },
+      "image": "overwatch/13b8c758ee84.webp",
+      "silhouette": "overwatch/a5ea7ceddfc6.webp",
       "names": {
         "ko": { "full": ["토르비욘"], "short": ["토르"] },
         "ja": { "full": ["トールビョーン"], "short": ["トール"] },
@@ -290,6 +342,8 @@
       "id": "tracer",
       "addedIn": 1,
       "groups": { "role": "damage" },
+      "image": "overwatch/ff61458f4e4d.webp",
+      "silhouette": "overwatch/5aee3a9b6424.webp",
       "names": {
         "ko": { "full": ["트레이서"], "short": ["트레"] },
         "ja": { "full": ["トレーサー"], "short": [] },
@@ -300,6 +354,8 @@
       "id": "widowmaker",
       "addedIn": 1,
       "groups": { "role": "damage" },
+      "image": "overwatch/97f4e09b1af4.webp",
+      "silhouette": "overwatch/dc584a751325.webp",
       "names": {
         "ko": { "full": ["위도우메이커"], "short": ["위도우"] },
         "ja": { "full": ["ウィドウメイカー"], "short": ["ウィドウ"] },
@@ -310,6 +366,8 @@
       "id": "ashe",
       "addedIn": 1,
       "groups": { "role": "damage" },
+      "image": "overwatch/02c6ba784097.webp",
+      "silhouette": "overwatch/86f895675aa8.webp",
       "names": {
         "ko": { "full": ["애쉬"], "short": [] },
         "ja": { "full": ["アッシュ"], "short": [] },
@@ -320,6 +378,8 @@
       "id": "echo",
       "addedIn": 1,
       "groups": { "role": "damage" },
+      "image": "overwatch/99a3bea6864a.webp",
+      "silhouette": "overwatch/e5a8120d7e5d.webp",
       "names": {
         "ko": { "full": ["에코"], "short": [] },
         "ja": { "full": ["エコー"], "short": [] },
@@ -330,6 +390,8 @@
       "id": "sojourn",
       "addedIn": 1,
       "groups": { "role": "damage" },
+      "image": "overwatch/fcdd89782e53.webp",
+      "silhouette": "overwatch/4020ff09aabb.webp",
       "names": {
         "ko": { "full": ["소전"], "short": [] },
         "ja": { "full": ["ソジョーン"], "short": [] },
@@ -340,6 +402,8 @@
       "id": "venture",
       "addedIn": 1,
       "groups": { "role": "damage" },
+      "image": "overwatch/52b3069c2681.webp",
+      "silhouette": "overwatch/e1e56ce200fd.webp",
       "names": {
         "ko": { "full": ["벤처"], "short": [] },
         "ja": { "full": ["ベンチャー"], "short": [] },
@@ -350,6 +414,8 @@
       "id": "freja",
       "addedIn": 1,
       "groups": { "role": "damage" },
+      "image": "overwatch/38d04c5a48cc.webp",
+      "silhouette": "overwatch/f774a8b6f84a.webp",
       "names": {
         "ko": { "full": ["프레야"], "short": [] },
         "ja": { "full": ["フレイヤ"], "short": [] },
@@ -360,6 +426,8 @@
       "id": "vendetta",
       "addedIn": 1,
       "groups": { "role": "damage" },
+      "image": "overwatch/c7b4e56d7d8b.webp",
+      "silhouette": "overwatch/c7da2ef9b456.webp",
       "names": {
         "ko": { "full": ["벤데타"], "short": [] },
         "ja": { "full": ["ヴェンデッタ"], "short": [] },
@@ -370,6 +438,8 @@
       "id": "emre",
       "addedIn": 1,
       "groups": { "role": "damage" },
+      "image": "overwatch/7caf92817a3d.webp",
+      "silhouette": "overwatch/c68a26c9cda0.webp",
       "names": {
         "ko": { "full": ["엠레"], "short": [] },
         "ja": { "full": ["エムレ"], "short": [] },
@@ -380,6 +450,8 @@
       "id": "anran",
       "addedIn": 1,
       "groups": { "role": "damage" },
+      "image": "overwatch/9535e623c4f1.webp",
+      "silhouette": "overwatch/1d23afe78cf7.webp",
       "names": {
         "ko": { "full": ["안란"], "short": [] },
         "ja": { "full": ["アンラン"], "short": [] },
@@ -390,6 +462,8 @@
       "id": "sierra",
       "addedIn": 1,
       "groups": { "role": "damage" },
+      "image": "overwatch/970fb1af9f76.webp",
+      "silhouette": "overwatch/57d64439cd02.webp",
       "names": {
         "ko": { "full": ["시에라"], "short": [] },
         "ja": { "full": ["シエラ"], "short": [] },
@@ -400,6 +474,8 @@
       "id": "shion",
       "addedIn": 1,
       "groups": { "role": "damage" },
+      "image": "overwatch/d16e4b7661fa.webp",
+      "silhouette": "overwatch/d68f86dbc3bd.webp",
       "names": {
         "ko": { "full": ["시온"], "short": [] },
         "ja": { "full": ["シオン"], "short": [] },
@@ -410,6 +486,8 @@
       "id": "lucio",
       "addedIn": 1,
       "groups": { "role": "support" },
+      "image": "overwatch/4fbce590183e.webp",
+      "silhouette": "overwatch/8861584991b3.webp",
       "names": {
         "ko": { "full": ["루시우"], "short": [] },
         "ja": { "full": ["ルシオ"], "short": [] },
@@ -420,6 +498,8 @@
       "id": "mercy",
       "addedIn": 1,
       "groups": { "role": "support" },
+      "image": "overwatch/119f2f6128ca.webp",
+      "silhouette": "overwatch/e4cef0632195.webp",
       "names": {
         "ko": { "full": ["메르시"], "short": [] },
         "ja": { "full": ["マーシー"], "short": [] },
@@ -430,6 +510,8 @@
       "id": "zenyatta",
       "addedIn": 1,
       "groups": { "role": "support" },
+      "image": "overwatch/6d49b9588145.webp",
+      "silhouette": "overwatch/cc1233c51d62.webp",
       "names": {
         "ko": { "full": ["젠야타"], "short": ["젠"] },
         "ja": { "full": ["ゼニヤッタ"], "short": [] },
@@ -440,6 +522,8 @@
       "id": "ana",
       "addedIn": 1,
       "groups": { "role": "support" },
+      "image": "overwatch/44ee8fe32ee7.webp",
+      "silhouette": "overwatch/f9472e45df3d.webp",
       "names": {
         "ko": { "full": ["아나"], "short": [] },
         "ja": { "full": ["アナ"], "short": [] },
@@ -450,6 +534,8 @@
       "id": "sombra",
       "addedIn": 1,
       "groups": { "role": "support" },
+      "image": "overwatch/b1593730c17d.webp",
+      "silhouette": "overwatch/771dea7ff9a5.webp",
       "names": {
         "ko": { "full": ["솜브라"], "short": [] },
         "ja": { "full": ["ソンブラ"], "short": [] },
@@ -460,6 +546,8 @@
       "id": "moira",
       "addedIn": 1,
       "groups": { "role": "support" },
+      "image": "overwatch/742eb3277729.webp",
+      "silhouette": "overwatch/2ddc192ff5d0.webp",
       "names": {
         "ko": { "full": ["모이라"], "short": [] },
         "ja": { "full": ["モイラ"], "short": [] },
@@ -470,6 +558,8 @@
       "id": "brigitte",
       "addedIn": 1,
       "groups": { "role": "support" },
+      "image": "overwatch/328045c4309e.webp",
+      "silhouette": "overwatch/10a548bda81a.webp",
       "names": {
         "ko": { "full": ["브리기테"], "short": ["브리"] },
         "ja": { "full": ["ブリギッテ"], "short": [] },
@@ -480,6 +570,8 @@
       "id": "baptiste",
       "addedIn": 1,
       "groups": { "role": "support" },
+      "image": "overwatch/a02df219f305.webp",
+      "silhouette": "overwatch/e099b34a2874.webp",
       "names": {
         "ko": { "full": ["바티스트"], "short": ["바티"] },
         "ja": { "full": ["バティスト"], "short": [] },
@@ -490,6 +582,8 @@
       "id": "kiriko",
       "addedIn": 1,
       "groups": { "role": "support" },
+      "image": "overwatch/2f80359f5512.webp",
+      "silhouette": "overwatch/63718a2eed3b.webp",
       "names": {
         "ko": { "full": ["키리코"], "short": [] },
         "ja": { "full": ["キリコ"], "short": [] },
@@ -500,6 +594,8 @@
       "id": "lifeweaver",
       "addedIn": 1,
       "groups": { "role": "support" },
+      "image": "overwatch/c4f33a17f2ca.webp",
+      "silhouette": "overwatch/c11fb2f59d70.webp",
       "names": {
         "ko": { "full": ["라이프위버"], "short": ["위버"] },
         "ja": { "full": ["ライフウィーバー"], "short": [] },
@@ -510,6 +606,8 @@
       "id": "illari",
       "addedIn": 1,
       "groups": { "role": "support" },
+      "image": "overwatch/555d1bcb5dd0.webp",
+      "silhouette": "overwatch/09336d913452.webp",
       "names": {
         "ko": { "full": ["일리아리"], "short": [] },
         "ja": { "full": ["イラリー"], "short": [] },
@@ -520,6 +618,8 @@
       "id": "juno",
       "addedIn": 1,
       "groups": { "role": "support" },
+      "image": "overwatch/b9f3fe9a8804.webp",
+      "silhouette": "overwatch/9c86d6958708.webp",
       "names": {
         "ko": { "full": ["주노"], "short": [] },
         "ja": { "full": ["ジュノ"], "short": [] },
@@ -530,6 +630,8 @@
       "id": "wuyang",
       "addedIn": 1,
       "groups": { "role": "support" },
+      "image": "overwatch/b68f61c426e9.webp",
+      "silhouette": "overwatch/676e8d7b89cf.webp",
       "names": {
         "ko": { "full": ["우양"], "short": [] },
         "ja": { "full": ["ウーヤン"], "short": [] },
@@ -540,6 +642,8 @@
       "id": "mizuki",
       "addedIn": 1,
       "groups": { "role": "support" },
+      "image": "overwatch/b0b4656bdedd.webp",
+      "silhouette": "overwatch/83f9bfcc2cd3.webp",
       "names": {
         "ko": { "full": ["미즈키"], "short": [] },
         "ja": { "full": ["ミズキ"], "short": [] },
@@ -550,6 +654,8 @@
       "id": "jetpack_cat",
       "addedIn": 1,
       "groups": { "role": "support" },
+      "image": "overwatch/049b53c61ad6.webp",
+      "silhouette": "overwatch/751a2058269b.webp",
       "names": {
         "ko": { "full": ["제트팩 캣"], "short": [] },
         "ja": { "full": ["ジェットパック・キャット"], "short": [] },
@@ -560,6 +666,8 @@
       "id": "doctrine",
       "addedIn": 1,
       "groups": { "role": "support" },
+      "image": "overwatch/a2d4f8ffb972.webp",
+      "silhouette": "overwatch/428488994889.webp",
       "names": {
         "ko": { "full": ["독트린"], "short": [] },
         "ja": { "full": ["ドクトリン"], "short": [] },

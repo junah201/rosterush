@@ -101,6 +101,8 @@
       "id": "trailblazer",
       "addedIn": 1,
       "groups": { "path": "destruction", "element": "physical" },
+      "image": "starrail/264632de13b4.webp",
+      "silhouette": "starrail/e7a7aa6f9cca.webp",
       "names": {
         "ko": { "full": ["개척자", "스텔레", "카일루스"], "short": [] },
         "ja": {
@@ -114,6 +116,8 @@
       "id": "march_7th",
       "addedIn": 1,
       "groups": { "path": "preservation", "element": "ice" },
+      "image": "starrail/13f0ff41bc34.webp",
+      "silhouette": "starrail/77894f749222.webp",
       "names": {
         "ko": { "full": ["Mar. 7th", "Mar. 7th·수렵"], "short": ["삼칠이"] },
         "ja": { "full": ["三月なのか", "みつきなのか"], "short": ["なのか"] },
@@ -124,6 +128,8 @@
       "id": "dan_heng",
       "addedIn": 1,
       "groups": { "path": "hunt", "element": "wind" },
+      "image": "starrail/18399db31f5c.webp",
+      "silhouette": "starrail/b5947d92d2c4.webp",
       "names": {
         "ko": { "full": ["단항"], "short": [] },
         "ja": { "full": ["丹恒", "たんこう"], "short": [] },
@@ -134,6 +140,8 @@
       "id": "himeko",
       "addedIn": 1,
       "groups": { "path": "erudition", "element": "fire" },
+      "image": "starrail/55d7e8f5ae65.webp",
+      "silhouette": "starrail/bee6729d320d.webp",
       "names": {
         "ko": { "full": ["히메코"], "short": [] },
         "ja": { "full": ["姫子", "ひめこ"], "short": [] },
@@ -144,6 +152,8 @@
       "id": "welt",
       "addedIn": 1,
       "groups": { "path": "nihility", "element": "imaginary" },
+      "image": "starrail/3b729a3bdf42.webp",
+      "silhouette": "starrail/e9dd138cb564.webp",
       "names": {
         "ko": { "full": ["웰트"], "short": [] },
         "ja": { "full": ["ヴェルト"], "short": [] },
@@ -154,6 +164,8 @@
       "id": "arlan",
       "addedIn": 1,
       "groups": { "path": "destruction", "element": "lightning" },
+      "image": "starrail/2ff9e0c6425e.webp",
+      "silhouette": "starrail/8e03201a0c59.webp",
       "names": {
         "ko": { "full": ["아를란"], "short": [] },
         "ja": { "full": ["アーラン"], "short": [] },
@@ -164,6 +176,8 @@
       "id": "asta",
       "addedIn": 1,
       "groups": { "path": "harmony", "element": "fire" },
+      "image": "starrail/ec310d02323b.webp",
+      "silhouette": "starrail/d14a182f563a.webp",
       "names": {
         "ko": { "full": ["아스타"], "short": [] },
         "ja": { "full": ["アスター"], "short": [] },
@@ -174,6 +188,8 @@
       "id": "herta",
       "addedIn": 1,
       "groups": { "path": "erudition", "element": "ice" },
+      "image": "starrail/533592384af8.webp",
+      "silhouette": "starrail/3d8c78d2de27.webp",
       "names": {
         "ko": { "full": ["헤르타"], "short": [] },
         "ja": { "full": ["ヘルタ"], "short": [] },
@@ -184,6 +200,8 @@
       "id": "serval",
       "addedIn": 1,
       "groups": { "path": "erudition", "element": "lightning" },
+      "image": "starrail/77d6cf77aedc.webp",
+      "silhouette": "starrail/5176420a6607.webp",
       "names": {
         "ko": { "full": ["서벌"], "short": [] },
         "ja": { "full": ["セーバル"], "short": [] },
@@ -194,6 +212,8 @@
       "id": "natasha",
       "addedIn": 1,
       "groups": { "path": "abundance", "element": "physical" },
+      "image": "starrail/e3c20a5237d9.webp",
+      "silhouette": "starrail/35caec506653.webp",
       "names": {
         "ko": { "full": ["나타샤"], "short": [] },
         "ja": { "full": ["ナターシャ"], "short": [] },
@@ -204,6 +224,8 @@
       "id": "pela",
       "addedIn": 1,
       "groups": { "path": "nihility", "element": "ice" },
+      "image": "starrail/bbece3a42c8d.webp",
+      "silhouette": "starrail/a5d80f8475fe.webp",
       "names": {
         "ko": { "full": ["페라"], "short": [] },
         "ja": { "full": ["ペラ"], "short": [] },
@@ -214,6 +236,8 @@
       "id": "sampo",
       "addedIn": 1,
       "groups": { "path": "nihility", "element": "wind" },
+      "image": "starrail/734bcdd02858.webp",
+      "silhouette": "starrail/741328dbf147.webp",
       "names": {
         "ko": { "full": ["삼포"], "short": [] },
         "ja": { "full": ["サンポ"], "short": [] },
@@ -224,6 +248,8 @@
       "id": "hook",
       "addedIn": 1,
       "groups": { "path": "destruction", "element": "fire" },
+      "image": "starrail/036ffbe9b6cf.webp",
+      "silhouette": "starrail/24db0c39b419.webp",
       "names": {
         "ko": { "full": ["후크"], "short": [] },
         "ja": { "full": ["フック"], "short": [] },
@@ -234,6 +260,8 @@
       "id": "qingque",
       "addedIn": 1,
       "groups": { "path": "erudition", "element": "quantum" },
+      "image": "starrail/aa91744b310b.webp",
+      "silhouette": "starrail/df374ee46db4.webp",
       "names": {
         "ko": { "full": ["청작"], "short": [] },
         "ja": { "full": ["青雀", "せいじゃく"], "short": [] },
@@ -244,6 +272,8 @@
       "id": "tingyun",
       "addedIn": 1,
       "groups": { "path": "harmony", "element": "lightning" },
+      "image": "starrail/faaaeead4e70.webp",
+      "silhouette": "starrail/254262cb3801.webp",
       "names": {
         "ko": { "full": ["정운"], "short": [] },
         "ja": { "full": ["停雲", "ていうん"], "short": [] },
@@ -254,6 +284,8 @@
       "id": "sushang",
       "addedIn": 1,
       "groups": { "path": "hunt", "element": "physical" },
+      "image": "starrail/d4f10d55e260.webp",
+      "silhouette": "starrail/7fce308f7baf.webp",
       "names": {
         "ko": { "full": ["소상"], "short": [] },
         "ja": { "full": ["素裳", "そしょう"], "short": [] },
@@ -264,6 +296,8 @@
       "id": "yanqing",
       "addedIn": 1,
       "groups": { "path": "hunt", "element": "ice" },
+      "image": "starrail/8e77e3e03ecc.webp",
+      "silhouette": "starrail/adc564548be1.webp",
       "names": {
         "ko": { "full": ["연경"], "short": [] },
         "ja": { "full": ["彦卿", "げんきょう"], "short": [] },
@@ -274,6 +308,8 @@
       "id": "bronya",
       "addedIn": 1,
       "groups": { "path": "harmony", "element": "wind" },
+      "image": "starrail/a8df68a8035b.webp",
+      "silhouette": "starrail/da4730c58faf.webp",
       "names": {
         "ko": { "full": ["브로냐"], "short": [] },
         "ja": { "full": ["ブローニャ"], "short": [] },
@@ -284,6 +320,8 @@
       "id": "gepard",
       "addedIn": 1,
       "groups": { "path": "preservation", "element": "ice" },
+      "image": "starrail/0161d94f03e7.webp",
+      "silhouette": "starrail/163cb8b3c8fd.webp",
       "names": {
         "ko": { "full": ["게파드"], "short": [] },
         "ja": { "full": ["ジェパード"], "short": [] },
@@ -294,6 +332,8 @@
       "id": "clara",
       "addedIn": 1,
       "groups": { "path": "destruction", "element": "physical" },
+      "image": "starrail/676be5255002.webp",
+      "silhouette": "starrail/6f4bb6324a1b.webp",
       "names": {
         "ko": { "full": ["클라라"], "short": [] },
         "ja": { "full": ["クラーラ"], "short": [] },
@@ -304,6 +344,8 @@
       "id": "seele",
       "addedIn": 1,
       "groups": { "path": "hunt", "element": "quantum" },
+      "image": "starrail/019451ff007a.webp",
+      "silhouette": "starrail/30771235dbd4.webp",
       "names": {
         "ko": { "full": ["제레"], "short": [] },
         "ja": { "full": ["ゼーレ"], "short": [] },
@@ -314,6 +356,8 @@
       "id": "jing_yuan",
       "addedIn": 1,
       "groups": { "path": "erudition", "element": "lightning" },
+      "image": "starrail/0e866e3a2caf.webp",
+      "silhouette": "starrail/fbdd0ccedbb4.webp",
       "names": {
         "ko": { "full": ["경원"], "short": [] },
         "ja": { "full": ["景元", "けいげん"], "short": [] },
@@ -324,6 +368,8 @@
       "id": "bailu",
       "addedIn": 1,
       "groups": { "path": "abundance", "element": "lightning" },
+      "image": "starrail/0d5f0c2676ff.webp",
+      "silhouette": "starrail/27a611022914.webp",
       "names": {
         "ko": { "full": ["백로"], "short": [] },
         "ja": { "full": ["白露", "はくろ"], "short": [] },
@@ -334,6 +380,8 @@
       "id": "silver_wolf",
       "addedIn": 1,
       "groups": { "path": "nihility", "element": "quantum" },
+      "image": "starrail/01e20e8857bf.webp",
+      "silhouette": "starrail/ad13ca0897df.webp",
       "names": {
         "ko": { "full": ["은랑"], "short": [] },
         "ja": { "full": ["銀狼", "ぎんろう"], "short": [] },
@@ -344,6 +392,8 @@
       "id": "luka",
       "addedIn": 1,
       "groups": { "path": "nihility", "element": "physical" },
+      "image": "starrail/b25f62785ac6.webp",
+      "silhouette": "starrail/bc886eba14d0.webp",
       "names": {
         "ko": { "full": ["루카"], "short": [] },
         "ja": { "full": ["ルカ"], "short": [] },
@@ -354,6 +404,8 @@
       "id": "luocha",
       "addedIn": 1,
       "groups": { "path": "abundance", "element": "imaginary" },
+      "image": "starrail/08fc8a134ae7.webp",
+      "silhouette": "starrail/38d954904b05.webp",
       "names": {
         "ko": { "full": ["나찰"], "short": [] },
         "ja": { "full": ["羅刹", "らせつ"], "short": [] },
@@ -364,6 +416,8 @@
       "id": "yukong",
       "addedIn": 1,
       "groups": { "path": "harmony", "element": "imaginary" },
+      "image": "starrail/108d596ad73a.webp",
+      "silhouette": "starrail/2345c3e003ea.webp",
       "names": {
         "ko": { "full": ["어공"], "short": [] },
         "ja": { "full": ["御空", "みそら"], "short": [] },
@@ -374,6 +428,8 @@
       "id": "blade",
       "addedIn": 1,
       "groups": { "path": "destruction", "element": "wind" },
+      "image": "starrail/217b029180c4.webp",
+      "silhouette": "starrail/08af8a46dc59.webp",
       "names": {
         "ko": { "full": ["블레이드"], "short": [] },
         "ja": { "full": ["刃", "じん"], "short": [] },
@@ -384,6 +440,8 @@
       "id": "kafka",
       "addedIn": 1,
       "groups": { "path": "nihility", "element": "lightning" },
+      "image": "starrail/c52ffc641475.webp",
+      "silhouette": "starrail/ac630b86b344.webp",
       "names": {
         "ko": { "full": ["카프카"], "short": [] },
         "ja": { "full": ["カフカ"], "short": [] },
@@ -394,6 +452,8 @@
       "id": "dan_heng_imbibitor_lunae",
       "addedIn": 1,
       "groups": { "path": "destruction", "element": "imaginary" },
+      "image": "starrail/1dba5cc068d6.webp",
+      "silhouette": "starrail/ec97c7b65469.webp",
       "names": {
         "ko": { "full": ["단항·음월"], "short": ["음월"] },
         "ja": { "full": ["丹恒・飲月", "たんこういんげつ"], "short": ["飲月", "いんげつ"] },
@@ -404,6 +464,8 @@
       "id": "fu_xuan",
       "addedIn": 1,
       "groups": { "path": "preservation", "element": "quantum" },
+      "image": "starrail/d5c6e9028828.webp",
+      "silhouette": "starrail/5a51e4d0ca03.webp",
       "names": {
         "ko": { "full": ["부현"], "short": [] },
         "ja": { "full": ["符玄", "ふげん"], "short": [] },
@@ -414,6 +476,8 @@
       "id": "lynx",
       "addedIn": 1,
       "groups": { "path": "abundance", "element": "quantum" },
+      "image": "starrail/4106ffcca465.webp",
+      "silhouette": "starrail/0e7c59f52581.webp",
       "names": {
         "ko": { "full": ["링스"], "short": [] },
         "ja": { "full": ["リンクス"], "short": [] },
@@ -424,6 +488,8 @@
       "id": "jingliu",
       "addedIn": 1,
       "groups": { "path": "destruction", "element": "ice" },
+      "image": "starrail/42e2efbd7c2f.webp",
+      "silhouette": "starrail/1aa10094b9d8.webp",
       "names": {
         "ko": { "full": ["경류"], "short": [] },
         "ja": { "full": ["鏡流", "きょうりゅう"], "short": [] },
@@ -434,6 +500,8 @@
       "id": "topaz_and_numby",
       "addedIn": 1,
       "groups": { "path": "hunt", "element": "fire" },
+      "image": "starrail/b946e7b157d4.webp",
+      "silhouette": "starrail/1f15f768d434.webp",
       "names": {
         "ko": { "full": ["토파즈&복순이", "토파즈 복순이"], "short": ["토파즈"] },
         "ja": { "full": ["トパーズ＆カブ", "トパーズカブ"], "short": ["トパーズ"] },
@@ -444,6 +512,8 @@
       "id": "guinaifen",
       "addedIn": 1,
       "groups": { "path": "nihility", "element": "fire" },
+      "image": "starrail/15367b17e4d5.webp",
+      "silhouette": "starrail/71c925e406ff.webp",
       "names": {
         "ko": { "full": ["계네빈"], "short": [] },
         "ja": { "full": ["桂乃芬", "けいないふん"], "short": [] },
@@ -454,6 +524,8 @@
       "id": "huohuo",
       "addedIn": 1,
       "groups": { "path": "abundance", "element": "wind" },
+      "image": "starrail/b0f1ae82bba0.webp",
+      "silhouette": "starrail/d3fc399bf977.webp",
       "names": {
         "ko": { "full": ["곽향"], "short": [] },
         "ja": { "full": ["フォフォ"], "short": [] },
@@ -464,6 +536,8 @@
       "id": "argenti",
       "addedIn": 1,
       "groups": { "path": "erudition", "element": "physical" },
+      "image": "starrail/412386a708df.webp",
+      "silhouette": "starrail/326b39beb173.webp",
       "names": {
         "ko": { "full": ["아젠티"], "short": [] },
         "ja": { "full": ["アルジェンティ"], "short": [] },
@@ -474,6 +548,8 @@
       "id": "hanya",
       "addedIn": 1,
       "groups": { "path": "harmony", "element": "physical" },
+      "image": "starrail/b6824f6ee2f0.webp",
+      "silhouette": "starrail/37e8aab18dfe.webp",
       "names": {
         "ko": { "full": ["한아"], "short": [] },
         "ja": { "full": ["寒鴉", "かんあ"], "short": [] },
@@ -484,6 +560,8 @@
       "id": "ruan_mei",
       "addedIn": 1,
       "groups": { "path": "harmony", "element": "ice" },
+      "image": "starrail/82ddf288f1d3.webp",
+      "silhouette": "starrail/19f681e01d06.webp",
       "names": {
         "ko": { "full": ["완·매"], "short": [] },
         "ja": { "full": ["ルアン・メェイ"], "short": [] },
@@ -494,6 +572,8 @@
       "id": "dr_ratio",
       "addedIn": 1,
       "groups": { "path": "hunt", "element": "imaginary" },
+      "image": "starrail/89e50291ad17.webp",
+      "silhouette": "starrail/e72dcaf91c9d.webp",
       "names": {
         "ko": { "full": ["Dr. 레이시오"], "short": ["레이시오"] },
         "ja": { "full": ["Dr.レイシオ"], "short": ["レイシオ"] },
@@ -504,6 +584,8 @@
       "id": "xueyi",
       "addedIn": 1,
       "groups": { "path": "destruction", "element": "quantum" },
+      "image": "starrail/39d8f944f732.webp",
+      "silhouette": "starrail/0659a76e0f17.webp",
       "names": {
         "ko": { "full": ["설의"], "short": [] },
         "ja": { "full": ["雪衣", "せつい"], "short": [] },
@@ -514,6 +596,8 @@
       "id": "black_swan",
       "addedIn": 1,
       "groups": { "path": "nihility", "element": "wind" },
+      "image": "starrail/3791506aa894.webp",
+      "silhouette": "starrail/7760b9ae0b26.webp",
       "names": {
         "ko": { "full": ["블랙 스완"], "short": ["블스"] },
         "ja": { "full": ["ブラックスワン"], "short": [] },
@@ -524,6 +608,8 @@
       "id": "sparkle",
       "addedIn": 1,
       "groups": { "path": "harmony", "element": "quantum" },
+      "image": "starrail/3ff6bef8dc61.webp",
+      "silhouette": "starrail/2b942e729569.webp",
       "names": {
         "ko": { "full": ["스파클"], "short": [] },
         "ja": { "full": ["花火", "はなび"], "short": [] },
@@ -534,6 +620,8 @@
       "id": "misha",
       "addedIn": 1,
       "groups": { "path": "destruction", "element": "ice" },
+      "image": "starrail/220ebf810fd6.webp",
+      "silhouette": "starrail/54b33d5f1d34.webp",
       "names": {
         "ko": { "full": ["미샤"], "short": [] },
         "ja": { "full": ["ミーシャ"], "short": [] },
@@ -544,6 +632,8 @@
       "id": "acheron",
       "addedIn": 1,
       "groups": { "path": "nihility", "element": "lightning" },
+      "image": "starrail/cf5c41599c40.webp",
+      "silhouette": "starrail/2d603296f40d.webp",
       "names": {
         "ko": { "full": ["아케론"], "short": [] },
         "ja": { "full": ["黄泉", "よみ"], "short": [] },
@@ -554,6 +644,8 @@
       "id": "aventurine",
       "addedIn": 1,
       "groups": { "path": "preservation", "element": "imaginary" },
+      "image": "starrail/b65d959577af.webp",
+      "silhouette": "starrail/b06d1e3074ae.webp",
       "names": {
         "ko": { "full": ["어벤츄린"], "short": [] },
         "ja": { "full": ["アベンチュリン"], "short": [] },
@@ -564,6 +656,8 @@
       "id": "gallagher",
       "addedIn": 1,
       "groups": { "path": "abundance", "element": "fire" },
+      "image": "starrail/c501354e482c.webp",
+      "silhouette": "starrail/295c605f84d9.webp",
       "names": {
         "ko": { "full": ["갤러거"], "short": [] },
         "ja": { "full": ["ギャラガー"], "short": [] },
@@ -574,6 +668,8 @@
       "id": "robin",
       "addedIn": 1,
       "groups": { "path": "harmony", "element": "physical" },
+      "image": "starrail/842c160e4425.webp",
+      "silhouette": "starrail/1ab21011f51c.webp",
       "names": {
         "ko": { "full": ["로빈"], "short": [] },
         "ja": { "full": ["ロビン"], "short": [] },
@@ -584,6 +680,8 @@
       "id": "boothill",
       "addedIn": 1,
       "groups": { "path": "hunt", "element": "physical" },
+      "image": "starrail/9c68760a325f.webp",
+      "silhouette": "starrail/93b9677d5657.webp",
       "names": {
         "ko": { "full": ["부트힐"], "short": [] },
         "ja": { "full": ["ブートヒル"], "short": [] },
@@ -594,6 +692,8 @@
       "id": "firefly",
       "addedIn": 1,
       "groups": { "path": "destruction", "element": "fire" },
+      "image": "starrail/c15f5b4a8d0f.webp",
+      "silhouette": "starrail/87b4592d5058.webp",
       "names": {
         "ko": { "full": ["반디"], "short": [] },
         "ja": { "full": ["ホタル"], "short": [] },
@@ -604,6 +704,8 @@
       "id": "jade",
       "addedIn": 1,
       "groups": { "path": "erudition", "element": "quantum" },
+      "image": "starrail/d1eb6a7b8ad5.webp",
+      "silhouette": "starrail/653ada527bf7.webp",
       "names": {
         "ko": { "full": ["제이드"], "short": [] },
         "ja": { "full": ["ジェイド"], "short": [] },
@@ -614,6 +716,8 @@
       "id": "yunli",
       "addedIn": 1,
       "groups": { "path": "destruction", "element": "physical" },
+      "image": "starrail/13752d730d2d.webp",
+      "silhouette": "starrail/04d617d07b83.webp",
       "names": {
         "ko": { "full": ["운리"], "short": [] },
         "ja": { "full": ["雲璃", "うんり"], "short": [] },
@@ -624,6 +728,8 @@
       "id": "jiaoqiu",
       "addedIn": 1,
       "groups": { "path": "nihility", "element": "fire" },
+      "image": "starrail/13a36c5a27f8.webp",
+      "silhouette": "starrail/c1e5130cda07.webp",
       "names": {
         "ko": { "full": ["초구"], "short": [] },
         "ja": { "full": ["椒丘", "しょうきゅう"], "short": [] },
@@ -634,6 +740,8 @@
       "id": "feixiao",
       "addedIn": 1,
       "groups": { "path": "hunt", "element": "wind" },
+      "image": "starrail/e45ac2ee6d2c.webp",
+      "silhouette": "starrail/07d2a9754a51.webp",
       "names": {
         "ko": { "full": ["비소"], "short": [] },
         "ja": { "full": ["飛霄", "ひしょう"], "short": [] },
@@ -644,6 +752,8 @@
       "id": "lingsha",
       "addedIn": 1,
       "groups": { "path": "abundance", "element": "fire" },
+      "image": "starrail/613fdcbea3ed.webp",
+      "silhouette": "starrail/970345fcfeae.webp",
       "names": {
         "ko": { "full": ["영사"], "short": [] },
         "ja": { "full": ["霊砂", "れいさ"], "short": [] },
@@ -654,6 +764,8 @@
       "id": "moze",
       "addedIn": 1,
       "groups": { "path": "hunt", "element": "lightning" },
+      "image": "starrail/912f34beddb5.webp",
+      "silhouette": "starrail/79be56933f4a.webp",
       "names": {
         "ko": { "full": ["맥택"], "short": [] },
         "ja": { "full": ["モゼ"], "short": [] },
@@ -664,6 +776,8 @@
       "id": "rappa",
       "addedIn": 1,
       "groups": { "path": "erudition", "element": "imaginary" },
+      "image": "starrail/670084265150.webp",
+      "silhouette": "starrail/7f451a575d90.webp",
       "names": {
         "ko": { "full": ["라파"], "short": [] },
         "ja": { "full": ["乱破", "らっぱ"], "short": [] },
@@ -674,6 +788,8 @@
       "id": "sunday",
       "addedIn": 1,
       "groups": { "path": "harmony", "element": "imaginary" },
+      "image": "starrail/33caf395dfce.webp",
+      "silhouette": "starrail/95060d8b577c.webp",
       "names": {
         "ko": { "full": ["선데이"], "short": [] },
         "ja": { "full": ["サンデー"], "short": [] },
@@ -684,6 +800,8 @@
       "id": "fugue",
       "addedIn": 1,
       "groups": { "path": "nihility", "element": "fire" },
+      "image": "starrail/147633838810.webp",
+      "silhouette": "starrail/efbd601f8b98.webp",
       "names": {
         "ko": { "full": ["망귀인"], "short": [] },
         "ja": { "full": ["帰忘の流離人", "きぼうのるりじん"], "short": [] },
@@ -694,6 +812,8 @@
       "id": "the_herta",
       "addedIn": 1,
       "groups": { "path": "erudition", "element": "ice" },
+      "image": "starrail/9dfb53765365.webp",
+      "silhouette": "starrail/e4276ede124c.webp",
       "names": {
         "ko": { "full": ["더 헤르타"], "short": [] },
         "ja": { "full": ["マダム・ヘルタ"], "short": [] },
@@ -704,6 +824,8 @@
       "id": "aglaea",
       "addedIn": 1,
       "groups": { "path": "remembrance", "element": "lightning" },
+      "image": "starrail/8735115787d8.webp",
+      "silhouette": "starrail/bc43aafe8edf.webp",
       "names": {
         "ko": { "full": ["아글라이아"], "short": [] },
         "ja": { "full": ["アグライア"], "short": [] },
@@ -714,6 +836,8 @@
       "id": "tribbie",
       "addedIn": 1,
       "groups": { "path": "harmony", "element": "quantum" },
+      "image": "starrail/bd83438452d1.webp",
+      "silhouette": "starrail/44d1eb543d61.webp",
       "names": {
         "ko": { "full": ["트리비"], "short": [] },
         "ja": { "full": ["トリビー"], "short": [] },
@@ -724,6 +848,8 @@
       "id": "mydei",
       "addedIn": 1,
       "groups": { "path": "destruction", "element": "imaginary" },
+      "image": "starrail/8b30c510f84d.webp",
+      "silhouette": "starrail/6d0bd914264e.webp",
       "names": {
         "ko": { "full": ["마이데이"], "short": [] },
         "ja": { "full": ["モーディス"], "short": [] },
@@ -734,6 +860,8 @@
       "id": "castorice",
       "addedIn": 1,
       "groups": { "path": "remembrance", "element": "quantum" },
+      "image": "starrail/db3e8fb869a4.webp",
+      "silhouette": "starrail/564b3775e3b7.webp",
       "names": {
         "ko": { "full": ["카스토리스"], "short": [] },
         "ja": { "full": ["キャストリス"], "short": [] },
@@ -744,6 +872,8 @@
       "id": "anaxa",
       "addedIn": 1,
       "groups": { "path": "erudition", "element": "wind" },
+      "image": "starrail/a1e474311463.webp",
+      "silhouette": "starrail/4e0a2fc49820.webp",
       "names": {
         "ko": { "full": ["아낙사"], "short": [] },
         "ja": { "full": ["アナイクス"], "short": [] },
@@ -754,6 +884,8 @@
       "id": "hyacine",
       "addedIn": 1,
       "groups": { "path": "remembrance", "element": "wind" },
+      "image": "starrail/22e50c7172a3.webp",
+      "silhouette": "starrail/04523b84348a.webp",
       "names": {
         "ko": { "full": ["히아킨"], "short": [] },
         "ja": { "full": ["ヒアンシー"], "short": [] },
@@ -764,6 +896,8 @@
       "id": "cipher",
       "addedIn": 1,
       "groups": { "path": "nihility", "element": "quantum" },
+      "image": "starrail/db3233b010cf.webp",
+      "silhouette": "starrail/4b9a80a64d8e.webp",
       "names": {
         "ko": { "full": ["사이퍼"], "short": [] },
         "ja": { "full": ["サフェル"], "short": [] },
@@ -774,6 +908,8 @@
       "id": "phainon",
       "addedIn": 1,
       "groups": { "path": "destruction", "element": "physical" },
+      "image": "starrail/250f10842568.webp",
+      "silhouette": "starrail/b86cd329c43c.webp",
       "names": {
         "ko": { "full": ["파이논"], "short": [] },
         "ja": { "full": ["ファイノン"], "short": [] },
@@ -784,6 +920,8 @@
       "id": "saber",
       "addedIn": 1,
       "groups": { "path": "destruction", "element": "wind" },
+      "image": "starrail/e2e459a02f7f.webp",
+      "silhouette": "starrail/e84608e506cc.webp",
       "names": {
         "ko": { "full": ["세이버"], "short": [] },
         "ja": { "full": ["セイバー"], "short": [] },
@@ -794,6 +932,8 @@
       "id": "archer",
       "addedIn": 1,
       "groups": { "path": "hunt", "element": "quantum" },
+      "image": "starrail/a72a83b63864.webp",
+      "silhouette": "starrail/6d9523b2ed91.webp",
       "names": {
         "ko": { "full": ["아처"], "short": [] },
         "ja": { "full": ["アーチャー"], "short": [] },
@@ -804,6 +944,8 @@
       "id": "hysilens",
       "addedIn": 1,
       "groups": { "path": "nihility", "element": "physical" },
+      "image": "starrail/82f93f51d592.webp",
+      "silhouette": "starrail/369aba7cb863.webp",
       "names": {
         "ko": { "full": ["히실렌스"], "short": [] },
         "ja": { "full": ["セイレンス"], "short": [] },
@@ -814,6 +956,8 @@
       "id": "cerydra",
       "addedIn": 1,
       "groups": { "path": "harmony", "element": "wind" },
+      "image": "starrail/921c0889a2b4.webp",
+      "silhouette": "starrail/742958446736.webp",
       "names": {
         "ko": { "full": ["케리드라"], "short": [] },
         "ja": { "full": ["ケリュドラ"], "short": [] },
@@ -824,6 +968,8 @@
       "id": "evernight",
       "addedIn": 1,
       "groups": { "path": "remembrance", "element": "ice" },
+      "image": "starrail/eb564d21a59b.webp",
+      "silhouette": "starrail/644e75d6e48b.webp",
       "names": {
         "ko": { "full": ["에버나이트"], "short": [] },
         "ja": { "full": ["長夜月", "ながよづき"], "short": [] },
@@ -834,6 +980,8 @@
       "id": "dan_heng_permansor_terrae",
       "addedIn": 1,
       "groups": { "path": "preservation", "element": "physical" },
+      "image": "starrail/7ac859dba035.webp",
+      "silhouette": "starrail/2a3d3093e98d.webp",
       "names": {
         "ko": { "full": ["단항·등황"], "short": ["등황"] },
         "ja": { "full": ["丹恒・騰荒", "たんこうとうこう"], "short": ["騰荒", "とうこう"] },
@@ -844,6 +992,8 @@
       "id": "cyrene",
       "addedIn": 1,
       "groups": { "path": "remembrance", "element": "ice" },
+      "image": "starrail/26e787ac1912.webp",
+      "silhouette": "starrail/62b654c28676.webp",
       "names": {
         "ko": { "full": ["키레네"], "short": [] },
         "ja": { "full": ["キュレネ"], "short": [] },
@@ -854,6 +1004,8 @@
       "id": "the_dahlia",
       "addedIn": 1,
       "groups": { "path": "nihility", "element": "fire" },
+      "image": "starrail/56e6368fc9ce.webp",
+      "silhouette": "starrail/bdc0784e40dd.webp",
       "names": {
         "ko": { "full": ["달리아", "더 달리아"], "short": [] },
         "ja": { "full": ["ダリア"], "short": [] },
@@ -864,6 +1016,8 @@
       "id": "yao_guang",
       "addedIn": 1,
       "groups": { "path": "elation", "element": "physical" },
+      "image": "starrail/9441cb710007.webp",
+      "silhouette": "starrail/afba6127c7cd.webp",
       "names": {
         "ko": { "full": ["효광"], "short": [] },
         "ja": { "full": ["爻光", "こうこう"], "short": [] },
@@ -874,6 +1028,8 @@
       "id": "sparxie",
       "addedIn": 1,
       "groups": { "path": "elation", "element": "fire" },
+      "image": "starrail/f49022e716e1.webp",
+      "silhouette": "starrail/50df90f4835a.webp",
       "names": {
         "ko": { "full": ["스파키"], "short": [] },
         "ja": { "full": ["火花", "ひばな"], "short": [] },
@@ -884,6 +1040,8 @@
       "id": "ashveil",
       "addedIn": 1,
       "groups": { "path": "hunt", "element": "lightning" },
+      "image": "starrail/3f3e60ccc711.webp",
+      "silhouette": "starrail/ecaff4a2fef7.webp",
       "names": {
         "ko": { "full": ["애쉬베일"], "short": [] },
         "ja": { "full": ["不死途", "しなず"], "short": [] },
@@ -894,6 +1052,8 @@
       "id": "silver_wolf_lv_999",
       "addedIn": 1,
       "groups": { "path": "elation", "element": "imaginary" },
+      "image": "starrail/a9aff45a7381.webp",
+      "silhouette": "starrail/028271c70a4d.webp",
       "names": {
         "ko": { "full": ["은랑 LV.999"], "short": [] },
         "ja": { "full": ["銀狼LV.999", "ぎんろうLV.999"], "short": [] },
@@ -904,6 +1064,8 @@
       "id": "evanescia",
       "addedIn": 1,
       "groups": { "path": "elation", "element": "physical" },
+      "image": "starrail/14c8ba64448b.webp",
+      "silhouette": "starrail/b6368ff2cef5.webp",
       "names": {
         "ko": { "full": ["에바네시아"], "short": [] },
         "ja": { "full": ["緋英", "ひえい"], "short": [] },
@@ -914,6 +1076,8 @@
       "id": "mortenax_blade",
       "addedIn": 1,
       "groups": { "path": "nihility", "element": "fire" },
+      "image": "starrail/76a4481e1e23.webp",
+      "silhouette": "starrail/7840a372b88e.webp",
       "names": {
         "ko": { "full": ["천야·블레이드"], "short": ["천야"] },
         "ja": { "full": ["千冶・刃", "せんやじん"], "short": ["千冶", "せんや"] },
@@ -924,6 +1088,8 @@
       "id": "himeko_nova",
       "addedIn": 1,
       "groups": { "path": "erudition", "element": "fire" },
+      "image": "starrail/5a978ccc9391.webp",
+      "silhouette": "starrail/5cabb281a00f.webp",
       "names": {
         "ko": { "full": ["히메코·노바"], "short": [] },
         "ja": { "full": ["姫子・旅立ち", "ひめこたびだち"], "short": [] },
@@ -934,6 +1100,8 @@
       "id": "gilgamesh",
       "addedIn": 1,
       "groups": { "path": "destruction", "element": "lightning" },
+      "image": "starrail/eca36d3ae1af.webp",
+      "silhouette": "starrail/d5d7ca3e1328.webp",
       "names": {
         "ko": { "full": ["길가메시"], "short": [] },
         "ja": { "full": ["ギルガメッシュ"], "short": [] },
@@ -944,6 +1112,8 @@
       "id": "rin_tohsaka",
       "addedIn": 1,
       "groups": { "path": "erudition", "element": "quantum" },
+      "image": "starrail/56d22c9e04cc.webp",
+      "silhouette": "starrail/0fc25cc0e02f.webp",
       "names": {
         "ko": { "full": ["토오사카 린"], "short": ["린"] },
         "ja": { "full": ["遠坂凛", "とおさかりん"], "short": ["凛", "りん"] },
@@ -954,6 +1124,8 @@
       "id": "robin_summeretto",
       "addedIn": 1,
       "groups": { "path": "remembrance", "element": "wind" },
+      "image": "starrail/36b5b8e5cd2b.webp",
+      "silhouette": "starrail/ff131e264672.webp",
       "names": {
         "ko": { "full": ["로빈·서머레토"], "short": ["서머레토"] },
         "ja": { "full": ["ロビン・夏空の歌", "ろびんなつぞらのうた"], "short": [] },
@@ -964,6 +1136,8 @@
       "id": "aventurine_waveflair",
       "addedIn": 1,
       "groups": { "path": "elation", "element": "quantum" },
+      "image": "starrail/d00b23fba5dd.webp",
+      "silhouette": "starrail/5bfe5828fbc7.webp",
       "names": {
         "ko": { "full": ["어벤츄린·웨이브"], "short": [] },
         "ja": {
@@ -977,6 +1151,8 @@
       "id": "pearl",
       "addedIn": 1,
       "groups": { "path": "elation", "element": "ice" },
+      "image": "starrail/242d58d9f8e8.webp",
+      "silhouette": "starrail/1256446f78a8.webp",
       "names": {
         "ko": { "full": ["펄"], "short": [] },
         "ja": { "full": ["パール"], "short": [] },
