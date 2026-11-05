@@ -1,21 +1,13 @@
 import type { Lang } from "@rosterush/core";
+import type { PolicyDoc, Ymd } from "./common";
 
 /**
  * 개인정보 처리방침 본문.
  * 실제 저장 동작(api/src/results.ts, shares.ts, comments.ts, lib/ratelimit.ts, web/lib/records.ts·nickname.ts)과
- * 맞춰 쓴다. 보관 기간이나 저장 항목을 바꾸면 여기도 고치고 EFFECTIVE_DATE를 올릴 것.
+ * 맞춰 쓴다. 보관 기간이나 저장 항목을 바꾸면 여기도 고치고 EFFECTIVE를 올릴 것.
  */
 
-/** 시행일 */
-export const EFFECTIVE_DATE = { y: 2026, m: 11, d: 6 };
-
-/** 개인정보 보호책임자 */
-export const PRIVACY_OFFICER = "@junah201";
-
-/** 개인정보 관련 문의처 */
-export const CONTACT_EMAIL = "junah.dev+rosterush@gmail.com";
-
-type Ymd = typeof EFFECTIVE_DATE;
+const EFFECTIVE: Ymd = { y: 2026, m: 11, d: 6 };
 
 /** 저장하는 정보 한 종류 */
 export type PrivacyData = {
@@ -28,35 +20,20 @@ export type PrivacyData = {
   keep: string;
 };
 
-export type PrivacySection = {
-  title: string;
-  /** 글머리표 목록 */
-  items: string[];
-};
-
-export type PrivacyDoc = {
-  title: string;
-  description: string;
-  effective: (date: Ymd) => string;
-  intro: string;
-  summaryTitle: string;
-  summary: string[];
-  /** 공개되는 정보에 대한 주의 */
-  publicNotice: string;
+/** 개인정보 처리방침은 공통 구성에 '저장하는 정보' 카드가 더 있다 */
+export type PrivacyDoc = PolicyDoc & {
   dataTitle: string;
   /** 처음 나오는 용어 풀이 */
   dataNote: string;
   dataLabels: { what: string; why: string; keep: string };
   data: PrivacyData[];
-  sections: PrivacySection[];
-  contact: { title: string; officer: string; email: string };
 };
 
 export const privacy: Record<Lang, PrivacyDoc> = {
   ko: {
     title: "개인정보 처리방침",
     description: "Rosterush가 어떤 정보를 왜 저장하고, 얼마나 보관하는지 알려 드려요.",
-    effective: ({ y, m, d }) => `${y}년 ${m}월 ${d}일부터 적용`,
+    effective: EFFECTIVE,
     intro:
       "Rosterush는 회원가입 없이 즐기는 퀴즈예요. 서비스를 운영하는 데 꼭 필요한 정보만 저장해요.",
     summaryTitle: "한눈에 보기",
@@ -65,7 +42,7 @@ export const privacy: Record<Lang, PrivacyDoc> = {
       "IP 주소와 비밀번호는 원래 값 그대로 저장하지 않아요.",
       "플레이 기록은 30일 뒤 자동으로 지워져요.",
     ],
-    publicNotice:
+    notice:
       "공유 기록과 댓글(닉네임 포함)은 누구나 볼 수 있어요. 실명이나 연락처 같은 개인정보는 적지 마세요.",
     dataTitle: "1. 저장하는 정보",
     dataNote: "해시: 원래 값으로 되돌릴 수 없게 바꾼 값이에요.",
@@ -151,14 +128,14 @@ export const privacy: Record<Lang, PrivacyDoc> = {
     ],
     contact: {
       title: "7. 개인정보 보호책임자와 문의처",
-      officer: "개인정보 보호책임자",
+      person: "개인정보 보호책임자",
       email: "이메일",
     },
   },
   ja: {
     title: "プライバシーポリシー",
     description: "Rosterushがどんな情報を、なぜ、どのくらいの期間保存するかをご案内します。",
-    effective: ({ y, m, d }) => `${y}年${m}月${d}日施行`,
+    effective: EFFECTIVE,
     intro:
       "Rosterushは会員登録なしで遊べるクイズです。サービスの運営に必要な情報だけを保存します。",
     summaryTitle: "ひと目でわかるポイント",
@@ -167,7 +144,7 @@ export const privacy: Record<Lang, PrivacyDoc> = {
       "IPアドレスとパスワードは元の値のままでは保存しません。",
       "プレイ記録は30日後に自動で削除されます。",
     ],
-    publicNotice:
+    notice:
       "シェア記録とコメント（ニックネームを含む）は誰でも見られます。本名や連絡先などの個人情報は書かないでください。",
     dataTitle: "1. 保存する情報",
     dataNote: "ハッシュ：元の値に戻せないように変換した値のことです。",
@@ -253,20 +230,14 @@ export const privacy: Record<Lang, PrivacyDoc> = {
     ],
     contact: {
       title: "7. 個人情報保護責任者とお問い合わせ先",
-      officer: "個人情報保護責任者",
+      person: "個人情報保護責任者",
       email: "メール",
     },
   },
   en: {
     title: "Privacy Policy",
     description: "What Rosterush stores, why, and for how long.",
-    effective: ({ y, m, d }) =>
-      `Effective ${new Date(Date.UTC(y, m - 1, d)).toLocaleDateString("en-US", {
-        month: "long",
-        day: "numeric",
-        year: "numeric",
-        timeZone: "UTC",
-      })}`,
+    effective: EFFECTIVE,
     intro:
       "Rosterush is a quiz you can play without an account. We only store what we need to run it.",
     summaryTitle: "At a glance",
@@ -275,7 +246,7 @@ export const privacy: Record<Lang, PrivacyDoc> = {
       "We never store your IP address or password in their original form.",
       "Game runs are deleted automatically after 30 days.",
     ],
-    publicNotice:
+    notice:
       "Shared runs and comments (including nicknames) are visible to everyone. Don't include your real name, contact details or other personal information.",
     dataTitle: "1. What we store",
     dataNote: "Hash: a value transformed so it can't be turned back into the original.",
@@ -363,7 +334,7 @@ export const privacy: Record<Lang, PrivacyDoc> = {
     ],
     contact: {
       title: "7. Privacy officer and contact",
-      officer: "Privacy officer",
+      person: "Privacy officer",
       email: "Email",
     },
   },

@@ -4,7 +4,8 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { fontClassName, fontStyle } from "@/lib/fonts";
 import { isLang, t } from "@/lib/i18n";
-import { privacy } from "@/lib/privacy";
+import { privacy } from "@/lib/policy/privacy";
+import { terms } from "@/lib/policy/terms";
 import { SITE_ORIGIN } from "@/lib/seo";
 import "../globals.css";
 
@@ -51,6 +52,9 @@ export default async function LangLayout({ children, params }: LayoutProps<"/[la
         <main className="mx-auto max-w-6xl px-6 pb-20">{children}</main>
         <footer className="text-muted-foreground mx-auto flex max-w-6xl gap-4 px-6 pb-10 text-xs font-bold">
           <span>© Rosterush</span>
+          <Link href={`/${lang}/terms/`} className="underline">
+            {terms[lang].title}
+          </Link>
           <Link href={`/${lang}/privacy/`} className="underline">
             {privacy[lang].title}
           </Link>
