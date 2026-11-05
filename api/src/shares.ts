@@ -1,7 +1,8 @@
 import { GetCommand } from "@aws-sdk/lib-dynamodb";
 import { SHARE_ID_RE, ShareRequest, type ShareResponse } from "@rosterush/core";
 import { ddb } from "./lib/dynamo";
-import { HttpError, handler, json, parseBody } from "./lib/http";
+import { HttpError, handler, ipHash, json, parseBody } from "./lib/http";
+import { hit, LIMITS } from "./lib/ratelimit";
 import type { ShareItem } from "./lib/share-core";
 import { toShareView } from "./lib/share-core";
 import { ensureShare } from "./lib/share-create";
@@ -15,6 +16,7 @@ const shareUrl = (shareId: string) => `${process.env.PUBLIC_ORIGIN ?? ""}/s/${sh
  */
 export const create = handler(async (event) => {
   const req = parseBody(event, ShareRequest);
+  await hit("share", ipHash(event), LIMITS.shareCreate);
   const { shareId, created } = await ensureShare(req.resultId, req.nickname);
   return json(created ? 201 : 200, { shareId, url: shareUrl(shareId) } satisfies ShareResponse);
 });

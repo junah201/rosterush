@@ -10,6 +10,7 @@ import { getGame } from "@rosterush/games";
 import { checkRun } from "./lib/check-run";
 import { ddb } from "./lib/dynamo";
 import { HttpError, handler, ipHash, json, parseBody } from "./lib/http";
+import { hit, LIMITS } from "./lib/ratelimit";
 import { TABLES } from "./lib/tables";
 
 const TTL_SECONDS = 30 * 24 * 60 * 60;
@@ -21,7 +22,8 @@ export const main = handler(async (event) => {
   if (!game) throw new HttpError("UNKNOWN_GAME", "unknown game");
 
   const { flagged } = checkRun(game, req);
-  // TODO: ipHash 기준 IP별 요청 제한 (ratelimits 테이블)
+  const ip = ipHash(event);
+  await hit("result", ip, LIMITS.resultWrite);
 
   const now = Date.now();
   const key = { game: req.game, lang: req.lang, difficulty: req.difficulty, ulid: newUlid(now) };
@@ -38,7 +40,7 @@ export const main = handler(async (event) => {
         totalMs: req.totalMs,
         solves: req.solves,
         flagged: flagged || undefined,
-        ipHash: ipHash(event),
+        ipHash: ip,
         createdAt,
         expiresAt: createdAt + TTL_SECONDS,
       },

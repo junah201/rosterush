@@ -59,6 +59,10 @@ export async function count(name: string, ip: string, w: Window, now = Date.now(
 
 /** 9장 IP별 한도 */
 export const LIMITS = {
+  /** 기록 저장: 10분 20회 */
+  resultWrite: [{ sec: 600, max: 20 }],
+  /** 공유 생성: 1시간 30회 (이미 공유된 기록을 다시 요청해도 센다) */
+  shareCreate: [{ sec: 3600, max: 30 }],
   /** 댓글/답글 작성: 1분 5회, 1시간 30회 */
   commentWrite: [
     { sec: 60, max: 5 },
