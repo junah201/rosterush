@@ -2,6 +2,7 @@
 
 import { type Difficulty, type GameDef, type Lang, rosterAt } from "@rosterush/core";
 import { useCallback, useEffect, useRef, useState } from "react";
+import { ShareBox } from "@/components/share/share-box";
 import { postResult } from "@/lib/api";
 import { formatTime } from "@/lib/format";
 import type { Dict } from "@/lib/i18n";
@@ -9,7 +10,7 @@ import { saveRecord } from "@/lib/records";
 import { PercentileCard } from "./percentile-card";
 import type { PlayResult } from "./use-play";
 
-type SaveState = "saving" | "saved" | "failed";
+type SaveState = { s: "saving" } | { s: "saved"; resultId: string } | { s: "failed" };
 
 type Props = {
   game: GameDef;
@@ -21,13 +22,13 @@ type Props = {
 };
 
 export function ResultPanel({ game, lang, d, difficulty, result, onRetry }: Props) {
-  const [save, setSave] = useState<SaveState>("saving");
+  const [save, setSave] = useState<SaveState>({ s: "saving" });
   const sent = useRef(false);
   const total = rosterAt(game).length;
   const solved = Object.keys(result.solves).length;
 
   const submit = useCallback(async () => {
-    setSave("saving");
+    setSave({ s: "saving" });
     try {
       const { resultId } = await postResult({
         game: game.id,
@@ -49,9 +50,9 @@ export function ResultPanel({ game, lang, d, difficulty, result, onRetry }: Prop
         total,
         at: Date.now(),
       });
-      setSave("saved");
+      setSave({ s: "saved", resultId });
     } catch {
-      setSave("failed");
+      setSave({ s: "failed" });
     }
   }, [game, lang, difficulty, result, solved, total]);
 
@@ -81,9 +82,9 @@ export function ResultPanel({ game, lang, d, difficulty, result, onRetry }: Prop
       <PercentileCard game={game} lang={lang} d={d} difficulty={difficulty} result={result} />
 
       <div className="text-center text-xs font-bold" aria-live="polite">
-        {save === "saving" && <span className="text-[#5b6577]">{d.saving}</span>}
-        {save === "saved" && <span className="text-brand">✓ {d.saved}</span>}
-        {save === "failed" && (
+        {save.s === "saving" && <span className="text-[#5b6577]">{d.saving}</span>}
+        {save.s === "saved" && <span className="text-brand">✓ {d.saved}</span>}
+        {save.s === "failed" && (
           <span className="text-[#c2405b]">
             {d.saveFailed} ·{" "}
             <button type="button" className="underline" onClick={() => void submit()}>
@@ -92,6 +93,14 @@ export function ResultPanel({ game, lang, d, difficulty, result, onRetry }: Prop
           </span>
         )}
       </div>
+
+      {save.s === "saved" && (
+        <ShareBox
+          resultId={save.resultId}
+          title={`${game.name[lang]} · ${d.end[result.endReason]} ${formatTime(result.totalMs)}`}
+          d={d}
+        />
+      )}
 
       <button
         type="button"

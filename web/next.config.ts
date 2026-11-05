@@ -26,8 +26,13 @@ const nextConfig: NextConfig = {
     skipTrailingSlashRedirect: true,
     // `/` → `/ko/` 이동 (배포 환경에서는 CloudFront Function이 담당)
     redirects: async () => [{ source: "/", destination: "/ko/", permanent: false }],
-    // `/api/*` → serverless offline (배포 환경에서는 CloudFront → API Gateway)
-    rewrites: async () => [{ source: "/api/:path*", destination: `${API_DEV_ORIGIN}/api/:path*` }],
+    rewrites: async () => [
+      // `/api/*` → serverless offline (배포 환경에서는 CloudFront → API Gateway)
+      { source: "/api/:path*", destination: `${API_DEV_ORIGIN}/api/:path*` },
+      // `/s/{shareId}` → 공유 페이지. 배포 환경에서는 API가 기록 언어의 껍데기에 미리보기 메타 태그를 넣어 응답하고,
+      // 개발 중에는 메타 태그 없이 ko 껍데기만 보여준다.
+      { source: "/s/:shareId", destination: "/ko/s/" },
+    ],
   }),
 };
 
