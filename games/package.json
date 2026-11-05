@@ -7,9 +7,13 @@
   },
   "scripts": {
     "typecheck": "tsc -p tsconfig.json",
-    "validate": "tsx scripts/validate.ts"
+    "validate": "tsx scripts/validate.ts",
+    "images:build": "tsx scripts/build-images.ts"
   },
   "dependencies": {
     "@rosterush/core": "workspace:*"
+  },
+  "devDependencies": {
+    "sharp": "^0.35.5"
   }
 }

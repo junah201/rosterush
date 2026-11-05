@@ -76,9 +76,18 @@ export function PlayView({ game, lang }: { game: GameDef; lang: Lang }) {
                       className={`shadow-sticker-sm flex aspect-square flex-col items-center justify-center rounded-xl border-2 border-black p-1 text-center ${play.lastHit?.id === c.id ? "rr-pop" : ""}`}
                       style={{ background: group?.color ?? "#ffd23f", rotate: `${tilt}deg` }}
                     >
-                      <div className="mb-1 grid h-7 w-7 place-items-center rounded-full border-2 border-black bg-white text-xs font-black">
-                        {name[0]}
-                      </div>
+                      {c.image ? (
+                        // biome-ignore lint/performance/noImgElement: 정적 export, 최적화 불필요
+                        <img
+                          src={`/img/${c.image}`}
+                          alt=""
+                          className="mb-0.5 min-h-0 w-full flex-1 object-contain"
+                        />
+                      ) : (
+                        <div className="mb-1 grid h-7 w-7 place-items-center rounded-full border-2 border-black bg-white text-xs font-black">
+                          {name[0]}
+                        </div>
+                      )}
                       <span className="w-full truncate text-[10px] leading-tight font-bold">
                         {name}
                       </span>
@@ -90,8 +99,16 @@ export function PlayView({ game, lang }: { game: GameDef; lang: Lang }) {
                   return (
                     <div
                       key={c.id}
-                      className="grid aspect-square place-items-center rounded-xl border-2 border-dashed border-[#ff8fa3] bg-[#fff0f3] p-1 text-center"
+                      className="flex aspect-square flex-col items-center justify-center rounded-xl border-2 border-dashed border-[#ff8fa3] bg-[#fff0f3] p-1 text-center"
                     >
+                      {c.image && (
+                        // biome-ignore lint/performance/noImgElement: 정적 export, 최적화 불필요
+                        <img
+                          src={`/img/${c.image}`}
+                          alt=""
+                          className="mb-0.5 min-h-0 w-full flex-1 object-contain opacity-60 grayscale"
+                        />
+                      )}
                       <span className="w-full truncate text-[10px] font-bold text-[#c2405b]">
                         {name}
                       </span>
@@ -103,10 +120,14 @@ export function PlayView({ game, lang }: { game: GameDef; lang: Lang }) {
                     key={c.id}
                     className="relative grid aspect-square place-items-center overflow-hidden rounded-xl border-2 border-dashed border-[#9aa3b5] bg-[#f6f7fa] text-lg font-black text-[#c3cad8]"
                   >
-                    {play.difficulty === "easy" && c.image ? (
-                      // 이미지 자체가 미리 블러 처리되어 업로드됨
+                    {play.difficulty === "easy" && c.silhouette ? (
+                      // 실루엣은 별도 파일 (컬러 원본은 맞히기 전엔 내려받지 않음)
                       // biome-ignore lint/performance/noImgElement: 정적 export, 최적화 불필요
-                      <img src={`/img/${c.image}`} alt="" className="h-full w-full object-cover" />
+                      <img
+                        src={`/img/${c.silhouette}`}
+                        alt=""
+                        className="h-full w-full object-contain p-1"
+                      />
                     ) : (
                       "?"
                     )}

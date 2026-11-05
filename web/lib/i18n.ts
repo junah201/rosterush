@@ -9,7 +9,7 @@ const dict = {
     characters: "명",
     difficulty: { easy: "쉬움", normal: "보통", hard: "어려움" },
     difficultyHint: {
-      easy: "흐릿한 이미지 + 약칭 인정",
+      easy: "실루엣 + 약칭 인정",
       normal: "약칭 인정",
       hard: "정확한 풀네임만",
     },
@@ -91,7 +91,7 @@ const dict = {
     characters: "人",
     difficulty: { easy: "かんたん", normal: "ふつう", hard: "むずかしい" },
     difficultyHint: {
-      easy: "ぼかし画像 + 略称OK",
+      easy: "シルエット + 略称OK",
       normal: "略称OK",
       hard: "フルネームのみ",
     },
@@ -173,7 +173,7 @@ const dict = {
     characters: " characters",
     difficulty: { easy: "Easy", normal: "Normal", hard: "Hard" },
     difficultyHint: {
-      easy: "Blurred image + short names OK",
+      easy: "Silhouettes + short names OK",
       normal: "Short names OK",
       hard: "Full names only",
     },

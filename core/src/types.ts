@@ -45,8 +45,10 @@ export type Character = {
   groups?: Record<string, string>;
   /** groupingId → 우선순위 (작을수록 앞) */
   priority?: Record<string, number>;
-  /** 쉬움 모드 이미지 S3 경로 (예: "overwatch/8b2d07e4.webp") */
+  /** 컬러 초상화 경로, 맞힌 뒤 표시 (예: "overwatch/8b2d07e4c1a9.webp"). pnpm images:build가 채움 */
   image?: string;
+  /** 쉬움 모드 실루엣 경로. image와 파일명이 무관해야 함 (실루엣에서 정답 추측 방지) */
+  silhouette?: string;
   names: Record<Lang, CharacterNames>;
 };
 

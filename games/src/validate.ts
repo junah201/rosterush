@@ -44,12 +44,16 @@ export function validateGame(game: GameDef): string[] {
     for (const lang of LANGS)
       if (!c.names[lang]?.full.length) err(`${c.id}: ${lang} full 이름 누락`);
 
-    if (c.image !== undefined) {
-      if (!IMAGE_RE.test(c.image) || !c.image.startsWith(`${game.id}/`))
-        err(`${c.id}: image는 "${game.id}/{파일명}.webp" 형식`);
-      if (c.image.toLowerCase().includes(c.id.toLowerCase()))
-        err(`${c.id}: image 파일명에 캐릭터 id 사용 금지 (정답 노출)`);
+    for (const field of ["image", "silhouette"] as const) {
+      const path = c[field];
+      if (path === undefined) continue;
+      if (!IMAGE_RE.test(path) || !path.startsWith(`${game.id}/`))
+        err(`${c.id}: ${field}는 "${game.id}/{파일명}.webp" 형식`);
+      if (path.toLowerCase().includes(c.id.toLowerCase()))
+        err(`${c.id}: ${field} 파일명에 캐릭터 id 사용 금지 (정답 노출)`);
     }
+    if (c.silhouette !== undefined && c.silhouette === c.image)
+      err(`${c.id}: silhouette와 image가 같은 파일`);
   }
 
   if (!game.characters.some((c) => c.addedIn === game.rosterVer))

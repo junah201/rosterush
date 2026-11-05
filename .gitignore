@@ -30,3 +30,7 @@ GAMES_REVIEW.md
 # 로컬 집계 결과
 api/.local/
 web/public/stats/
+
+# 캐릭터 이미지 원본(저작권 있음)과 변환 결과 — 결과는 ImagesBucket에 직접 업로드
+games/images/
+web/public/img/

@@ -30,8 +30,9 @@ aws s3 sync web/out/_next/static "s3://$BUCKET/_next/static" "${AWS_ARGS[@]}" \
 
 # 2) 나머지(HTML, RSC 페이로드 등): 항상 재검증
 #    stats/는 로컬 집계 결과가 섞여 들어올 수 있으므로 제외 (운영 통계는 StatsBucket에서 서빙)
+#    img/도 로컬 변환 결과이므로 제외 (운영 이미지는 ImagesBucket, scripts/upload-images.sh)
 aws s3 sync web/out "s3://$BUCKET" "${AWS_ARGS[@]}" --delete \
-  --exclude "_next/static/*" --exclude "stats/*" \
+  --exclude "_next/static/*" --exclude "stats/*" --exclude "img/*" \
   --cache-control "public,max-age=0,must-revalidate"
 
 aws cloudfront create-invalidation --distribution-id "$DIST" --paths "/*" "${AWS_ARGS[@]}" \
