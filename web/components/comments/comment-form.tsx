@@ -5,7 +5,7 @@ import { useEffect, useId, useState } from "react";
 import { formatTime } from "@/lib/format";
 import type { Dict } from "@/lib/i18n";
 import { loadNickname, NICKNAME_MAX, saveNickname } from "@/lib/nickname";
-import { type LocalRecord, loadRecords } from "@/lib/records";
+import { type LocalRecord, loadRecords, onRecordsChange } from "@/lib/records";
 import { errorText, inputCls } from "./util";
 
 /** 기록은 results TTL(30일) 안에서만 첨부할 수 있다 */
@@ -43,8 +43,16 @@ export function CommentForm({
 
   useEffect(() => {
     setNickname(loadNickname());
-    const since = Date.now() - ATTACH_WINDOW_MS;
-    setRecords(loadRecords().filter((r) => r.game === gameId && r.at > since));
+  }, []);
+
+  // 첨부할 수 있는 기록: 폼이 뜬 뒤에 끝낸 판도 바로 고를 수 있게 기록이 저장될 때마다 다시 읽는다
+  useEffect(() => {
+    const load = () => {
+      const since = Date.now() - ATTACH_WINDOW_MS;
+      setRecords(loadRecords().filter((r) => r.game === gameId && r.at > since));
+    };
+    load();
+    return onRecordsChange(load);
   }, [gameId]);
 
   const onSubmit = async (e: React.FormEvent) => {
