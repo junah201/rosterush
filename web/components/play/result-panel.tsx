@@ -3,14 +3,17 @@
 import { type Difficulty, type GameDef, type Lang, rosterAt } from "@rosterush/core";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { ShareBox } from "@/components/share/share-box";
-import { postResult } from "@/lib/api";
+import { ApiRequestError, postResult } from "@/lib/api";
 import { formatTime } from "@/lib/format";
 import type { Dict } from "@/lib/i18n";
 import { saveRecord } from "@/lib/records";
 import { PercentileCard } from "./percentile-card";
 import type { PlayResult } from "./use-play";
 
-type SaveState = { s: "saving" } | { s: "saved"; resultId: string } | { s: "failed" };
+type SaveState =
+  | { s: "saving" }
+  | { s: "saved"; resultId: string }
+  | { s: "failed"; limited: boolean };
 
 type Props = {
   game: GameDef;
@@ -51,8 +54,9 @@ export function ResultPanel({ game, lang, d, difficulty, result, onRetry }: Prop
         at: Date.now(),
       });
       setSave({ s: "saved", resultId });
-    } catch {
-      setSave({ s: "failed" });
+    } catch (err) {
+      const limited = err instanceof ApiRequestError && err.code === "RATE_LIMITED";
+      setSave({ s: "failed", limited });
     }
   }, [game, lang, difficulty, result, solved, total]);
 
@@ -86,7 +90,7 @@ export function ResultPanel({ game, lang, d, difficulty, result, onRetry }: Prop
         {save.s === "saved" && <span className="text-brand">✓ {d.saved}</span>}
         {save.s === "failed" && (
           <span className="text-[#c2405b]">
-            {d.saveFailed} ·{" "}
+            {save.limited ? d.commentErrors.RATE_LIMITED : d.saveFailed} ·{" "}
             <button type="button" className="underline" onClick={() => void submit()}>
               {d.saveRetry}
             </button>

@@ -10,7 +10,7 @@ type State =
   | { s: "idle" }
   | { s: "sending" }
   | { s: "done"; url: string }
-  | { s: "failed"; expired: boolean };
+  | { s: "failed"; message: string };
 
 /** 결과 화면: 닉네임(선택)을 받아 공유 링크를 만든다 */
 export function ShareBox({ resultId, title, d }: { resultId: string; title: string; d: Dict }) {
@@ -28,8 +28,14 @@ export function ShareBox({ resultId, title, d }: { resultId: string; title: stri
       saveNickname(name);
       setState({ s: "done", url });
     } catch (err) {
-      const expired = err instanceof ApiRequestError && err.code === "RESULT_NOT_FOUND";
-      setState({ s: "failed", expired });
+      const code = err instanceof ApiRequestError ? err.code : "";
+      const message =
+        code === "RESULT_NOT_FOUND"
+          ? d.shareExpired
+          : code === "RATE_LIMITED"
+            ? d.commentErrors.RATE_LIMITED
+            : d.shareFailed;
+      setState({ s: "failed", message });
     }
   };
 
@@ -58,7 +64,7 @@ export function ShareBox({ resultId, title, d }: { resultId: string; title: stri
           </button>
           {state.s === "failed" && (
             <p className="text-center text-xs font-bold text-[#c2405b]" role="alert">
-              {state.expired ? d.shareExpired : d.shareFailed}
+              {state.message}
             </p>
           )}
         </form>
