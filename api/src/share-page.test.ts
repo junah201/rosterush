@@ -56,6 +56,14 @@ describe("share page meta", () => {
     expect(out.indexOf("<title>")).toBeLessThan(out.indexOf('name="viewport"'));
   });
 
+  it("drops the shell's hreflang alternates", () => {
+    const withAlt = shell.replace(
+      "</head>",
+      '<link rel="alternate" hrefLang="ja" href="https://rosterush.junah.dev/ja/s/"/></head>',
+    );
+    expect(injectMeta(withAlt, meta)).not.toMatch(/hreflang/i);
+  });
+
   it("escapes the nickname", () => {
     const out = injectMeta(shell, meta);
     expect(out).not.toContain("<b>");

@@ -73,14 +73,16 @@ export function metaTags(m: ShareMeta): string {
 }
 
 /**
- * 정적 export 껍데기 HTML의 기본 title·description·og·twitter·canonical을 지우고 공유 기록용으로 바꾼다.
+ * 정적 export 껍데기 HTML의 기본 title·description·og·twitter·canonical·hreflang을 지우고 공유 기록용으로 바꾼다.
  * charset 메타 바로 뒤(없으면 <head> 바로 뒤)에 넣어 크롤러가 앞부분만 읽어도 보이게 한다.
  */
 export function injectMeta(html: string, m: ShareMeta): string {
   const cleaned = html
     .replace(/<title>[\s\S]*?<\/title>/gi, "")
     .replace(/<meta\s+(?:name|property)="(?:description|og:[^"]*|twitter:[^"]*)"[^>]*>/gi, "")
-    .replace(/<link\s+rel="canonical"[^>]*>/gi, "");
+    .replace(/<link\s+rel="canonical"[^>]*>/gi, "")
+    // 공유 기록은 기록 언어 하나뿐이라 언어별 대체 주소가 없다
+    .replace(/<link\s+rel="alternate"[^>]*hreflang=[^>]*>/gi, "");
   const tags = metaTags(m);
   const charset = /<meta\s+charset=["']?[\w-]+["']?\s*\/?>/i.exec(cleaned);
   if (charset) {
