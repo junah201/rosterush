@@ -1,8 +1,7 @@
 "use client";
 
-import type { Comment, CommentCreateRequest } from "@rosterush/core";
+import { type Comment, type CommentCreateRequest, formatTime } from "@rosterush/core";
 import { useEffect, useId, useState } from "react";
-import { formatTime } from "@/lib/format";
 import type { Dict } from "@/lib/i18n";
 import { loadNickname, NICKNAME_MAX, saveNickname } from "@/lib/nickname";
 import { type LocalRecord, loadRecords, onRecordsChange } from "@/lib/records";

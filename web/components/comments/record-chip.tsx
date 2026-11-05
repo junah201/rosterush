@@ -1,10 +1,8 @@
 "use client";
 
-import { type CommentRecord, type Lang, type LatestStats, topPercent } from "@rosterush/core";
-import { useEffect, useState } from "react";
-import { formatTime } from "@/lib/format";
+import { type CommentRecord, formatTime, type Lang } from "@rosterush/core";
 import type { Dict } from "@/lib/i18n";
-import { latestStatsOnce } from "@/lib/stats";
+import { rankOf, useLatestStats } from "@/lib/stats";
 
 /**
  * 댓글에 첨부된 기록 카드. 백분위는 저장하지 않고 지금 latest.json으로 계산한다.
@@ -25,23 +23,14 @@ export function RecordChip({
   d: Dict;
 }) {
   const clear = record.endReason === "clear";
-  const [stats, setStats] = useState<LatestStats | null | undefined>(undefined);
-
-  useEffect(() => {
-    if (!clear) return;
-    let alive = true;
-    latestStatsOnce(game, record.lang, record.difficulty).then((s) => alive && setStats(s));
-    return () => {
-      alive = false;
-    };
-  }, [clear, game, record.lang, record.difficulty]);
+  const stats = useLatestStats(game, record.lang, record.difficulty, clear);
 
   let tail: string | null = null;
   if (!clear) tail = `${record.solved}/${record.total}`;
-  else if (stats && stats.rosterVer !== record.rosterVer) tail = d.oldRoster;
   else if (stats) {
-    const top = topPercent(record.totalMs, stats.clearTime);
-    if (top !== null) tail = d.top(top);
+    const rank = rankOf(record.totalMs, record.rosterVer, stats);
+    if (rank.kind === "rosterChanged") tail = d.oldRoster;
+    else if (rank.kind === "top") tail = d.top(rank.top);
   }
 
   return (

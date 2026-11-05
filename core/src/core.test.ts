@@ -1,6 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { addRun, emptyState, toLatest } from "./aggregate";
 import { CommentCreateRequest } from "./api";
+import { formatTime } from "./format";
 import {
   commentKeys,
   makeCommentId,
@@ -62,6 +63,13 @@ const game: GameDef = {
     },
   ],
 };
+
+describe("formatTime", () => {
+  it("formats ms as mm:ss.cc", () => {
+    expect(formatTime(222_170)).toBe("03:42.17");
+    expect(formatTime(600_000)).toBe("10:00.00");
+  });
+});
 
 describe("normalize", () => {
   it("공백·구두점·대소문자를 무시한다", () => {

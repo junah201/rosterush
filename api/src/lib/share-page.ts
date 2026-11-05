@@ -1,5 +1,5 @@
-import type { GameDef } from "@rosterush/core";
-import { formatTime, LABELS, OG_HEIGHT, OG_WIDTH } from "./og/card";
+import { formatTime, type GameDef } from "@rosterush/core";
+import { LABELS, OG_HEIGHT, OG_WIDTH } from "./og/card";
 import type { ShareItem } from "./share-core";
 
 /**

@@ -1,4 +1,4 @@
-import type { Difficulty, EndReason, Lang } from "@rosterush/core";
+import { type Difficulty, type EndReason, formatTime, type Lang } from "@rosterush/core";
 
 /**
  * 공유 미리보기 이미지 (1200×630) — 시안 A "스티커 기록증".
@@ -56,14 +56,6 @@ const C = { brand: "#1f3cff", sun: "#ffd23f", paper: "#eef1f6", dot: "#c3cad8", 
 
 /** 디스플레이 글꼴 (라틴·숫자만 쓰임: 로고, 기록, 배지 숫자) */
 export const DISPLAY_FONT = "Dela Gothic One";
-
-/** ms → "mm:ss.cc" (web/lib/format.ts의 formatTime과 동일) */
-export function formatTime(ms: number): string {
-  const cs = Math.floor(ms / 10);
-  const m = Math.floor(cs / 6000);
-  const s = Math.floor((cs % 6000) / 100);
-  return `${String(m).padStart(2, "0")}:${String(s).padStart(2, "0")}.${String(cs % 100).padStart(2, "0")}`;
-}
 
 /** satori가 받는 React 요소 형태 (React 없이 만든다) */
 export type OgNode = {

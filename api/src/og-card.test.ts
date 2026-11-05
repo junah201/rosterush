@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { buildCard, type CardInput, formatTime } from "./lib/og/card";
+import { buildCard, type CardInput } from "./lib/og/card";
 import { hasJapanese, uniqueChars } from "./lib/og/fonts";
 
 const base: CardInput = {
@@ -23,11 +23,6 @@ const texts = (n: unknown): string[] => {
 };
 
 describe("og card", () => {
-  it("formats time like the result screen", () => {
-    expect(formatTime(222_170)).toBe("03:42.17");
-    expect(formatTime(600_000)).toBe("10:00.00");
-  });
-
   it("shows the percentile badge when ranked", () => {
     const all = texts(buildCard(base).node);
     expect(all).toContain("상위");

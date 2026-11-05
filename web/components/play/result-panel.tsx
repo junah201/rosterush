@@ -2,9 +2,9 @@
 
 import { type Difficulty, type GameDef, type Lang, rosterAt } from "@rosterush/core";
 import { useCallback, useEffect, useRef, useState } from "react";
+import { RecordSummary, recordTitle } from "@/components/record/record-summary";
 import { ShareBox } from "@/components/share/share-box";
 import { ApiRequestError, postResult } from "@/lib/api";
-import { formatTime } from "@/lib/format";
 import type { Dict } from "@/lib/i18n";
 import { saveRecord } from "@/lib/records";
 import { PercentileCard } from "./percentile-card";
@@ -73,14 +73,13 @@ export function ResultPanel({ game, lang, d, difficulty, result, onRetry }: Prop
       <div
         className={`shadow-sticker rr-pop rounded-2xl border-2 border-black p-5 ${clear ? "bg-sun" : "bg-white"}`}
       >
-        <div className="inline-block -rotate-3 rounded-full border-2 border-black bg-white px-3 py-0.5 text-sm font-black">
-          {d.end[result.endReason]}
-        </div>
-        <div className="mt-3 text-xs font-bold text-[#5b6577]">{d.record}</div>
-        <div className="font-heading text-4xl tabular-nums">{formatTime(result.totalMs)}</div>
-        <div className="mt-1 text-lg font-black">
-          {solved} / {total}
-        </div>
+        <RecordSummary
+          d={d}
+          endReason={result.endReason}
+          totalMs={result.totalMs}
+          solved={solved}
+          total={total}
+        />
       </div>
 
       <PercentileCard game={game} lang={lang} d={d} difficulty={difficulty} result={result} />
@@ -101,7 +100,7 @@ export function ResultPanel({ game, lang, d, difficulty, result, onRetry }: Prop
       {save.s === "saved" && (
         <ShareBox
           resultId={save.resultId}
-          title={`${game.name[lang]} · ${d.end[result.endReason]} ${formatTime(result.totalMs)}`}
+          title={recordTitle(game.name[lang], d, result.endReason, result.totalMs)}
           d={d}
         />
       )}

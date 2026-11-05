@@ -4,8 +4,8 @@ import { type Lang, SHARE_ID_RE, type ShareView as Share } from "@rosterush/core
 import { getGame } from "@rosterush/games";
 import Link from "next/link";
 import { useCallback, useEffect, useState } from "react";
+import { RecordSummary, recordTitle } from "@/components/record/record-summary";
 import { ApiRequestError, getShare } from "@/lib/api";
-import { formatTime } from "@/lib/format";
 import { type Dict, t } from "@/lib/i18n";
 import { CopyLink } from "./copy-link";
 import { SharePercentile } from "./share-percentile";
@@ -84,7 +84,7 @@ function ShareCard({ share, lang, d }: { share: Share; lang: Lang; d: Dict }) {
   const gameName = game?.name[lang] ?? share.game;
   const clear = share.endReason === "clear";
   const date = new Date(share.createdAt).toLocaleDateString(lang);
-  const title = `${gameName} · ${d.end[share.endReason]} ${formatTime(share.totalMs)}`;
+  const title = recordTitle(gameName, d, share.endReason, share.totalMs);
   const [url, setUrl] = useState("");
 
   useEffect(() => {
@@ -109,14 +109,14 @@ function ShareCard({ share, lang, d }: { share: Share; lang: Lang; d: Dict }) {
           {share.nickname ? d.recordOf(share.nickname) : d.anonymousRecord}
         </div>
 
-        <div className="mt-4 inline-block -rotate-3 rounded-full border-2 border-black bg-white px-3 py-0.5 text-sm font-black">
-          {d.end[share.endReason]}
-        </div>
-        <div className="mt-3 text-xs font-bold text-[#5b6577]">{d.record}</div>
-        <div className="font-heading text-4xl tabular-nums">{formatTime(share.totalMs)}</div>
-        <div className="mt-1 text-lg font-black">
-          {share.solved} / {share.total}
-        </div>
+        <RecordSummary
+          d={d}
+          endReason={share.endReason}
+          totalMs={share.totalMs}
+          solved={share.solved}
+          total={share.total}
+          className="mt-4"
+        />
         <div className="mt-3 text-xs font-bold text-[#5b6577]">{d.sharedOn(date)}</div>
       </div>
 
