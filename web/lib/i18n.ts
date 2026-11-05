@@ -4,6 +4,15 @@ export const isLang = (v: string): v is Lang => (LANGS as readonly string[]).inc
 
 const dict = {
   ko: {
+    seo: {
+      siteDescription: "게임 캐릭터 이름을 전부 맞히는 타이핑 퀴즈",
+      homeTitle: "Rosterush · 게임 캐릭터 이름 맞히기 퀴즈",
+      homeDescription: (games: string[]) =>
+        `${games.join(", ")} 캐릭터 이름을 제한 시간 안에 전부 맞혀 보세요. 기록을 겨루고 친구에게 공유할 수 있는 타이핑 퀴즈예요.`,
+      gameTitle: (game: string) => `${game} 캐릭터 이름 맞히기 퀴즈 | Rosterush`,
+      gameDescription: (game: string, n: number) =>
+        `${game} 캐릭터 ${n}명의 이름을 제한 시간 안에 전부 맞혀 보세요. 쉬움·보통·어려움 난이도로 도전하고 기록을 공유할 수 있어요.`,
+    },
     tagline: "캐릭터 이름을 전부 불러봐!",
     play: "도전하기",
     characters: "명",
@@ -86,6 +95,15 @@ const dict = {
     },
   },
   ja: {
+    seo: {
+      siteDescription: "ゲームキャラの名前を全部答えるタイピングクイズ",
+      homeTitle: "Rosterush · ゲームキャラ名前当てクイズ",
+      homeDescription: (games: string[]) =>
+        `${games.join("、")}のキャラの名前を制限時間内に全部答えよう。記録を競って友達にシェアできるタイピングクイズです。`,
+      gameTitle: (game: string) => `${game} キャラ名前当てクイズ | Rosterush`,
+      gameDescription: (game: string, n: number) =>
+        `${game}のキャラ${n}人の名前を制限時間内に全部答えよう。かんたん・ふつう・むずかしいの3つの難易度で挑戦して、記録をシェアできます。`,
+    },
     tagline: "キャラの名前を全部言えるかな？",
     play: "挑戦する",
     characters: "人",
@@ -168,6 +186,15 @@ const dict = {
     },
   },
   en: {
+    seo: {
+      siteDescription: "A typing quiz where you name every character in a game",
+      homeTitle: "Rosterush · Name Every Game Character Quiz",
+      homeDescription: (games: string[]) =>
+        `Name every character from ${games.join(", ")} before time runs out. A typing quiz where you can race the clock and share your run.`,
+      gameTitle: (game: string) => `${game} Character Name Quiz | Rosterush`,
+      gameDescription: (game: string, n: number) =>
+        `Name all ${n} ${game} characters before time runs out. Pick Easy, Normal or Hard, then share your run with friends.`,
+    },
     tagline: "Name every character you can!",
     play: "Play",
     characters: " characters",

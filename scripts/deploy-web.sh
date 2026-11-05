@@ -22,6 +22,12 @@ BUCKET="$(output SiteBucketName)"
 DIST="$(output DistributionId)"
 echo "stage=$STAGE bucket=$BUCKET distribution=$DIST"
 
+# canonical·hreflang·og:url의 절대 주소 기준 (web/lib/seo.ts)
+case "$STAGE" in
+  prod) export SITE_ORIGIN="https://rosterush.junah.dev" ;;
+  *) export SITE_ORIGIN="https://rosterush-${STAGE}.junah.dev" ;;
+esac
+
 pnpm --filter @rosterush/web build
 
 # 1) 파일명에 해시가 붙은 정적 자산: 1년 immutable (이전 버전도 남겨서 열려 있는 탭이 깨지지 않게)

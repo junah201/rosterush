@@ -3,7 +3,8 @@ import type { Metadata } from "next";
 import { Black_Han_Sans, Dela_Gothic_One, Noto_Sans_KR } from "next/font/google";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { isLang } from "@/lib/i18n";
+import { isLang, t } from "@/lib/i18n";
+import { SITE_ORIGIN } from "@/lib/seo";
 import "../globals.css";
 
 const sans = Noto_Sans_KR({
@@ -17,10 +18,16 @@ const hanSans = Black_Han_Sans({ variable: "--font-hansans", weight: "400", prel
 export const dynamicParams = false;
 export const generateStaticParams = () => LANGS.map((lang) => ({ lang }));
 
-export const metadata: Metadata = {
-  title: "Rosterush",
-  description: "게임 캐릭터 이름을 전부 맞히는 타이핑 퀴즈",
-};
+/** 페이지가 따로 정하지 않을 때의 기본값 (공유 기록 껍데기 등). hreflang은 페이지마다 넣는다. */
+export async function generateMetadata({ params }: LayoutProps<"/[lang]">): Promise<Metadata> {
+  const { lang } = await params;
+  if (!isLang(lang)) return {};
+  return {
+    metadataBase: new URL(SITE_ORIGIN),
+    title: "Rosterush",
+    description: t(lang).seo.siteDescription,
+  };
+}
 
 export default async function LangLayout({ children, params }: LayoutProps<"/[lang]">) {
   const { lang } = await params;

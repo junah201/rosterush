@@ -1,7 +1,19 @@
 import { rosterAt } from "@rosterush/core";
 import { games } from "@rosterush/games";
+import type { Metadata } from "next";
 import Link from "next/link";
 import { isLang, t } from "@/lib/i18n";
+import { localizedMeta } from "@/lib/seo";
+
+export async function generateMetadata({ params }: PageProps<"/[lang]">): Promise<Metadata> {
+  const { lang } = await params;
+  if (!isLang(lang)) return {};
+  const { seo } = t(lang);
+  return localizedMeta(lang, "/", {
+    title: seo.homeTitle,
+    description: seo.homeDescription(games.map((g) => g.name[lang])),
+  });
+}
 
 export default async function HomePage({ params }: PageProps<"/[lang]">) {
   const { lang } = await params;
