@@ -14,3 +14,20 @@ export async function fetchLatestStats(
     return null;
   }
 }
+
+const cache = new Map<string, Promise<LatestStats | null>>();
+
+/** 같은 (게임, 언어, 난이도)는 페이지에서 한 번만 불러온다 (댓글마다 기록 카드가 있어서) */
+export function latestStatsOnce(
+  game: string,
+  lang: Lang,
+  difficulty: Difficulty,
+): Promise<LatestStats | null> {
+  const key = `${game}/${lang}/${difficulty}`;
+  let p = cache.get(key);
+  if (!p) {
+    p = fetchLatestStats(game, lang, difficulty);
+    cache.set(key, p);
+  }
+  return p;
+}

@@ -1,6 +1,7 @@
 import { LANGS } from "@rosterush/core";
 import { games, getGame } from "@rosterush/games";
 import { notFound } from "next/navigation";
+import { CommentSection } from "@/components/comments/comment-section";
 import { PlayView } from "@/components/play/play";
 import { isLang } from "@/lib/i18n";
 
@@ -13,5 +14,10 @@ export default async function GamePage({ params }: PageProps<"/[lang]/[game]">) 
   const game = getGame(gameId);
   if (!isLang(lang) || !game) notFound();
 
-  return <PlayView game={game} lang={lang} />;
+  return (
+    <>
+      <PlayView game={game} lang={lang} />
+      <CommentSection gameId={game.id} lang={lang} />
+    </>
+  );
 }
