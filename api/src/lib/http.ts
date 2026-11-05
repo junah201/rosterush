@@ -13,6 +13,7 @@ export class HttpError extends Error {
     readonly code: ErrorCode,
     message: string,
     readonly details?: unknown,
+    readonly headers: Record<string, string> = {},
   ) {
     super(message);
   }
@@ -33,7 +34,7 @@ export function json(
 export function errorResponse(e: unknown): Response {
   if (e instanceof HttpError) {
     const body: ApiError = { error: { code: e.code, message: e.message, details: e.details } };
-    return json(ERROR_STATUS[e.code], body);
+    return json(ERROR_STATUS[e.code], body, e.headers);
   }
   console.error(e);
   return json(500, { error: { code: "INTERNAL", message: "internal error" } } satisfies ApiError);
