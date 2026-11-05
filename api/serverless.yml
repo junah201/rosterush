@@ -467,6 +467,14 @@ resources:
           IPV6Enabled: true
           # PriceClass_100은 한국·일본 엣지를 포함하지 않음
           PriceClass: PriceClass_200
+          # 없는 경로: S3(OAC, ListBucket 권한 없음)는 없는 객체에 403을 주므로 이를 404 페이지(web/app/global-not-found.tsx)로 바꾼다.
+          # 커스텀 에러 응답은 배포 전체(API 포함)에 적용되므로 404는 건드리지 않는다 (API의 404 JSON 유지).
+          # 같은 이유로 API는 403을 쓰지 않는다 (core ERROR_STATUS).
+          CustomErrorResponses:
+            - ErrorCode: 403
+              ResponseCode: 404
+              ResponsePagePath: /404.html
+              ErrorCachingMinTTL: 60
           Origins:
             - Id: site
               DomainName: !GetAtt SiteBucket.RegionalDomainName
