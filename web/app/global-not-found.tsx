@@ -61,20 +61,24 @@ export default function GlobalNotFound() {
         <style dangerouslySetInnerHTML={{ __html: langCss }} />
       </head>
       <body className="min-h-dvh">
-        <header className="mx-auto flex max-w-6xl items-center gap-4 px-6 py-5">
+        <header className="mx-auto flex max-w-6xl items-center gap-3 px-6 py-5 sm:gap-4">
           {LANGS.map((l) => (
             <a
               key={l}
               data-l={l}
               href={`/${l}/`}
-              className="bg-brand font-heading shadow-sticker -rotate-2 border-2 border-black px-3 py-1 text-2xl text-white"
+              className="bg-brand font-heading shadow-sticker -rotate-2 border-2 border-black px-2.5 py-1 text-xl whitespace-nowrap text-white sm:px-3 sm:text-2xl"
             >
               ROSTERUSH
             </a>
           ))}
-          <nav className="ml-auto flex overflow-hidden rounded-full border-2 border-black bg-white text-xs font-bold">
+          <nav className="ml-auto flex shrink-0 overflow-hidden rounded-full border-2 border-black bg-white text-xs font-bold">
             {LANGS.map((l) => (
-              <a key={l} href={`/${l}/`} className={`px-3 py-1 uppercase ${activeLang[l]}`}>
+              <a
+                key={l}
+                href={`/${l}/`}
+                className={`px-2.5 py-1 uppercase sm:px-3 ${activeLang[l]}`}
+              >
                 {l}
               </a>
             ))}

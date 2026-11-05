@@ -28,19 +28,19 @@ export default async function LangLayout({ children, params }: LayoutProps<"/[la
   return (
     <html lang={lang} className={fontClassName} style={fontStyle}>
       <body className="min-h-dvh">
-        <header className="mx-auto flex max-w-6xl items-center gap-4 px-6 py-5">
+        <header className="mx-auto flex max-w-6xl items-center gap-3 px-6 py-5 sm:gap-4">
           <Link
             href={`/${lang}/`}
-            className="bg-brand font-heading shadow-sticker -rotate-2 border-2 border-black px-3 py-1 text-2xl text-white"
+            className="bg-brand font-heading shadow-sticker -rotate-2 border-2 border-black px-2.5 py-1 text-xl whitespace-nowrap text-white sm:px-3 sm:text-2xl"
           >
             ROSTERUSH
           </Link>
-          <nav className="ml-auto flex overflow-hidden rounded-full border-2 border-black bg-white text-xs font-bold">
+          <nav className="ml-auto flex shrink-0 overflow-hidden rounded-full border-2 border-black bg-white text-xs font-bold">
             {LANGS.map((l) => (
               <Link
                 key={l}
                 href={`/${l}/`}
-                className={`px-3 py-1 uppercase ${l === lang ? "bg-black text-white" : ""}`}
+                className={`px-2.5 py-1 uppercase sm:px-3 ${l === lang ? "bg-black text-white" : ""}`}
               >
                 {l}
               </Link>
