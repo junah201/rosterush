@@ -25,12 +25,18 @@ export const ShareRequest = z.object({
 });
 export type ShareRequest = z.infer<typeof ShareRequest>;
 
+/** 댓글 본문: 줄바꿈을 \n으로 맞춘 뒤 앞뒤 공백 제거, 1~500자, 연속 줄바꿈 최대 3줄 */
 const body = z
   .string()
-  .trim()
-  .min(1)
-  .max(500)
-  .refine((s) => !/\n{4,}/.test(s), "too many line breaks");
+  .transform((s) => s.replace(/\r\n?/g, "\n"))
+  .pipe(
+    z
+      .string()
+      .trim()
+      .min(1)
+      .max(500)
+      .refine((s) => !/\n{4,}/.test(s), "too many line breaks"),
+  );
 
 export const CommentCreateRequest = z.object({
   nickname: z.string().trim().min(1).max(12),
@@ -76,8 +82,11 @@ export type ShareView = {
 };
 export type Page<T> = { items: T[]; nextCursor: string | null };
 
+/** 댓글에 첨부된 기록 요약. 백분위는 저장하지 않고 화면에서 latest.json으로 계산한다 */
 export type CommentRecord = {
   shareId: string;
+  /** 기록을 플레이한 언어 (댓글 언어와 다를 수 있음, latest.json 경로에 필요) */
+  lang: (typeof LANGS)[number];
   difficulty: (typeof DIFFICULTIES)[number];
   rosterVer: number;
   endReason: (typeof END_REASONS)[number];
@@ -86,6 +95,10 @@ export type CommentRecord = {
   total: number;
 };
 
+/**
+ * 댓글 응답 객체 (pwHash, ipHash는 절대 포함하지 않는다).
+ * status가 active가 아니면 nickname·body는 빈 문자열, record는 null.
+ */
 export type Comment = {
   id: string;
   nickname: string;
@@ -97,6 +110,13 @@ export type Comment = {
   editedAt: string | null;
   record: CommentRecord | null;
 };
+
+/** DELETE /api/comments/{id} 응답. 답글이 남은 원댓글은 soft(자리 유지), 그 외는 hard(사라짐) */
+export type CommentDeleteResponse = { id: string; removed: "soft" | "hard" };
+
+/** 댓글 목록 페이지 크기 */
+export const COMMENT_PAGE_SIZE = 20;
+export const REPLY_PAGE_SIZE = 50;
 
 // ─── 에러 ────────────────────────────────────────────────────────────────
 

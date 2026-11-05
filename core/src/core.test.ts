@@ -1,6 +1,14 @@
 import { describe, expect, it } from "vitest";
 import { addRun, emptyState, toLatest } from "./aggregate";
-import { makeCommentId, makeResultId, parseCommentId, parseResultId, resultKeys } from "./ids";
+import { CommentCreateRequest } from "./api";
+import {
+  commentKeys,
+  makeCommentId,
+  makeResultId,
+  parseCommentId,
+  parseResultId,
+  resultKeys,
+} from "./ids";
 import { normalize } from "./normalize";
 import { HIST_BINS, histToClearTime, topPercent } from "./percentile";
 import { buildLookup, groupCharacters, judge, rosterAt } from "./roster";
@@ -111,6 +119,36 @@ describe("ids", () => {
       parseCommentId(makeCommentId({ game: "genshin", lang: "ko", parent: null, ulid: u }))?.parent,
     ).toBeNull();
     expect(parseCommentId(`genshin.ko.${u}.${u}`)?.parent).toBe(u);
+  });
+  it("commentId 키: 원댓글은 G#game#lang, 답글은 R#부모ULID", () => {
+    const v = "01JC8Z3K9QX7M2B4N6P8R0T2V5";
+    expect(commentKeys({ game: "genshin", lang: "ko", parent: null, ulid: u })).toEqual({
+      pk: "G#genshin#ko",
+      sk: u,
+    });
+    expect(commentKeys({ game: "genshin", lang: "ko", parent: u, ulid: v })).toEqual({
+      pk: `R#${u}`,
+      sk: v,
+    });
+    expect(parseCommentId(`genshin.ko.${u}.${v}.${v}`)).toBeNull();
+    expect(parseCommentId("genshin.ko.nope")).toBeNull();
+  });
+});
+
+describe("CommentCreateRequest", () => {
+  const base = { nickname: " 준아 ", password: "1234", body: "  9분 컷\r\n했다  " };
+  it("닉네임·본문 앞뒤 공백을 지우고 줄바꿈을 \\n으로 맞춘다", () => {
+    expect(CommentCreateRequest.parse(base)).toEqual({
+      nickname: "준아",
+      password: "1234",
+      body: "9분 컷\n했다",
+    });
+  });
+  it("연속 줄바꿈 4줄 이상, 빈 본문, 짧은 비밀번호는 거부", () => {
+    expect(CommentCreateRequest.safeParse({ ...base, body: "a\n\n\n\nb" }).success).toBe(false);
+    expect(CommentCreateRequest.safeParse({ ...base, body: " \r\n " }).success).toBe(false);
+    expect(CommentCreateRequest.safeParse({ ...base, password: "123" }).success).toBe(false);
+    expect(CommentCreateRequest.safeParse({ ...base, body: "a\n\n\nb" }).success).toBe(true);
   });
 });
 

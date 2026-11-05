@@ -3,6 +3,8 @@ import { DIFFICULTIES, type Difficulty, LANGS, type Lang } from "./types";
 
 const ULID_RE = /^[0-9A-HJKMNP-TV-Z]{26}$/;
 
+export const isUlid = (v: string) => ULID_RE.test(v);
+
 export const newUlid = (time?: number) => ulid(time === undefined ? undefined : Math.floor(time));
 
 /** 해당 시각(ms)에 만들어질 수 있는 가장 큰 ULID — 시각 기준 범위 조회의 상한으로 사용 */
