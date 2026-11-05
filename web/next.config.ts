@@ -11,6 +11,8 @@ const nextConfig: NextConfig = {
   output: isDev ? undefined : "export",
   trailingSlash: true,
   images: { unoptimized: true },
+  // 루트 레이아웃이 [lang] 아래에 있어 일치하는 경로가 없는 주소의 404를 따로 정의한다 (app/global-not-found.tsx)
+  experimental: { globalNotFound: true },
   transpilePackages: ["@rosterush/core", "@rosterush/games"],
   turbopack: {
     rules: {
