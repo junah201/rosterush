@@ -28,6 +28,14 @@ case "$STAGE" in
   *) export SITE_ORIGIN="https://rosterush-${STAGE}.junah.dev" ;;
 esac
 
+# Google Tag(GA4) 측정 ID (web/lib/analytics.ts). prod에만 넣어 dev 방문이 통계에 섞이지 않게 한다.
+# 측정 ID는 페이지 소스에 그대로 노출되는 공개 값이라 여기에 적어 둔다.
+if [ "$STAGE" = "prod" ]; then
+  export NEXT_PUBLIC_GA_ID="G-V5XMP4JQ5C"
+else
+  unset NEXT_PUBLIC_GA_ID
+fi
+
 pnpm --filter @rosterush/web build
 
 # 1) 파일명에 해시가 붙은 정적 자산: 1년 immutable (이전 버전도 남겨서 열려 있는 탭이 깨지지 않게)

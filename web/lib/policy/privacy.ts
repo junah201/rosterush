@@ -3,11 +3,11 @@ import type { PolicyDoc, Ymd } from "./common";
 
 /**
  * 개인정보 처리방침 본문.
- * 실제 저장 동작(api/src/results.ts, shares.ts, comments.ts, lib/ratelimit.ts, web/lib/records.ts·nickname.ts)과
+ * 실제 저장 동작(api/src/results.ts, shares.ts, comments.ts, lib/ratelimit.ts, web/lib/records.ts·nickname.ts·analytics.ts)과
  * 맞춰 쓴다. 보관 기간이나 저장 항목을 바꾸면 여기도 고치고 EFFECTIVE를 올릴 것.
  */
 
-const EFFECTIVE: Ymd = { y: 2026, m: 11, d: 6 };
+const EFFECTIVE: Ymd = { y: 2026, m: 11, d: 7 };
 
 /** 저장하는 정보 한 종류 */
 export type PrivacyData = {
@@ -41,6 +41,7 @@ export const privacy: Record<Lang, PrivacyDoc> = {
       "회원가입이 없고, 이름·이메일·전화번호를 받지 않아요.",
       "IP 주소와 비밀번호는 원래 값 그대로 저장하지 않아요.",
       "플레이 기록은 30일 뒤 자동으로 지워져요.",
+      "방문자 수와 플레이 횟수를 보려고 Google Analytics를 써요. 광고에는 쓰지 않아요.",
     ],
     notice:
       "공유 기록과 댓글(닉네임 포함)은 누구나 볼 수 있어요. 실명이나 연락처 같은 개인정보는 적지 마세요.",
@@ -84,6 +85,12 @@ export const privacy: Record<Lang, PrivacyDoc> = {
         why: "장애를 찾아 고치려고",
         keep: "14일 뒤 자동으로 지워져요.",
       },
+      {
+        name: "방문·이용 통계 (Google Analytics)",
+        what: "본 페이지, 게임 시작·종료(게임, 언어, 난이도, 맞힌 수, 걸린 시간), 브라우저·기기 종류, 대략적인 지역, 쿠키에 저장한 임의의 방문자 번호",
+        why: "몇 명이 방문하고 몇 판을 하는지 보고 서비스를 고치려고",
+        keep: "개별 기록은 2개월 뒤 자동으로 지워져요. 합산한 통계는 남지만 누구의 것인지는 알 수 없어요.",
+      },
     ],
     sections: [
       {
@@ -92,7 +99,8 @@ export const privacy: Record<Lang, PrivacyDoc> = {
           "최근 플레이 기록(최대 50개)과 마지막으로 쓴 닉네임을 이 브라우저 안의 저장 공간(localStorage)에 저장해요.",
           "기록을 공유·첨부할 때 내 기록인지 확인하고, 닉네임을 다시 입력하지 않게 하려는 거예요. 서버로 따로 보내지 않아요.",
           "브라우저에서 이 사이트의 데이터를 지우면 함께 사라져요.",
-          "광고나 방문 분석을 위한 쿠키·추적 도구는 쓰지 않아요.",
+          "방문 통계를 위해 Google Analytics가 쿠키(_ga로 시작하는 이름)를 저장해요. 광고나 맞춤형 광고에는 쓰지 않아요.",
+          "브라우저 설정에서 쿠키를 막거나 Google 애널리틱스 차단 부가기능(tools.google.com/dlpage/gaoptout)을 쓰면 수집되지 않아요. 게임은 그대로 할 수 있어요.",
         ],
       },
       {
@@ -102,6 +110,7 @@ export const privacy: Record<Lang, PrivacyDoc> = {
           "비밀번호 해시와 IP 해시는 어디에도 공개하지 않아요.",
           "서버와 데이터 저장은 Amazon Web Services(AWS)에 맡기고 있어요. 데이터는 서울에 있는 서버에 저장돼요.",
           "페이지를 빠르게 보내려고 AWS CloudFront가 전 세계에 둔 서버를 거쳐 전달할 수 있어요.",
+          "방문 통계 분석은 Google LLC(Google Analytics)에 맡기고 있어요. 페이지를 열거나 게임을 할 때 1번의 '방문·이용 통계'가 인터넷으로 미국 등 Google의 해외 서버에 보내져 보관돼요.",
         ],
       },
       {
@@ -143,6 +152,7 @@ export const privacy: Record<Lang, PrivacyDoc> = {
       "会員登録はなく、名前・メールアドレス・電話番号は受け取りません。",
       "IPアドレスとパスワードは元の値のままでは保存しません。",
       "プレイ記録は30日後に自動で削除されます。",
+      "訪問者数とプレイ回数を知るためにGoogle Analyticsを使っています。広告には使いません。",
     ],
     notice:
       "シェア記録とコメント（ニックネームを含む）は誰でも見られます。本名や連絡先などの個人情報は書かないでください。",
@@ -186,6 +196,12 @@ export const privacy: Record<Lang, PrivacyDoc> = {
         why: "障害を見つけて直すため",
         keep: "14日後に自動で削除されます。",
       },
+      {
+        name: "アクセス・利用統計（Google Analytics）",
+        what: "見たページ、ゲームの開始・終了（ゲーム、言語、難易度、正解数、かかった時間）、ブラウザ・端末の種類、おおよその地域、Cookieに保存するランダムな訪問者番号",
+        why: "何人が訪れ、何回プレイしているかを把握してサービスを改善するため",
+        keep: "個別のデータは2か月後に自動で削除されます。集計した統計は残りますが、誰のものかはわかりません。",
+      },
     ],
     sections: [
       {
@@ -194,7 +210,8 @@ export const privacy: Record<Lang, PrivacyDoc> = {
           "最近のプレイ記録（最大50件）と最後に使ったニックネームを、このブラウザ内の保存領域（localStorage）に保存します。",
           "記録のシェアや添付のときに自分の記録か確認し、ニックネームを再入力しなくて済むようにするためです。サーバーへ別途送ることはありません。",
           "ブラウザでこのサイトのデータを消すと一緒に消えます。",
-          "広告やアクセス解析のためのCookie・トラッキングツールは使っていません。",
+          "アクセス統計のため、Google AnalyticsがCookie（名前が_gaで始まるもの）を保存します。広告やパーソナライズ広告には使いません。",
+          "ブラウザの設定でCookieをブロックするか、Googleアナリティクス オプトアウト アドオン（tools.google.com/dlpage/gaoptout）を使うと収集されません。ゲームはそのまま遊べます。",
         ],
       },
       {
@@ -204,6 +221,7 @@ export const privacy: Record<Lang, PrivacyDoc> = {
           "パスワードのハッシュとIPハッシュはどこにも公開しません。",
           "サーバーとデータの保存はAmazon Web Services（AWS）に委託しています。データはソウルにあるサーバーに保存されます。",
           "ページを速く届けるため、AWS CloudFrontが世界各地に置いたサーバーを経由することがあります。",
+          "アクセス統計の分析はGoogle LLC（Google Analytics）に委託しています。ページを開いたりゲームをプレイしたりすると、1の「アクセス・利用統計」がインターネット経由で米国などにあるGoogleのサーバーへ送られ、保存されます。",
         ],
       },
       {
@@ -245,6 +263,7 @@ export const privacy: Record<Lang, PrivacyDoc> = {
       "There are no accounts, and we never ask for your name, email or phone number.",
       "We never store your IP address or password in their original form.",
       "Game runs are deleted automatically after 30 days.",
+      "We use Google Analytics to count visitors and games played. It's never used for ads.",
     ],
     notice:
       "Shared runs and comments (including nicknames) are visible to everyone. Don't include your real name, contact details or other personal information.",
@@ -288,6 +307,12 @@ export const privacy: Record<Lang, PrivacyDoc> = {
         why: "To find and fix problems",
         keep: "Deleted automatically after 14 days.",
       },
+      {
+        name: "Visit and usage stats (Google Analytics)",
+        what: "Pages you view, game starts and ends (game, language, difficulty, characters named, time taken), browser and device type, approximate location, and a random visitor ID stored in a cookie",
+        why: "To see how many people visit and how many games they play, so we can improve the site",
+        keep: "Individual data is deleted automatically after 2 months. Combined stats remain, but they can't be traced back to anyone.",
+      },
     ],
     sections: [
       {
@@ -296,7 +321,8 @@ export const privacy: Record<Lang, PrivacyDoc> = {
           "Your recent game runs (up to 50) and the last nickname you used are saved in this browser's own storage (localStorage).",
           "This lets us confirm a run is yours when you share or attach it, and saves you retyping your nickname. It isn't sent to our servers separately.",
           "Clearing this site's data in your browser removes it.",
-          "We don't use cookies or trackers for ads or analytics.",
+          "Google Analytics stores cookies (named starting with _ga) to measure visits. They're never used for ads or ad personalization.",
+          "Blocking cookies in your browser settings, or using the Google Analytics Opt-out Browser Add-on (tools.google.com/dlpage/gaoptout), stops this collection. The game still works as usual.",
         ],
       },
       {
@@ -306,6 +332,7 @@ export const privacy: Record<Lang, PrivacyDoc> = {
           "Password hashes and IP hashes are never made public.",
           "Hosting and storage are provided by Amazon Web Services (AWS). Your data is stored on servers in Seoul.",
           "To load pages faster, they may be delivered through AWS CloudFront servers around the world.",
+          "Visit analytics are provided by Google LLC (Google Analytics). When you open a page or play a game, the visit and usage stats in section 1 are sent over the internet to Google's servers in the United States and elsewhere, where they're stored.",
         ],
       },
       {

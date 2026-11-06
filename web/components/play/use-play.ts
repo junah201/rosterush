@@ -12,6 +12,7 @@ import {
   TIME_LIMIT_MS,
 } from "@rosterush/core";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { track } from "@/lib/analytics";
 
 /** 타이머 시작 이후 경과 ms */
 function elapsedSince(start: number | null): number {
@@ -46,14 +47,26 @@ export function usePlay(game: GameDef, lang: Lang) {
   const roster = useMemo(() => rosterAt(game), [game]);
   const lookup = useMemo(() => buildLookup(game, lang, difficulty), [game, lang, difficulty]);
 
-  const finish = useCallback((endReason: EndReason, totalMs: number) => {
-    if (phaseRef.current === "ended") return;
-    phaseRef.current = "ended";
-    const ms = Math.min(TIME_LIMIT_MS, Math.max(1, Math.round(totalMs)));
-    setPhase("ended");
-    setElapsed(ms);
-    setResult({ endReason, totalMs: ms, solves: solvesRef.current });
-  }, []);
+  const finish = useCallback(
+    (endReason: EndReason, totalMs: number) => {
+      if (phaseRef.current === "ended") return;
+      phaseRef.current = "ended";
+      const ms = Math.min(TIME_LIMIT_MS, Math.max(1, Math.round(totalMs)));
+      setPhase("ended");
+      setElapsed(ms);
+      setResult({ endReason, totalMs: ms, solves: solvesRef.current });
+      track("game_end", {
+        game: game.id,
+        lang,
+        difficulty,
+        end_reason: endReason,
+        solved: Object.keys(solvesRef.current).length,
+        total: roster.length,
+        seconds: Math.round(ms / 1000),
+      });
+    },
+    [game.id, lang, difficulty, roster.length],
+  );
 
   /** 첫 입력 시 타이머 시작 */
   const start = useCallback(() => {
@@ -61,7 +74,8 @@ export function usePlay(game: GameDef, lang: Lang) {
     phaseRef.current = "playing";
     startRef.current = performance.now();
     setPhase("playing");
-  }, []);
+    track("game_start", { game: game.id, lang, difficulty });
+  }, [game.id, lang, difficulty]);
 
   /** 입력값을 판정. 새로 맞혔으면 캐릭터 id 반환 */
   const answer = useCallback(

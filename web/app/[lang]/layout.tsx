@@ -1,7 +1,9 @@
+import { GoogleAnalytics } from "@next/third-parties/google";
 import { LANGS } from "@rosterush/core";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { GA_ID } from "@/lib/analytics";
 import { fontClassName, fontStyle } from "@/lib/fonts";
 import { isLang, t } from "@/lib/i18n";
 import { privacy } from "@/lib/policy/privacy";
@@ -60,6 +62,7 @@ export default async function LangLayout({ children, params }: LayoutProps<"/[la
           </Link>
         </footer>
       </body>
+      {GA_ID && <GoogleAnalytics gaId={GA_ID} />}
     </html>
   );
 }
